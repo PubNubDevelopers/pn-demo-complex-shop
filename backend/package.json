@@ -1,0 +1,27 @@
+{
+  "name": "pn-solution-live-events",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "generator": "node index.js",
+    "test": "node tests/timeline.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PubNubDevelopers/pn-solution-live-events.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PubNubDevelopers/pn-solution-live-events/issues"
+  },
+  "homepage": "https://github.com/PubNubDevelopers/pn-solution-live-events#readme",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "nconf": "^0.12.1",
+    "pubnub": "^9.3.2"
+  }
+}
