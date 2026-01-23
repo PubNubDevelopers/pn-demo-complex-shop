@@ -74,7 +74,7 @@ export default function SportsEventPage ({
         This app is not designed for mobile
       </div>
 
-      <div className='hidden sm:flex flex-row w-full mt-[92px] pb-0 bg-navy900/40 text-neutral-50'>
+      <div className='hidden sm:flex flex-row w-full mt-[92px] pb-0 bg-complex-black/40 text-neutral-50'>
         <SideMenu
           sideMenuOpen={sideMenuOpen}
           isGuidedDemo={isGuidedDemo}

@@ -82,7 +82,7 @@ export default function TabletContents ({
   }
 
   return (
-    <div className='w-full rounded-2xl bg-navy50 text-neutral-900 h-full'>
+    <div className='w-full rounded-2xl bg-complex-gray-light text-neutral-900 h-full'>
       <div className='relative'>
         <div className='absolute w-1/2 right-0'>
           {alert && (

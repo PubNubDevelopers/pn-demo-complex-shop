@@ -206,13 +206,13 @@ export default function LoginPage ({
     setLoginPageShown(false)
   }
   return (
-    <div className='flex items-center justify-center h-fit min-h-screen w-screen min-w-screen bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-[#184A2C] to-navy900 select-none'>
+    <div className='flex items-center justify-center h-fit min-h-screen w-screen min-w-screen bg-complex-black select-none'>
       {!isGuidedDemo && isLoginBypass ? (
-        <div className='flex flex-col gap-20 items-center text-navy100'>
+        <div className='flex flex-col gap-20 items-center text-complex-white'>
           <div className='text-5xl font-extrabold'>Loading...</div>
         </div>
       ) : (
-        <div className='flex flex-col gap-20 items-center text-navy100 '>
+        <div className='flex flex-col gap-20 items-center text-complex-white '>
           <div className='flex flex-row gap-4 items-center'>
             {isGuidedDemo && !isPopout && (
               <div

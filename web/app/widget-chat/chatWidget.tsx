@@ -626,7 +626,7 @@ export default function ChatWidget ({
       )}
 
       {activeChannel && !isOverlayMode && (
-        <div className='text-lg border-b pb-2 flex items-center bg-navy900 overflow-hidden rounded-t px-[16px] py-[12px] text-white text-[16px] font-[600] leading-[24px] h-[56px]'>
+        <div className='text-lg border-b pb-2 flex items-center bg-complex-black overflow-hidden rounded-t px-[16px] py-[12px] text-white text-[16px] font-[600] leading-[24px] h-[56px]'>
           <div
             className={'rounded-full w-[32px] h-[32px] !bg-cover bg-gray-100'}
             style={

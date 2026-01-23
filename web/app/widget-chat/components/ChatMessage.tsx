@@ -143,10 +143,10 @@ export default function ChatMessage ({
         ref={ref}
         className={`group relative max-w-[80%] flex items-end rounded-lg px-4 py-[4px] gap-[16px] ${
           isQuestionMessage
-            ? 'bg-navy300 text-gray-800' // Light blue for questions
+            ? 'bg-complex-gray text-gray-800' // Gray for questions
             : isOwnMessage
-            ? 'bg-navy900 text-white' // Default for own messages
-            : 'bg-navy100' // Default for other messages
+            ? 'bg-complex-gray-dark text-white' // Dark gray for own messages
+            : 'bg-complex-gray-light' // Light gray for other messages
         }`}
       >
         <div

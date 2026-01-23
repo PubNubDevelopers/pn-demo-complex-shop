@@ -472,7 +472,7 @@ export default function StreamWidget ({
             }}
           />
         )}
-        <div className={`flex flex-row gap-2 items-center justify-center ${isMobilePreview  ? 'bg-transparent' : 'bg-navy900'} py-2 px-4`}>
+        <div className={`flex flex-row gap-2 items-center justify-center ${isMobilePreview  ? 'bg-transparent' : 'bg-complex-black'} py-2 px-4`}>
           {reactions.map((reaction, index) => (
             <Reaction
               key={index}

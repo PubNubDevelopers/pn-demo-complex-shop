@@ -374,7 +374,7 @@ export default function PreviewMobile ({
               className="absolute inset-0 z-50 bg-white rounded-2xl"
             >
               <div className="h-full flex flex-col">
-                <div className="flex justify-between items-center p-4 border-b bg-navy600 relative z-10 shrink-0">
+                <div className="flex justify-between items-center p-4 border-b bg-complex-gray-dark relative z-10 shrink-0">
                   <h2 className="text-xl font-bold">Adverts</h2>
                   <button
                     className="text-2xl p-2 rounded-full min-w-fit "
@@ -399,7 +399,7 @@ export default function PreviewMobile ({
               className="absolute inset-0 z-50 bg-white rounded-2xl"
             >
               <div className="h-full flex flex-col">
-                <div className="flex justify-between items-center p-4 border-b bg-navy600 relative z-10 shrink-0">
+                <div className="flex justify-between items-center p-4 border-b bg-complex-gray-dark relative z-10 shrink-0">
                   <h2 className="text-xl font-bold">Product Showcase</h2>
                   <button
                     className="text-2xl p-2 rounded-full min-w-fit"
