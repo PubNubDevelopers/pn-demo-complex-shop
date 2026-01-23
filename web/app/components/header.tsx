@@ -91,11 +91,11 @@ export default function Header ({
   }
 
   return (
-    <div className='hidden sm:flex flex-row w-full justify-between h-[92px] select-none fixed items-center px-6 bg-navy900'>
+    <div className='hidden sm:flex flex-row w-full justify-between h-[92px] select-none fixed items-center px-6 bg-complex-black'>
       <div className='flex flex-row gap-6 items-center'>
         <div className='bg-white h-[52px] rounded-lg place-content-center p-3'>
           <Image
-            src='../images/logo-trans-bg.jpeg'
+            src='/logo-complex.jpeg'
             alt='Complex Logo'
             width={97.49}
             height={52}
@@ -105,7 +105,7 @@ export default function Header ({
           />
         </div>
         <div
-          className={`flex h-11 w-11 border-1 hover:bg-navy800 border-brandAccent3 shadow-sm items-center justify-center rounded-md text-neutral50 cursor-pointer`}
+          className={`flex h-11 w-11 border-1 hover:bg-complex-gray-dark border-complex-red shadow-sm items-center justify-center rounded-md text-complex-white cursor-pointer`}
           onClick={e => {
             setSideMenuOpen(!sideMenuOpen)
             e.stopPropagation()
@@ -114,17 +114,17 @@ export default function Header ({
           <MenuOpenIcon />
         </div>
       </div>
-      <div className='text-navy100 font-bold text-2xl'>
+      <div className='text-complex-white font-bold text-2xl'>
         Live Shopping Experience
       </div>
       <div className='flex flex-row gap-4'>
         <div className='flex flex-row'>
           <div
-            className={`flex h-11 w-[58px] border-1 hover:bg-navy700 ${
+            className={`flex h-11 w-[58px] border-1 hover:bg-complex-gray-dark ${
               !tabletPreview
-                ? 'bg-navy700 border-brandAccent3'
-                : 'border-navy600'
-            } shadow-sm items-center justify-center rounded-l-md text-neutral200 cursor-pointer`}
+                ? 'bg-complex-gray-dark border-complex-red'
+                : 'border-complex-gray'
+            } shadow-sm items-center justify-center rounded-l-md text-complex-white cursor-pointer`}
             onClick={(e) => {
               setTabletPreview(false)
               e.stopPropagation()
@@ -133,11 +133,11 @@ export default function Header ({
             <PhoneIcon />
           </div>{' '}
           <div
-            className={`flex h-11 w-[58px] border-1 hover:bg-navy700 ${
+            className={`flex h-11 w-[58px] border-1 hover:bg-complex-gray-dark ${
               tabletPreview
-                ? 'bg-navy700 border-brandAccent3'
-                : 'border-navy600'
-            } shadow-sm items-center justify-center rounded-r-md text-neutral200 cursor-pointer`}
+                ? 'bg-complex-gray-dark border-complex-red'
+                : 'border-complex-gray'
+            } shadow-sm items-center justify-center rounded-r-md text-complex-white cursor-pointer`}
             onClick={(e) => {
               setTabletPreview(true)
               e.stopPropagation()
@@ -147,7 +147,7 @@ export default function Header ({
           </div>
         </div>
         <div
-          className='flex flex-row gap-2 h-11 rounded-md border-1 border-brandAccent3 px-4 py-2 hover:bg-navy800 shadow-[0px_4px_18px_0px_rgba(76,_195,_161,_0.8)] text-neutral50 items-center cursor-pointer'
+          className='flex flex-row gap-2 h-11 rounded-md border-1 border-complex-red px-4 py-2 hover:bg-complex-gray-dark shadow-[0px_4px_18px_0px_rgba(255,_0,_0,_0.8)] text-complex-white items-center cursor-pointer'
           onClick={e => {
             setGuidesShown(!guidesShown)
             e.stopPropagation()

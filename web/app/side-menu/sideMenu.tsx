@@ -29,7 +29,7 @@ export default function SideMenu ({
     <AnimatePresence>
       {true && (
         <div className={`${!sideMenuOpen && 'hidden'}`}>
-          <div className='flex flex-1 flex-col max-w-[366px] min-w-[366px] h-full bg-navy900'>
+          <div className='flex flex-1 flex-col max-w-[366px] min-w-[366px] h-full bg-complex-black'>
             <div className='flex flex-col w-full select-none mt-8 pb-8 overflow-y-auto overscroll-none h-full'>
               <div className='h-full'>
                 <SideMenuContents
@@ -64,9 +64,9 @@ function SideMenuContents ({
       <AnchorIcon className='text-neutral-100' transform='rotate(-90)' />
     )
   }
-  const accordionItemClass = `pl-4 pr-4 pt-3 pb-2 bg-navy900 hover:bg-navy900 data-[open]:bg-navy900`
+  const accordionItemClass = `pl-4 pr-4 pt-3 pb-2 bg-complex-black hover:bg-complex-gray-dark data-[open]:bg-complex-black`
   const accordionTitleClass =
-    'flex flex-row gap-3 w-full text-base items-center font-semibold uppercase text-neutral-50'
+    'flex flex-row gap-3 w-full text-base items-center font-semibold uppercase text-complex-white'
 
   return (
     <div className='flex flex-col justify-between h-full'>
@@ -194,7 +194,7 @@ function SideMenuContents ({
 function LinkButton ({ buttonText, url }) {
   return (
     <a href={`${url}`} target='_blank' className={`no-underline`}>
-      <div className='flex flex-row gap-1 h-10 items-center py-1 px-3 border-1 border-navy600 hover:bg-navy800 rounded-md'>
+      <div className='flex flex-row gap-1 h-10 items-center py-1 px-3 border-1 border-complex-red hover:bg-complex-gray-dark rounded-md'>
         <div className=''>{buttonText}</div>
         <OpenInNewWindowIcon />
       </div>

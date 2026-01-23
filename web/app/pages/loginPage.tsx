@@ -254,7 +254,7 @@ export default function LoginPage ({
 function LoginAvatar ({ id, avatarUrl, name, personSelected }) {
   return (
     <div
-      className='flex flex-col gap-3 p-2 items-center cursor-pointer hover:bg-navy800 rounded-lg'
+      className='flex flex-col gap-3 p-2 items-center cursor-pointer hover:bg-complex-gray-dark rounded-lg'
       onClick={() => {
         personSelected(id)
       }}
