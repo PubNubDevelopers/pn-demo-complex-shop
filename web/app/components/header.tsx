@@ -95,7 +95,7 @@ export default function Header ({
       <div className='flex flex-row gap-6 items-center'>
         <div className='bg-white h-[52px] rounded-lg place-content-center p-3'>
           <Image
-            src='/logo-complex.jpeg'
+            src='/logo-trans-bg.jpeg'
             alt='Complex Logo'
             width={97.49}
             height={52}
