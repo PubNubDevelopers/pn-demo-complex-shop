@@ -141,7 +141,6 @@ export default function PreviewMobile ({
       if (channel) {
         await channel.sendText(chatMessage)
         setChatMessage('')
-        setShowChatInput(false)
       }
     } catch (error) {
       console.error('Error sending message:', error)
