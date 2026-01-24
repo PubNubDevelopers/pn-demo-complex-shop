@@ -199,7 +199,7 @@ export default function PreviewMobile ({
         {/* Chat overlay - bottom left */}
         {showChat && (
           <>
-            <div className="absolute bottom-32 left-4 right-20 z-10 max-h-96 overflow-visible">
+            <div className="absolute bottom-32 left-4 right-20 z-20 pointer-events-auto" style={{ maxHeight: '384px' }}>
               <ChatWidget
                 className="bg-transparent border-none shadow-none"
                 isMobilePreview={true}
