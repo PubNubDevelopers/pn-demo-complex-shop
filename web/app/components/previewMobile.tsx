@@ -50,7 +50,6 @@ export default function PreviewMobile ({
   const [activeOverlay, setActiveOverlay] = useState<'none' | 'reviews' | 'products'>('none')
   const [showSubtitles, setShowSubtitles] = useState(true)
   const [showChat, setShowChat] = useState(true)
-  const [showChatInput, setShowChatInput] = useState(false)
   const [chatMessage, setChatMessage] = useState('')
   
   const pushChannelId = isGuidedDemo ? pushChannelSalesId : pushChannelSelfId
@@ -198,13 +197,10 @@ export default function PreviewMobile ({
           />
         </div>
 
-        {/* Chat overlay - bottom left, tappable */}
-        {showChat && !showChatInput && (
+        {/* Chat overlay - bottom left */}
+        {showChat && (
           <>
-            <div 
-              className="absolute bottom-20 left-4 right-20 z-10"
-              onClick={() => setShowChatInput(true)}
-            >
+            <div className="absolute bottom-20 left-4 right-20 z-10">
               <div className="pointer-events-none">
                 <ChatWidget
                   className="bg-transparent border-none shadow-none hide-scrollbar"
@@ -223,69 +219,34 @@ export default function PreviewMobile ({
                   }}
                 />
               </div>
-              {/* Invisible tap area for chat input */}
-              <div className="absolute inset-0 pointer-events-auto" />
             </div>
             
-            {/* Send Message button - always visible when chat is enabled */}
-            <button
-              className="absolute bottom-16 left-4 z-10 bg-complex-red text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg"
-              onClick={() => setShowChatInput(true)}
-            >
-              Send Message
-            </button>
+            {/* Chat input - always visible when chat is enabled */}
+            <div className="absolute bottom-16 left-4 right-4 z-10">
+              <div className="flex space-x-2">
+                <input
+                  type="text"
+                  value={chatMessage}
+                  onChange={(e) => setChatMessage(e.target.value)}
+                  placeholder="Add a comment..."
+                  className="flex-1 bg-black/70 text-white placeholder-white/60 rounded-full px-4 py-2 text-sm border-none outline-none backdrop-blur-sm"
+                  style={{ fontSize: '16px' }} // Prevent iOS zoom
+                  onKeyPress={(e) => {
+                    if (e.key === 'Enter') {
+                      handleSendMessage()
+                    }
+                  }}
+                />
+                <button
+                  onClick={handleSendMessage}
+                  className="bg-complex-red text-white rounded-full px-4 py-2 text-sm font-medium min-w-fit shadow-lg"
+                >
+                  Send
+                </button>
+              </div>
+            </div>
           </>
         )}
-
-        {/* Floating chat input - Within mobile bounds */}
-        <AnimatePresence>
-          {showChatInput && (
-            <>
-              {/* Backdrop to dismiss chat input */}
-              <div 
-                className="absolute inset-0 z-40 bg-black/20"
-                onClick={() => setShowChatInput(false)}
-              />
-              <div className="absolute bottom-4 left-4 right-4 z-50">
-                <motion.div
-                  initial={{ y: 100, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  exit={{ y: 100, opacity: 0 }}
-                  transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-                  className="bg-black/90 backdrop-blur-md rounded-2xl p-4"
-                >
-                  <div className="flex space-x-3">
-                    <input
-                      type="text"
-                      value={chatMessage}
-                      onChange={(e) => setChatMessage(e.target.value)}
-                      placeholder="Add a comment..."
-                      className="flex-1 bg-white/20 text-white placeholder-white/60 rounded-full px-4 py-2 text-sm border-none outline-none"
-                      style={{ fontSize: '16px' }} // Prevent iOS zoom
-                      onKeyPress={(e) => {
-                        if (e.key === 'Enter') {
-                          handleSendMessage()
-                        }
-                      }}
-                    />
-                    <button
-                      onClick={handleSendMessage}
-                      className="bg-white text-black rounded-full px-4 py-2 text-sm font-medium min-w-fit"
-                    >
-                      Send
-                    </button>
-                    <button
-                      onClick={() => setShowChatInput(false)}
-                      className="text-white/60 px-2 text-lg"
-                    >
-                      ✕
-                    </button>
-                  </div>
-                </motion.div>
-              </div>
-            </>
-          )}
-        </AnimatePresence>
 
         {/* Chat toggle button - bottom left */}
         <button
