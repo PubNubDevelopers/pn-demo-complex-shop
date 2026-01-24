@@ -151,6 +151,13 @@ export default function PreviewMobile ({
     <div
       className={`${className} w-[460px] border-4 border-navy200 rounded-3xl bg-black px-2 py-[14px] h-full max-h-[954px]`}
       {...handlers}
+      onTouchStart={(e) => {
+        // Prevent swipe gestures from interfering with chat scrolling
+        const target = e.target as HTMLElement;
+        if (target.closest('[data-chat-scroll]')) {
+          e.stopPropagation();
+        }
+      }}
     >
       <div className='w-full rounded-2xl text-white h-full relative bg-black overflow-hidden'>
         {/* Main video stream - full screen */}
@@ -199,7 +206,11 @@ export default function PreviewMobile ({
         {/* Chat overlay - bottom left */}
         {showChat && (
           <>
-            <div className="absolute bottom-32 left-4 right-20 z-20 pointer-events-auto" style={{ maxHeight: '384px' }}>
+            <div 
+              className="absolute bottom-32 left-4 right-20 z-20 pointer-events-auto" 
+              style={{ maxHeight: '384px' }}
+              data-chat-scroll
+            >
               <ChatWidget
                 className="bg-transparent border-none shadow-none"
                 isMobilePreview={true}
