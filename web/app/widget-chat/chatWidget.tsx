@@ -662,7 +662,7 @@ export default function ChatWidget ({
           <div
             ref={messagesContainerRef}
             className={`${isOverlayMode 
-              ? 'overflow-y-auto max-h-32 space-y-1 hide-scrollbar' 
+              ? 'overflow-y-auto max-h-96 space-y-1 hide-scrollbar pointer-events-auto' 
               : 'py-[12px] px-[16px] overflow-y-auto flex-grow hide-scrollbar'
             }`}
           >

@@ -199,25 +199,23 @@ export default function PreviewMobile ({
         {/* Chat overlay - bottom left */}
         {showChat && (
           <>
-            <div className="absolute bottom-32 left-4 right-20 z-10">
-              <div className="pointer-events-none">
-                <ChatWidget
-                  className="bg-transparent border-none shadow-none hide-scrollbar"
-                  isMobilePreview={true}
-                  chat={chat}
-                  isGuidedDemo={isGuidedDemo}
-                  guidesShown={guidesShown}
-                  visibleGuide={visibleGuide}
-                  setVisibleGuide={setVisibleGuide}
-                  userMentioned={messageText => {
-                    setNotification({
-                      heading: 'You were mentioned',
-                      message: messageText,
-                      imageUrl: null
-                    })
-                  }}
-                />
-              </div>
+            <div className="absolute bottom-32 left-4 right-20 z-10 max-h-96">
+              <ChatWidget
+                className="bg-transparent border-none shadow-none hide-scrollbar"
+                isMobilePreview={true}
+                chat={chat}
+                isGuidedDemo={isGuidedDemo}
+                guidesShown={guidesShown}
+                visibleGuide={visibleGuide}
+                setVisibleGuide={setVisibleGuide}
+                userMentioned={messageText => {
+                  setNotification({
+                    heading: 'You were mentioned',
+                    message: messageText,
+                    imageUrl: null
+                  })
+                }}
+              />
             </div>
             
             {/* Chat input - always visible when chat is enabled */}
