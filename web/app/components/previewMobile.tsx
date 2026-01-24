@@ -199,9 +199,9 @@ export default function PreviewMobile ({
         {/* Chat overlay - bottom left */}
         {showChat && (
           <>
-            <div className="absolute bottom-32 left-4 right-20 z-10 max-h-96">
+            <div className="absolute bottom-32 left-4 right-20 z-10 max-h-96 overflow-visible">
               <ChatWidget
-                className="bg-transparent border-none shadow-none hide-scrollbar"
+                className="bg-transparent border-none shadow-none"
                 isMobilePreview={true}
                 chat={chat}
                 isGuidedDemo={isGuidedDemo}

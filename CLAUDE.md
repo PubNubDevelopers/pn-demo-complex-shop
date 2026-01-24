@@ -1,14 +1,5 @@
-Here is a precision-engineered prompt designed to get the best possible result from Claude Sonnet 4.5. It breaks the request down into a **Developer Role**, **Visual Design Spec**, **Configuration Context**, and a strict **Deployment Protocol**.
-
-You can copy and paste this entire block directly into Claude.
-
----
-
-### The Prompt for Claude
-
-```markdown
 **Role:** Senior Frontend Engineer & DevOps Specialist
-**Context:** I need you to rebrand and deploy an existing React application ("PubNub Live Shopping Solution") to Netlify.
+**Context:** I need you to rebrand an existing React application ("PubNub Live Shopping Solution"), set up version control, and deploy it to Netlify.
 
 **Source Code:**
 Use the code from this repository exactly as is, without changing the core functionality:
@@ -64,7 +55,18 @@ If you need to generate any additional configuration scripts that require admin 
 
 ---
 
-### Phase 3: Netlify Deployment Protocol
+### Phase 3: Version Control (Git & GitHub)
+
+Initialize a new repository and push it to the `PubNubDevelopers` organization.
+
+1. **Initialization:** Provide commands to initialize a local git repo and stage the files.
+2. **Authentication:** Provide the CLI commands to authenticate with GitHub. **Crucial:** Prompt me to verify I am authenticated with permissions for the **`PubNubDevelopers`** organization (`https://github.com/PubNubDevelopers`).
+3. **Remote Creation:** Provide the command to create a new remote repository named **`pn-demo-complex-shop`** under that organization.
+4. **Push:** Provide the commands to add the remote origin and push the main branch.
+
+---
+
+### Phase 4: Netlify Deployment Protocol
 
 **Important:** Do not execute the final deploy command immediately. Follow these steps sequentially:
 
@@ -80,4 +82,4 @@ If you need to generate any additional configuration scripts that require admin 
 1. The specific code blocks for the CSS/Tailwind config changes.
 2. The specific code blocks for the Logo component update.
 3. The specific code blocks for the Configuration update.
-4. The Step-by-Step CLI command script for the Netlify deployment.
+4. The Step-by-Step CLI command script for Phase 3 (Git) and Phase 4 (Netlify).
