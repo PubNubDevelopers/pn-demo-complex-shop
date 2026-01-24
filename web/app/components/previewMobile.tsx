@@ -49,6 +49,7 @@ export default function PreviewMobile ({
   // New states for overlay management
   const [activeOverlay, setActiveOverlay] = useState<'none' | 'reviews' | 'products'>('none')
   const [showSubtitles, setShowSubtitles] = useState(true)
+  const [showChat, setShowChat] = useState(true)
   const [showChatInput, setShowChatInput] = useState(false)
   const [chatMessage, setChatMessage] = useState('')
   
@@ -197,7 +198,7 @@ export default function PreviewMobile ({
         )}
 
         {/* Chat overlay - bottom left, tappable */}
-        {!showChatInput && (
+        {showChat && !showChatInput && (
           <div 
             className="absolute bottom-20 left-4 right-20 z-10"
             onClick={() => setShowChatInput(true)}
@@ -275,13 +276,23 @@ export default function PreviewMobile ({
           )}
         </AnimatePresence>
 
-        {/* Subtitle toggle button */}
+        {/* Chat toggle button - bottom left */}
         <button
           className="absolute bottom-4 left-4 z-20 bg-black/50 text-white p-2 rounded-full backdrop-blur-sm"
+          onClick={() => setShowChat(!showChat)}
+        >
+          <div className="w-6 h-6 flex items-center justify-center text-lg">
+            💬
+          </div>
+        </button>
+        
+        {/* Commentary toggle button - top right */}
+        <button
+          className="absolute top-4 right-4 z-20 bg-black/50 text-white p-2 rounded-full backdrop-blur-sm"
           onClick={() => setShowSubtitles(!showSubtitles)}
         >
-          <div className="w-6 h-6 flex items-center justify-center text-sm font-bold">
-            CC
+          <div className="w-6 h-6 flex items-center justify-center text-lg">
+            📢
           </div>
         </button>
 
