@@ -9,7 +9,10 @@ export default function LiveCommentaryWidget ({
   chat,
   guidesShown,
   visibleGuide,
-  setVisibleGuide
+  setVisibleGuide,
+  showCommentaryIcon = false,
+  commentaryEnabled = true,
+  onToggleCommentary = null
 }) {
   const liveCommentaryScrollRef = useRef<HTMLDivElement>(null)
   const [messages, setMessages] = useState<any[]>([])
@@ -65,7 +68,22 @@ export default function LiveCommentaryWidget ({
 
   return (
     <div className={`${className} px-6 pt-3 pb-4`}>
-      <div className='font-semibold text-base pb-3'>Live Commentary</div>
+      <div 
+        className={`font-semibold text-base pb-3 flex items-center gap-2 ${onToggleCommentary ? 'cursor-pointer' : ''}`}
+        onClick={onToggleCommentary ? () => onToggleCommentary() : undefined}
+      >
+        {showCommentaryIcon && (
+          <span className="text-lg relative inline-flex items-center justify-center">
+            {commentaryEnabled ? '📢' : (
+              <>
+                <span className="opacity-50">📢</span>
+                <span className="absolute inset-0 flex items-center justify-center text-red-500 text-2xl font-bold">⨯</span>
+              </>
+            )}
+          </span>
+        )}
+        <span>Live Commentary</span>
+      </div>
       <GuideOverlay
         id={'liveCommentary'}
         guidesShown={guidesShown}
