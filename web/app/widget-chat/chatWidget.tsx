@@ -658,13 +658,14 @@ export default function ChatWidget ({
 
       {/* Chat Messages */}
       {activeChannel && (
-        <div className={`${isOverlayMode ? 'max-h-40' : 'h-[400px]'} flex flex-col`}>
+        <div className={`${isOverlayMode ? 'max-h-full' : 'h-[400px]'} flex flex-col`}>
           <div
             ref={messagesContainerRef}
             className={`${isOverlayMode 
-              ? 'overflow-y-auto max-h-96 space-y-1 hide-scrollbar pointer-events-auto' 
+              ? 'overflow-y-auto flex-1 space-y-1 pointer-events-auto' 
               : 'py-[12px] px-[16px] overflow-y-auto flex-grow hide-scrollbar'
             }`}
+            style={isOverlayMode ? { maxHeight: '384px' } : {}}
           >
             {displayedMessages.length === 0 ? (
               !isOverlayMode && (
