@@ -186,7 +186,7 @@ export default function SideMenuDataControls ({
         <div className=''>Simulation</div>
         <div className='flex flex-col'>
           <div
-            className='flex flex-row gap-1 items-center cursor-pointer border-1 border-navy600 rounded-md h-11 max-h-11 w-48 px-3'
+            className='flex flex-row gap-1 items-center cursor-pointer border-1 border-complex-red rounded-md h-11 max-h-11 w-48 px-3'
             onClick={e => {
               setDataControlsDropDownVisible(!dataControlsDropDownVisible)
               e.stopPropagation()
@@ -194,7 +194,7 @@ export default function SideMenuDataControls ({
           >
             <div
               className={`font-normal truncate text-ellipsis overflow-hidden ${
-                selectedSimulation == 0 ? 'text-navy400' : 'text-neutral50'
+                selectedSimulation == 0 ? 'text-complex-gray' : 'text-complex-white'
               } grow`}
             >{`${
               selectedSimulation == 0
@@ -217,7 +217,7 @@ export default function SideMenuDataControls ({
         </div>
         <div
           className={`${
-            selectedSimulation == 0 ? 'text-navy500' : 'text-neutral50'
+            selectedSimulation == 0 ? 'text-complex-gray' : 'text-complex-white'
           } cursor-pointer`}
           onClick={e => {
             sendMessageToBackend(`${simulationNames[selectedSimulation]}`)
