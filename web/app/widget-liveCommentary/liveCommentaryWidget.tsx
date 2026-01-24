@@ -12,7 +12,17 @@ export default function LiveCommentaryWidget ({
   setVisibleGuide,
   showCommentaryIcon = false,
   commentaryEnabled = true,
-  onToggleCommentary = null
+  onToggleCommentary
+}: {
+  className?: string
+  isMobilePreview?: boolean
+  chat: any
+  guidesShown?: boolean
+  visibleGuide?: string
+  setVisibleGuide?: (guide: string) => void
+  showCommentaryIcon?: boolean
+  commentaryEnabled?: boolean
+  onToggleCommentary?: () => void
 }) {
   const liveCommentaryScrollRef = useRef<HTMLDivElement>(null)
   const [messages, setMessages] = useState<any[]>([])
