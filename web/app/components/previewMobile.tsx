@@ -158,6 +158,13 @@ export default function PreviewMobile ({
           e.stopPropagation();
         }
       }}
+      onWheel={(e) => {
+        // Allow trackpad scrolling in chat area
+        const target = e.target as HTMLElement;
+        if (target.closest('[data-chat-scroll]')) {
+          e.stopPropagation();
+        }
+      }}
     >
       <div className='w-full rounded-2xl text-white h-full relative bg-black overflow-hidden'>
         {/* Main video stream - full screen */}

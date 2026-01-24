@@ -674,6 +674,10 @@ export default function ChatWidget ({
               // Allow touch scrolling and prevent event bubbling
               e.stopPropagation();
             }}
+            onWheel={(e) => {
+              // Allow trackpad/mouse wheel scrolling
+              e.stopPropagation();
+            }}
           >
             {displayedMessages.length === 0 ? (
               !isOverlayMode && (
