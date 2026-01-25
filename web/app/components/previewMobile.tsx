@@ -421,14 +421,14 @@ export default function PreviewMobile ({
               <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10 pointer-events-none">
                 <div className="bg-gradient-to-r from-white/30 to-transparent px-3 py-2 rounded-r-lg animate-pulse">
                   <div className="text-white text-xs font-bold flex items-center">
-                    Ads <span className="ml-1">→</span>
+                    Buy <span className="ml-1">→</span>
                   </div>
                 </div>
               </div>
               <div className="absolute right-0 top-1/2 -translate-y-1/2 z-10 pointer-events-none">
                 <div className="bg-gradient-to-l from-white/30 to-transparent px-3 py-2 rounded-l-lg animate-pulse">
                   <div className="text-white text-xs font-bold flex items-center">
-                    <span className="mr-1">←</span> Products
+                    <span className="mr-1">←</span> Ads
                   </div>
                 </div>
               </div>
