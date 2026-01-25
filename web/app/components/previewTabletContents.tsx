@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import Image from 'next/image'
 import UserStatus from './userStatus'
 import GuideOverlay from './guideOverlay'
 import ChatWidget from '../widget-chat/chatWidget'
@@ -42,11 +43,12 @@ export default function TabletContents ({
     clickPoints: number
   } | null>(null)
   const [cartItems, setCartItems] = useState<any[]>([])
+  const [showCartDialog, setShowCartDialog] = useState(false)
   const pushChannelId = isGuidedDemo ? pushChannelSalesId : pushChannelSelfId
   const defaultWidgetClasses =
     'rounded-lg border-1 border-navy200 bg-white shadow-md'
   
-  // ==================== CART HANDLER ====================
+  // ==================== CART HANDLERS ====================
   const handleAddToCart = (product: any) => {
     // Check if product already in cart
     const existingItem = cartItems.find(item => item.id === product.id)
@@ -59,6 +61,21 @@ export default function TabletContents ({
         imageUrl: product.images?.[0] || null
       })
     }
+  }
+
+  const handleRemoveFromCart = (productId: string) => {
+    setCartItems(cartItems.filter(item => item.id !== productId))
+  }
+
+  const handlePurchase = () => {
+    // Mock purchase - clear cart and show success
+    setCartItems([])
+    setShowCartDialog(false)
+    setNotification({
+      heading: 'Order Confirmed!',
+      message: 'Your order has been placed successfully.',
+      imageUrl: null
+    })
   }
 
   useEffect(() => {
@@ -122,7 +139,13 @@ export default function TabletContents ({
           }}
         />
       )}
-      <TabletHeader displayedScore={uiScore} chat={chat} logout={logout} cartItemCount={cartItems.length} />
+      <TabletHeader 
+        displayedScore={uiScore} 
+        chat={chat} 
+        logout={logout} 
+        cartItemCount={cartItems.length}
+        onCartClick={() => setShowCartDialog(true)}
+      />
       <GuideOverlay
         id={'userPoints'}
         guidesShown={guidesShown}
@@ -291,14 +314,110 @@ export default function TabletContents ({
           </div>
         </div>
       </div>
+
+      {/* ==================== CART DIALOG ==================== */}
+      {showCartDialog && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center" onClick={() => setShowCartDialog(false)}>
+          <div className="bg-white rounded-2xl shadow-2xl w-[600px] max-h-[80vh] flex flex-col" onClick={(e) => e.stopPropagation()}>
+            {/* Header */}
+            <div className="flex justify-between items-center p-6 border-b bg-complex-gray-dark rounded-t-2xl">
+              <h2 className="text-2xl font-bold text-white">Your Cart ({cartItems.length})</h2>
+              <button
+                className="text-white text-3xl hover:text-gray-300 transition"
+                onClick={() => setShowCartDialog(false)}
+              >
+                ✕
+              </button>
+            </div>
+            
+            {/* Cart contents */}
+            <div className="flex-1 overflow-y-auto p-6">
+              {cartItems.length === 0 ? (
+                <div className="text-center py-20">
+                  <div className="text-8xl mb-4 opacity-20">🛒</div>
+                  <p className="text-gray-500 text-lg">Your cart is empty</p>
+                  <button
+                    onClick={() => setShowCartDialog(false)}
+                    className="mt-6 bg-complex-red text-white px-6 py-3 rounded-lg font-medium hover:bg-red-700 transition"
+                  >
+                    Continue Shopping
+                  </button>
+                </div>
+              ) : (
+                <div className="space-y-4">
+                  {cartItems.map((item) => (
+                    <div key={item.id} className="bg-white border-2 border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition">
+                      <div className="flex gap-4">
+                        {item.images && item.images[0] && (
+                          <Image
+                            src={item.images[0]}
+                            alt={item.name}
+                            width={100}
+                            height={100}
+                            className="rounded-lg object-cover"
+                          />
+                        )}
+                        <div className="flex-1">
+                          <h3 className="font-bold text-gray-900 text-lg">{item.name}</h3>
+                          <p className="text-xl text-green-600 font-bold mt-2">
+                            {new Intl.NumberFormat('en-US', { 
+                              style: 'currency', 
+                              currency: item.currency 
+                            }).format(parseFloat(item.price))}
+                          </p>
+                          <button
+                            onClick={() => handleRemoveFromCart(item.id)}
+                            className="text-red-500 text-sm mt-3 underline hover:text-red-700 transition font-medium"
+                          >
+                            Remove from cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+            
+            {/* Footer with total and purchase button */}
+            {cartItems.length > 0 && (
+              <div className="border-t bg-gray-50 p-6 rounded-b-2xl">
+                <div className="flex justify-between items-center mb-6">
+                  <span className="text-xl font-semibold text-gray-700">Total:</span>
+                  <span className="text-3xl font-bold text-green-600">
+                    {new Intl.NumberFormat('en-US', { 
+                      style: 'currency', 
+                      currency: cartItems[0]?.currency || 'USD'
+                    }).format(
+                      cartItems.reduce((sum, item) => sum + parseFloat(item.price) * (item.quantity || 1), 0)
+                    )}
+                  </span>
+                </div>
+                <button
+                  onClick={handlePurchase}
+                  className="w-full bg-complex-red hover:bg-red-700 text-white font-bold py-4 rounded-lg shadow-lg transition text-lg"
+                >
+                  Complete Purchase
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   )
 
-  function TabletHeader ({ displayedScore, chat, logout, cartItemCount }) {
+  function TabletHeader ({ displayedScore, chat, logout, cartItemCount, onCartClick }) {
     return (
       <div className='flex flex-row items-center justify-between w-full px-6 py-[11.5px]'>
         <div className='text-3xl font-bold'>Live Stream</div>
-        <UserStatus displayedScore={displayedScore} chat={chat} logout={logout} cartItemCount={cartItemCount} />
+        <UserStatus 
+          displayedScore={displayedScore} 
+          chat={chat} 
+          logout={logout} 
+          cartItemCount={cartItemCount}
+          onCartClick={onCartClick}
+        />
       </div>
     )
   }

@@ -3,7 +3,7 @@ import { Chat, User } from '@pubnub/chat'
 import Avatar from './avatar'
 import Cup from './icons/cup'
 
-export default function UserStatus ({ chat, logout, displayedScore, cartItemCount = 0 }) {
+export default function UserStatus ({ chat, logout, displayedScore, cartItemCount = 0, onCartClick }) {
   const [currentUser, setCurrentUser] = useState<User | null>(null)
     const [isLoginBypass, setIsLoginBypass] = useState(false)
 
@@ -36,7 +36,10 @@ export default function UserStatus ({ chat, logout, displayedScore, cartItemCoun
     <div className='flex flex-row self-end gap-4 items-center'>
       <div className='flex flex-row gap-3 items-center'>
         {/* Shopping cart icon */}
-        <button className='relative flex items-center justify-center w-10 h-10 rounded-full bg-complex-gray-light hover:bg-complex-gray transition-colors'>
+        <button 
+          onClick={onCartClick}
+          className='relative flex items-center justify-center w-10 h-10 rounded-full bg-complex-gray-light hover:bg-complex-gray transition-colors cursor-pointer'
+        >
           <span className='text-xl'>🛒</span>
           {cartItemCount > 0 && (
             <span className='absolute -top-1 -right-1 bg-complex-red text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center'>
