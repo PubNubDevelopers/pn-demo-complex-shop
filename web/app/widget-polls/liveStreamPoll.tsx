@@ -268,6 +268,11 @@ export default function LiveStreamPoll ({
     };
   }, [chat]);
 
+  // Don't render on mobile preview - mobile uses its own poll UI (slide-up card and fullscreen overlay)
+  if (isMobilePreview) {
+    return null
+  }
+
   if (!currentPoll) {
     return <LivePollNotAvailable />
   }
