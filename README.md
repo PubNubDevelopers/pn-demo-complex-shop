@@ -1,14 +1,14 @@
-# PubNub Live Shopping Solution Demo
+# Complex Live Shopping POC Demo
 
-Solution showcase to demonstrate how PubNub can enhance your live shopping experience.
+POC to demonstrate how PubNub can enable a live shopping experience.
 
 ## Demo
 
-A hosted version of this demo can be found at **[https://pn-solution-live-shopping.netlify.app/](https://pn-solution-live-shopping.netlify.app/)**
+A hosted version of this demo can be found at **[https://pn-demo-complex-shop.netlify.app/](https://pn-demo-complex-shop.netlify.app/)**
 
 ![Screenshot](./media/screen01.png)
 
-> **This demo is primarily designed to be delivered as a guided demo by PubNub's sales team.  Contact support@pubnub.com for more information**
+> **This demo is primarily designed to be delivered as a guided demo by PubNub's sales team. Please contact your Account Manager [Ivan Harding](ivan.harding@pubnub.com) or your Solution Architect [Craig Conover](craig@pubnub.com)**
 
 ## Things to Try as a user:
 
@@ -97,4 +97,4 @@ npm run generator
 
 ## Questions?
 
-Please contact [devrel@pubnub.com](devrel@pubnub.com) or raise an issue in this repository.
+Please contact your Account Manager [Ivan Harding](ivan.harding@pubnub.com) or your Solution Architect [Craig Conover](craig@pubnub.com) or raise an issue in this repository.
