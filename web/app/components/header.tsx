@@ -9,7 +9,8 @@ export default function Header ({
   tabletPreview,
   setTabletPreview,
   guidesShown,
-  setGuidesShown
+  setGuidesShown,
+  showMobileTitle = true
 }) {
   const MenuOpenIcon = props => {
     return (
@@ -114,9 +115,11 @@ export default function Header ({
           <MenuOpenIcon />
         </div>
       </div>
-      <div className='text-complex-white font-bold text-2xl'>
-        Live Shopping Experience
-      </div>
+      {showMobileTitle && (
+        <div className='text-complex-white font-bold text-2xl'>
+          Live Shopping Experience
+        </div>
+      )}
       <div className='flex flex-row gap-4'>
         <div className='flex flex-row'>
           <div
@@ -146,16 +149,18 @@ export default function Header ({
             <TabletIcon />
           </div>
         </div>
-        <div
-          className='flex flex-row gap-2 h-11 rounded-md border-1 border-complex-red px-4 py-2 hover:bg-complex-gray-dark shadow-[0px_4px_18px_0px_rgba(255,_0,_0,_0.8)] text-complex-white items-center cursor-pointer'
-          onClick={e => {
-            setGuidesShown(!guidesShown)
-            e.stopPropagation()
-          }}
-        >
-          {guidesShown && <CloseIcon />}
-          {!guidesShown ? 'How it works' : 'Close guide'}
-        </div>
+        {showMobileTitle && (
+          <div
+            className='flex flex-row gap-2 h-11 rounded-md border-1 border-complex-red px-4 py-2 hover:bg-complex-gray-dark shadow-[0px_4px_18px_0px_rgba(255,_0,_0,_0.8)] text-complex-white items-center cursor-pointer'
+            onClick={e => {
+              setGuidesShown(!guidesShown)
+              e.stopPropagation()
+            }}
+          >
+            {guidesShown && <CloseIcon />}
+            {!guidesShown ? 'How it works' : 'Close guide'}
+          </div>
+        )}
       </div>
     </div>
   )

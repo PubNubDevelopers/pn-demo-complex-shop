@@ -68,6 +68,7 @@ export default function SportsEventPage ({
         setTabletPreview={setTabletPreview}
         guidesShown={guidesShown}
         setGuidesShown={setGuidesShown}
+        showMobileTitle={tabletPreview}
       ></Header>
 
       <div className='sm:hidden flex flex-col mt-10 h-screen justify-center w-full text-center gap-16 text-4xl'>

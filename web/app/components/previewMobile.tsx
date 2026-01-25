@@ -393,8 +393,8 @@ export default function PreviewMobile ({
           </div>
         )}
 
-        {/* Live commentary label - just below header */}
-        <div className="absolute top-16 left-4 right-4 z-30">
+        {/* Live commentary - positioned to the left, not overlaying video */}
+        <div className="absolute top-16 left-2 z-30" style={{ maxWidth: '200px' }}>
           <LiveCommentaryWidget
             className="bg-transparent border-none text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
             isMobilePreview={true}
@@ -408,8 +408,8 @@ export default function PreviewMobile ({
           />
         </div>
 
-        {/* Main video stream - positioned below commentary label */}
-        <div className="absolute left-0 right-0 z-0" style={{ top: showSubtitles ? '320px' : '56px', height: '280px' }}>
+        {/* Main video stream - positioned below header, no overlay */}
+        <div className="absolute left-0 right-0 z-0" style={{ top: '56px', height: '280px' }}>
           {/* Swipe visual cues - show when no overlay is active */}
           {activeOverlay === 'none' && (
             <>
@@ -461,7 +461,7 @@ export default function PreviewMobile ({
             <div 
               className="absolute left-4 right-20 z-20 pointer-events-auto"
               style={{ 
-                top: showSubtitles ? '610px' : '346px',  // Below video
+                top: '346px',  // Below video (fixed position now)
                 bottom: '140px',  // Above input box
                 overflowY: 'auto',
                 overflowX: 'hidden'
