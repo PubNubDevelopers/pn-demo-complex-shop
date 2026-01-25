@@ -56,11 +56,14 @@ export default function PreviewMobile ({
   const [showChat, setShowChat] = useState(true)
   const [chatMessage, setChatMessage] = useState('')
   
-  // Poll state (reusing pattern from liveStreamPoll.tsx)
+  // ==================== POLL STATE ====================
+  // Poll state management - reuses interfaces and patterns from liveStreamPoll.tsx
+  // This provides mobile-specific UI (slide-up cards) around existing poll logic
+  
   interface FeaturedPollOption {
     id: number
     text: string
-    score?: number
+    score?: number  // Vote count, populated from poll results
   }
   
   interface FeaturedPoll {
@@ -68,15 +71,17 @@ export default function PreviewMobile ({
     title: string
     options: FeaturedPollOption[]
     pollType: 'featuredStreamPoll'
-    answered: boolean
-    isPollOpen: boolean
-    userAnswerId?: number
+    answered: boolean      // Has current user voted?
+    isPollOpen: boolean    // Is poll still accepting votes?
+    userAnswerId?: number  // Which option did user vote for?
   }
   
   const [activePoll, setActivePoll] = useState<FeaturedPoll | null>(null)
+  // pollViewState controls mobile UI: hidden (dismissed), minimized (slide-up card), fullscreen (overlay)
   const [pollViewState, setPollViewState] = useState<'hidden' | 'minimized' | 'fullscreen'>('hidden')
   const [userAnswerText, setUserAnswerText] = useState<string | null>(null)
   
+  // Ref allows listener to access latest poll state without re-subscribing
   const activePollRef = useRef(activePoll)
   useEffect(() => {
     activePollRef.current = activePoll
@@ -135,7 +140,9 @@ export default function PreviewMobile ({
     }
   }, [chat])
 
-  // Poll listener (reused from liveStreamPoll.tsx)
+  // ==================== POLL LISTENER ====================
+  // PubNub listener for poll events - reuses exact logic from liveStreamPoll.tsx
+  // Subscribes to: pollDeclarations, pollVotes, pollResults, uiResetChannel
   useEffect(() => {
     if (!chat?.sdk) return
 
@@ -145,7 +152,7 @@ export default function PreviewMobile ({
       message: (messageEvent) => {
         const message = messageEvent.message as any
 
-        // Handle reset
+        // Handle UI reset signal from backend (when stream ends)
         if (messageEvent.channel === uiResetChannel && message.resetLiveStreamPoll === true) {
           setActivePoll(null)
           setUserAnswerText(null)
@@ -153,7 +160,8 @@ export default function PreviewMobile ({
           return
         }
 
-        // Handle new poll declaration
+        // Handle new poll declaration from backend
+        // Auto-shows slide-up when new poll arrives
         if (messageEvent.channel === pollDeclarations && message.pollType === 'featuredStreamPoll') {
           const pollData = message as any
           setActivePoll({
@@ -164,9 +172,10 @@ export default function PreviewMobile ({
             answered: false,
             isPollOpen: true,
           })
-          setPollViewState('minimized') // Auto-show when new poll arrives
+          setPollViewState('minimized') // Auto-show slide-up when new poll arrives
         } 
-        // Handle user's vote
+        // Handle vote messages - only update UI if it's the current user's vote
+        // Uses messageEvent.publisher to identify who voted
         else if (messageEvent.channel === pollVotes && message.pollType === 'featuredStreamPoll' && activePollRef.current && message.pollId === activePollRef.current.id) {
           const choiceId = message.choiceId
           const choice = activePollRef.current.options.find(opt => opt.id === choiceId)
@@ -177,10 +186,10 @@ export default function PreviewMobile ({
               const updatedPoll = prevPoll ? { ...prevPoll, answered: true, userAnswerId: choiceId } : null
               return updatedPoll
             })
-            setPollViewState('minimized') // Show confirmation
+            setPollViewState('minimized') // Show confirmation in slide-up
           }
         } 
-        // Handle poll results
+        // Handle poll results - both interim (live vote counts) and final (isFinal: true)
         else if (messageEvent.channel === pollResults && message.pollType === 'featuredStreamPoll' && activePollRef.current && message.id === activePollRef.current.id) {
           const resultsData = message as any
           setActivePoll(prevPoll => {
@@ -196,21 +205,23 @@ export default function PreviewMobile ({
             }
 
             let pollStillOpen = prevPoll.isPollOpen
+            // isFinal: true means poll has ended, show results
             if (resultsData.isFinal === true) {
               pollStillOpen = false
-              setPollViewState('minimized') // Show results when poll ends
+              setPollViewState('minimized') // Show results slide-up
             }
 
             const updatedPoll = {
               ...prevPoll,
               options: newOptions,
               isPollOpen: pollStillOpen,
+              // Mark as answered when poll closes to show results
               answered: !pollStillOpen ? true : prevPoll.answered
             }
             return updatedPoll
           })
           
-          // Auto-hide results after 5 seconds
+          // Auto-hide results after 5 seconds so they don't block the video
           if (resultsData.isFinal === true) {
             setTimeout(() => {
               setPollViewState('hidden')
@@ -271,7 +282,9 @@ export default function PreviewMobile ({
     }
   }
 
-  // Handle poll vote (reused from liveStreamPoll.tsx)
+  // ==================== POLL VOTE HANDLER ====================
+  // Publishes user's vote to PubNub - reuses exact publish pattern from liveStreamPoll.tsx
+  // The listener above will receive this vote and update the UI
   const handlePollVote = (pollId: number, choiceId: number) => {
     if (!chat?.sdk || !activePoll || activePoll.answered) return
     
@@ -416,7 +429,9 @@ export default function PreviewMobile ({
           </div>
         </button>
 
-        {/* Poll icon button - shows when poll is active but dismissed */}
+        {/* ==================== POLL ICON BUTTON ====================
+            Shows when poll is active but user dismissed it
+            Allows user to re-open the poll slide-up */}
         {pollViewState === 'hidden' && activePoll && activePoll.isPollOpen && (
           <button
             className="absolute bottom-4 left-16 z-20 bg-black/50 text-white p-2 rounded-full backdrop-blur-sm animate-pulse"
@@ -428,7 +443,10 @@ export default function PreviewMobile ({
           </button>
         )}
 
-        {/* Poll slide-up card */}
+        {/* ==================== POLL SLIDE-UP CARD ====================
+            Compact card that slides up from bottom
+            Shows: poll title, option count, dismiss/expand buttons
+            Also used for showing vote confirmation and results */}
         <AnimatePresence>
           {pollViewState === 'minimized' && activePoll && (
             <motion.div
@@ -649,7 +667,10 @@ export default function PreviewMobile ({
             </motion.div>
           )}
 
-          {/* Poll full-screen overlay */}
+          {/* ==================== POLL FULL-SCREEN OVERLAY ====================
+              Full-screen poll interface for voting and viewing results
+              Slides up from bottom like products/reviews overlays
+              Reuses voting logic from liveStreamPoll.tsx */}
           {pollViewState === 'fullscreen' && activePoll && (
             <motion.div
               initial={{ y: '100%' }}
