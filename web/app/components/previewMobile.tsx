@@ -51,11 +51,14 @@ export default function PreviewMobile ({
   } | null>(null)
   
   // New states for overlay management
-  const [activeOverlay, setActiveOverlay] = useState<'none' | 'reviews' | 'products'>('none')
+  const [activeOverlay, setActiveOverlay] = useState<'none' | 'reviews' | 'products' | 'cart'>('none')
   const [showSubtitles, setShowSubtitles] = useState(true)
   const [showChat, setShowChat] = useState(true)
   const [chatMessage, setChatMessage] = useState('')
   const [showLogoutDialog, setShowLogoutDialog] = useState(false)
+  const [cartItems, setCartItems] = useState<any[]>([])
+  const [showAddedToast, setShowAddedToast] = useState(false)
+  const [muted, setMuted] = useState(true) // Mobile video starts muted for autoplay
   
   // ==================== POLL STATE ====================
   // Poll state management - reuses interfaces and patterns from liveStreamPoll.tsx
@@ -299,6 +302,32 @@ export default function PreviewMobile ({
     })
   }
 
+  // ==================== CART HANDLER ====================
+  const handleAddToCart = (product: any) => {
+    // Check if product already in cart
+    const existingItem = cartItems.find(item => item.id === product.id)
+    if (!existingItem) {
+      setCartItems([...cartItems, { ...product, quantity: 1 }])
+      setShowAddedToast(true)
+      setTimeout(() => setShowAddedToast(false), 2000)
+    }
+  }
+
+  const handleRemoveFromCart = (productId: string) => {
+    setCartItems(cartItems.filter(item => item.id !== productId))
+  }
+
+  const handlePurchase = () => {
+    // Mock purchase - just clear cart and show success
+    setCartItems([])
+    setActiveOverlay('none')
+    setNotification({
+      heading: 'Order Confirmed!',
+      message: 'Your order has been placed successfully.',
+      imageUrl: null
+    })
+  }
+
   return (
     <div
       className={`${className} w-[460px] border-4 border-navy200 rounded-3xl bg-black px-2 py-[14px] h-full max-h-[954px]`}
@@ -319,6 +348,26 @@ export default function PreviewMobile ({
       }}
     >
       <div className='w-full rounded-2xl text-white h-full relative bg-black overflow-hidden'>
+        {/* Swipe visual cues - show when no overlay is active */}
+        {activeOverlay === 'none' && (
+          <>
+            <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10 pointer-events-none">
+              <div className="bg-gradient-to-r from-white/30 to-transparent px-3 py-2 rounded-r-lg animate-pulse">
+                <div className="text-white text-xs font-bold flex items-center">
+                  Ads <span className="ml-1">→</span>
+                </div>
+              </div>
+            </div>
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 z-10 pointer-events-none">
+              <div className="bg-gradient-to-l from-white/30 to-transparent px-3 py-2 rounded-l-lg animate-pulse">
+                <div className="text-white text-xs font-bold flex items-center">
+                  <span className="mr-1">←</span> Products
+                </div>
+              </div>
+            </div>
+          </>
+        )}
+        
         {/* Main video stream - full screen */}
         <StreamWidget
           className="absolute inset-0 z-0"
@@ -328,6 +377,7 @@ export default function PreviewMobile ({
           guidesShown={guidesShown}
           visibleGuide={visibleGuide}
           setVisibleGuide={setVisibleGuide}
+          muted={muted}
           awardPoints={async (points, message) => {
             const newScore = await AwardPoints(
               chat,
@@ -348,6 +398,8 @@ export default function PreviewMobile ({
             displayedScore={uiScore} 
             chat={chat} 
             onProfileClick={() => setShowLogoutDialog(true)}
+            cartItemCount={cartItems.length}
+            onCartClick={() => setActiveOverlay('cart')}
           />
         </div>
 
@@ -378,23 +430,28 @@ export default function PreviewMobile ({
           </div>
         )}
 
-        {/* Live commentary as subtitles - moved to top
-            Only render commentary content when showSubtitles is true */}
-        {showSubtitles && (
-          <div className="absolute top-16 left-4 right-4 z-30">
-            <LiveCommentaryWidget
-              className="bg-transparent border-none text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
-              isMobilePreview={true}
-              chat={chat}
-              guidesShown={guidesShown}
-              visibleGuide={visibleGuide}
-              setVisibleGuide={setVisibleGuide}
-              showCommentaryIcon={true}
-              commentaryEnabled={showSubtitles}
-              onToggleCommentary={() => setShowSubtitles(!showSubtitles)}
-            />
+        {/* Add to cart toast notification */}
+        {showAddedToast && (
+          <div className="absolute top-20 left-1/2 -translate-x-1/2 z-50 bg-green-500 text-white px-6 py-3 rounded-full shadow-lg font-medium animate-fade-in-up">
+            ✓ Added to cart
           </div>
         )}
+
+        {/* Live commentary as subtitles - moved to top
+            Always render the widget, but control content visibility via commentaryEnabled prop */}
+        <div className="absolute top-16 left-4 right-4 z-30">
+          <LiveCommentaryWidget
+            className="bg-transparent border-none text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
+            isMobilePreview={true}
+            chat={chat}
+            guidesShown={guidesShown}
+            visibleGuide={visibleGuide}
+            setVisibleGuide={setVisibleGuide}
+            showCommentaryIcon={true}
+            commentaryEnabled={showSubtitles}
+            onToggleCommentary={() => setShowSubtitles(!showSubtitles)}
+          />
+        </div>
 
         {/* Chat overlay - bottom left */}
         {showChat && (
@@ -464,18 +521,17 @@ export default function PreviewMobile ({
           </div>
         </button>
 
-        {/* Commentary toggle button - shows when commentary is hidden */}
-        {!showSubtitles && (
-          <button
-            className="absolute top-16 left-4 z-30 bg-black/50 text-white p-2 rounded-full backdrop-blur-sm"
-            onClick={() => setShowSubtitles(true)}
-          >
-            <div className="w-6 h-6 flex items-center justify-center text-lg relative">
-              <span className="opacity-50">📢</span>
-              <span className="absolute inset-0 flex items-center justify-center text-complex-red text-2xl font-bold">⨯</span>
-            </div>
-          </button>
-        )}
+
+        {/* ==================== MUTE TOGGLE BUTTON ====================
+            Volume control for mobile video - bottom right corner */}
+        <button
+          className="absolute bottom-4 right-16 z-20 bg-black/50 text-white p-2 rounded-full backdrop-blur-sm hover:bg-black/70 transition"
+          onClick={() => setMuted(!muted)}
+        >
+          <div className="w-6 h-6 flex items-center justify-center text-lg">
+            {muted ? '🔇' : '🔊'}
+          </div>
+        </button>
 
         {/* ==================== POLL ICON BUTTON ====================
             Shows on right side when a poll exists
@@ -682,8 +738,8 @@ export default function PreviewMobile ({
                     ✕
                   </button>
                 </div>
-                <div className="shrink-0">
-                  <RandomAdDisplay onAdClick={handleAdClick} />
+                <div className="flex-1 overflow-y-auto p-4">
+                  <AllAdsDisplay onAdClick={handleAdClick} />
                 </div>
               </div>
             </motion.div>
@@ -716,8 +772,101 @@ export default function PreviewMobile ({
                     guidesShown={guidesShown}
                     visibleGuide={visibleGuide}
                     setVisibleGuide={setVisibleGuide}
+                    onAddToCart={handleAddToCart}
                   />
                 </div>
+              </div>
+            </motion.div>
+          )}
+
+          {/* ==================== CART OVERLAY ====================
+              Shopping cart with items, quantities, and mock checkout */}
+          {activeOverlay === 'cart' && (
+            <motion.div
+              initial={{ y: '100%' }}
+              animate={{ y: 0 }}
+              exit={{ y: '100%' }}
+              transition={{ type: 'tween', duration: 0.3 }}
+              className="absolute inset-0 z-50 bg-white rounded-2xl"
+            >
+              <div className="h-full flex flex-col">
+                <div className="flex justify-between items-center p-4 border-b bg-complex-gray-dark relative z-10 shrink-0">
+                  <h2 className="text-xl font-bold text-white">Your Cart ({cartItems.length})</h2>
+                  <button
+                    className="text-white text-2xl p-2 rounded-full min-w-fit"
+                    onClick={() => setActiveOverlay('none')}
+                  >
+                    ✕
+                  </button>
+                </div>
+                
+                <div className="flex-1 overflow-y-auto p-4">
+                  {cartItems.length === 0 ? (
+                    <div className="text-center py-20">
+                      <div className="text-6xl mb-4 opacity-30">🛒</div>
+                      <p className="text-gray-500">Your cart is empty</p>
+                      <button
+                        onClick={() => setActiveOverlay('products')}
+                        className="mt-4 bg-complex-red text-white px-6 py-2 rounded-lg font-medium"
+                      >
+                        Browse Products
+                      </button>
+                    </div>
+                  ) : (
+                    <div className="space-y-4">
+                      {cartItems.map((item) => (
+                        <div key={item.id} className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                          <div className="flex gap-4">
+                            <Image
+                              src={item.imageUrl}
+                              alt={item.name}
+                              width={80}
+                              height={80}
+                              className="rounded-lg object-cover"
+                            />
+                            <div className="flex-1">
+                              <h3 className="font-semibold text-gray-900">{item.name}</h3>
+                              <p className="text-lg text-green-600 font-semibold mt-1">
+                                {new Intl.NumberFormat('en-US', { 
+                                  style: 'currency', 
+                                  currency: item.currency 
+                                }).format(parseFloat(item.price))}
+                              </p>
+                              <button
+                                onClick={() => handleRemoveFromCart(item.id)}
+                                className="text-red-500 text-sm mt-2 underline"
+                              >
+                                Remove
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+                
+                {cartItems.length > 0 && (
+                  <div className="border-t bg-gray-50 p-4 shrink-0">
+                    <div className="flex justify-between items-center mb-4">
+                      <span className="text-lg font-semibold">Total:</span>
+                      <span className="text-2xl font-bold text-green-600">
+                        {new Intl.NumberFormat('en-US', { 
+                          style: 'currency', 
+                          currency: cartItems[0]?.currency || 'USD'
+                        }).format(
+                          cartItems.reduce((sum, item) => sum + parseFloat(item.price) * (item.quantity || 1), 0)
+                        )}
+                      </span>
+                    </div>
+                    <button
+                      onClick={handlePurchase}
+                      className="w-full bg-complex-red hover:bg-red-700 text-white font-bold py-4 rounded-lg shadow-lg transition"
+                    >
+                      Complete Purchase
+                    </button>
+                  </div>
+                )}
               </div>
             </motion.div>
           )}
@@ -819,7 +968,7 @@ export default function PreviewMobile ({
     </div>
   )
 
-  function MobileHeader ({ displayedScore, chat, onProfileClick }) {
+  function MobileHeader ({ displayedScore, chat, onProfileClick, cartItemCount, onCartClick }) {
     const profileUrl = chat?.currentUser?.profileUrl
     const userName = chat?.currentUser?.name?.split(' ')[0] || 'User'
     
@@ -844,35 +993,51 @@ export default function PreviewMobile ({
             </div>
           </div>
         </div>
+        
+        {/* Right side - Cart button */}
+        <button
+          onClick={onCartClick}
+          className="relative bg-black/50 text-white p-2 rounded-full backdrop-blur-sm hover:bg-black/70 transition"
+        >
+          <div className="w-6 h-6 flex items-center justify-center text-xl">
+            🛒
+          </div>
+          {cartItemCount > 0 && (
+            <div className="absolute -top-1 -right-1 bg-complex-red text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+              {cartItemCount}
+            </div>
+          )}
+        </button>
       </div>
     )
   }
 
-  function RandomAdDisplay({ onAdClick }) {
-    const randomAd = getRandomAd()
+  function AllAdsDisplay({ onAdClick }) {
+    const { ads } = require('../data/constants')
     
-    if (!randomAd) return null
-
     return (
-      <div className="p-4 border-t bg-gray-50">
-        <div className="text-xs text-gray-500 mb-2 text-center">Sponsored</div>
-        <div 
-          className="relative cursor-pointer"
-          onClick={() => onAdClick(randomAd.clickPoints || 0)}
-        >
-          <Image
-            src={randomAd.src}
-            alt="Advertisement"
-            width={402}
-            height={150}
-            className="rounded-lg shadow-sm w-full object-cover"
-          />
-          {randomAd.clickPoints > 0 && (
-            <div className="absolute top-2 right-2 bg-yellow-400 text-black text-xs px-2 py-1 rounded-full font-bold">
-              +{randomAd.clickPoints} pts
-            </div>
-          )}
-        </div>
+      <div className="space-y-4">
+        <div className="text-xs text-gray-500 mb-4 text-center">Sponsored Content</div>
+        {ads.map((ad, index) => (
+          <div 
+            key={ad.id}
+            className="relative cursor-pointer border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+            onClick={() => onAdClick(ad.clickPoints || 0)}
+          >
+            <Image
+              src={ad.src}
+              alt={`Advertisement ${index + 1}`}
+              width={402}
+              height={150}
+              className="w-full object-cover"
+            />
+            {ad.clickPoints > 0 && (
+              <div className="absolute top-2 right-2 bg-yellow-400 text-black text-xs px-2 py-1 rounded-full font-bold">
+                +{ad.clickPoints} pts
+              </div>
+            )}
+          </div>
+        ))}
       </div>
     )
   }

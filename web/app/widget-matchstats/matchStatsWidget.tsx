@@ -52,7 +52,8 @@ export default function MatchStatsWidget ({
   isGuidedDemo,
   guidesShown,
   visibleGuide,
-  setVisibleGuide
+  setVisibleGuide,
+  onAddToCart
 }) {
   const [featuredProduct, setFeaturedProduct] = useState<Product | null>(null);
   const [isProductDetailsVisible, setIsProductDetailsVisible] = useState(false);
@@ -220,7 +221,16 @@ export default function MatchStatsWidget ({
             </div>
           )}
 
-          {featuredProduct.callToAction && (
+          {onAddToCart && isMobilePreview && (
+            <button
+              onClick={() => onAddToCart(featuredProduct)}
+              className="mt-6 bg-complex-red hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-150 ease-in-out w-full text-center"
+            >
+              Add to Cart
+            </button>
+          )}
+          
+          {!isMobilePreview && featuredProduct.callToAction && (
             <a 
               href={featuredProduct.callToAction.link} 
               target="_blank" 

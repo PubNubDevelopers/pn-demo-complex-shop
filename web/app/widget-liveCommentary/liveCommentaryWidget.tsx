@@ -117,24 +117,26 @@ export default function LiveCommentaryWidget ({
         flexStyle={'flex-row items-start'}
       />
 
-      {!scrolledToBottom && (
+      {commentaryEnabled && !scrolledToBottom && (
         <SkipToLatestButton liveCommentaryScrollRef={liveCommentaryScrollRef} />
       )}
-      <div
-        className='flex flex-col gap-3 min-h-64 max-h-64 overflow-y-auto overscroll-none'
-        onScroll={handleScroll}
-        ref={liveCommentaryScrollRef}
-      >
-        {messages.map(message => {
-          return (
-            <CommentaryRow
-              key={message.timetoken}
-              text={message.message.text}
-              timeCode={message.message.timeCode}
-            />
-          )
-        })}
-      </div>
+      {commentaryEnabled && (
+        <div
+          className='flex flex-col gap-3 min-h-64 max-h-64 overflow-y-auto overscroll-none'
+          onScroll={handleScroll}
+          ref={liveCommentaryScrollRef}
+        >
+          {messages.map(message => {
+            return (
+              <CommentaryRow
+                key={message.timetoken}
+                text={message.message.text}
+                timeCode={message.message.timeCode}
+              />
+            )
+          })}
+        </div>
+      )}
     </div>
   )
 }

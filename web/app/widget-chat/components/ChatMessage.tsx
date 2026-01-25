@@ -119,7 +119,7 @@ export default function ChatMessage ({
 
   return (
     <div
-      className={`mb-6 flex ${isOwnMessage ? 'justify-end' : 'justify-start'}`}
+      className={`mb-1.5 flex ${isOwnMessage ? 'justify-end' : 'justify-start'}`}
     >
       {!isOwnMessage && (
         <div

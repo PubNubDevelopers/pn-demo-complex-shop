@@ -694,9 +694,7 @@ export default function ChatWidget ({
               )
             ) : (
               <>
-                {displayedMessages
-                  .slice(isOverlayMode ? -3 : 0) // Show only last 3 messages in overlay mode
-                  .map((message, index) => {
+                {displayedMessages.map((message, index) => {
                     return (
                       <div
                         key={`${message.timetoken}-${index}`}

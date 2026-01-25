@@ -93,7 +93,7 @@ export default function Header ({
   return (
     <div className='hidden sm:flex flex-row w-full justify-between h-[92px] select-none fixed items-center px-6 bg-complex-black'>
       <div className='flex flex-row gap-6 items-center'>
-        <div className='bg-white h-[52px] rounded-lg place-content-center p-3'>
+        <div className='bg-white h-[52px] rounded-lg flex items-center justify-center p-3'>
           <Image
             src='/logo-trans-bg.png'
             alt='Complex Logo'

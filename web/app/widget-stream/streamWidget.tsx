@@ -24,7 +24,8 @@ export default function StreamWidget ({
   guidesShown,
   visibleGuide,
   setVisibleGuide,
-  awardPoints
+  awardPoints,
+  muted: mutedProp
 }) {
   const [occupancy, setOccupancy] = useState(0)
   const [realOccupancy, setRealOccupancy] = useState(0)
@@ -58,6 +59,9 @@ export default function StreamWidget ({
   const [requestedVideoProgress, setRequestedVideoProgress] = useState(0)
   const [muted, setMuted] = useState(true)
   const playerRef = useRef<ReactPlayer>(null)
+  
+  // Use prop for mobile, internal state for desktop
+  const effectiveMuted = isMobilePreview && mutedProp !== undefined ? mutedProp : muted
 
   useEffect(() => {
     //  Handle all types of message other than video control
@@ -301,28 +305,24 @@ export default function StreamWidget ({
         >
           {isVideoPlaying == true ? (
             isMobilePreview ? (
-              <div className='pointer-events-none w-full aspect-[9/16] max-w-full overflow-hidden' style={{ transform: 'scale(3)', transformOrigin: 'center' }}>
-                <div style={{ width: '100%', height: 'calc(100% + 15px)', overflow: 'hidden' }}>
-                  <div style={{ width: '100%', height: '100%', transform: 'translateY(-15px)' }}>
-                    <ReactPlayer
-                      ref={playerRef}
-                      url={videoUrl}
-                      playing={isVideoPlaying}
-                      controls={false}
-                      width={'100%'}
-                      height={'100%'}
-                      loop={false}
-                      muted={true}
-                      pip={false}
-                      onReady={ev => onVideoReady(ev)}
-                      onStart={() => onVideoStart()}
-                      onPlay={() => onVideoPlay()}
-                      onProgress={ev => onVideoProgress(ev)}
-                      progressInterval={1000}
-                      style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-                    />
-                  </div>
-                </div>
+              <div className='pointer-events-none w-full h-full overflow-hidden bg-black'>
+                <ReactPlayer
+                  ref={playerRef}
+                  url={videoUrl}
+                  playing={isVideoPlaying}
+                  controls={false}
+                  width={'100%'}
+                  height={'100%'}
+                  loop={false}
+                  muted={effectiveMuted}
+                  pip={false}
+                  onReady={ev => onVideoReady(ev)}
+                  onStart={() => onVideoStart()}
+                  onPlay={() => onVideoPlay()}
+                  onProgress={ev => onVideoProgress(ev)}
+                  progressInterval={1000}
+                  style={{ objectFit: 'contain', width: '100%', height: '100%' }}
+                />
               </div>
             ) : (
               <div className='pointer-events-none'>
@@ -334,7 +334,7 @@ export default function StreamWidget ({
                   width={698}
                   height={393}
                   loop={false}
-                  muted={muted}
+                  muted={effectiveMuted}
                   pip={false}
                   onReady={ev => onVideoReady(ev)}
                   onStart={() => onVideoStart()}

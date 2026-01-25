@@ -140,6 +140,7 @@ export default function TabletContents ({
               guidesShown={guidesShown}
               visibleGuide={visibleGuide}
               setVisibleGuide={setVisibleGuide}
+              muted={undefined}
               awardPoints={async (points, message) => {
                 const newScore = await AwardPoints(
                   chat,
@@ -161,6 +162,7 @@ export default function TabletContents ({
               guidesShown={guidesShown}
               visibleGuide={visibleGuide}
               setVisibleGuide={setVisibleGuide}
+              onAddToCart={undefined}
             />
             <AdvertsWidget
               className={`${defaultWidgetClasses}`}
