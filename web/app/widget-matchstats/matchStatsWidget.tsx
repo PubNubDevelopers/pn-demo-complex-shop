@@ -221,24 +221,13 @@ export default function MatchStatsWidget ({
             </div>
           )}
 
-          {onAddToCart && isMobilePreview && (
+          {onAddToCart && (
             <button
               onClick={() => onAddToCart(featuredProduct)}
               className="mt-6 bg-complex-red hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-150 ease-in-out w-full text-center"
             >
               Add to Cart
             </button>
-          )}
-          
-          {!isMobilePreview && featuredProduct.callToAction && (
-            <a 
-              href={featuredProduct.callToAction.link} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="pointer-events-none mt-6 inline-block bg-navy600 hover:bg-navy700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-150 ease-in-out w-full text-center no-underline"
-            >
-              {featuredProduct.callToAction.text}
-            </a>
           )}
         </div>
       ) : (

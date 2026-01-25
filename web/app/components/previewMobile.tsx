@@ -308,8 +308,12 @@ export default function PreviewMobile ({
     const existingItem = cartItems.find(item => item.id === product.id)
     if (!existingItem) {
       setCartItems([...cartItems, { ...product, quantity: 1 }])
-      setShowAddedToast(true)
-      setTimeout(() => setShowAddedToast(false), 2000)
+      // Show notification instead of toast
+      setNotification({
+        heading: 'Added to Cart',
+        message: `${product.name} has been added to your cart`,
+        imageUrl: product.images?.[0] || null
+      })
     }
   }
 

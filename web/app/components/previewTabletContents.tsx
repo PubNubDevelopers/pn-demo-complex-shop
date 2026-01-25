@@ -41,9 +41,25 @@ export default function TabletContents ({
     adId: string
     clickPoints: number
   } | null>(null)
+  const [cartItems, setCartItems] = useState<any[]>([])
   const pushChannelId = isGuidedDemo ? pushChannelSalesId : pushChannelSelfId
   const defaultWidgetClasses =
     'rounded-lg border-1 border-navy200 bg-white shadow-md'
+  
+  // ==================== CART HANDLER ====================
+  const handleAddToCart = (product: any) => {
+    // Check if product already in cart
+    const existingItem = cartItems.find(item => item.id === product.id)
+    if (!existingItem) {
+      setCartItems([...cartItems, { ...product, quantity: 1 }])
+      // Show notification when item is added
+      setNotification({
+        heading: 'Added to Cart',
+        message: `${product.name} has been added to your cart`,
+        imageUrl: product.images?.[0] || null
+      })
+    }
+  }
 
   useEffect(() => {
     if (chat && chat.currentUser && chat.currentUser.custom && typeof chat.currentUser.custom.score === 'number') {
@@ -106,7 +122,7 @@ export default function TabletContents ({
           }}
         />
       )}
-      <TabletHeader displayedScore={uiScore} chat={chat} logout={logout} />
+      <TabletHeader displayedScore={uiScore} chat={chat} logout={logout} cartItemCount={cartItems.length} />
       <GuideOverlay
         id={'userPoints'}
         guidesShown={guidesShown}
@@ -162,7 +178,7 @@ export default function TabletContents ({
               guidesShown={guidesShown}
               visibleGuide={visibleGuide}
               setVisibleGuide={setVisibleGuide}
-              onAddToCart={undefined}
+              onAddToCart={handleAddToCart}
             />
             <AdvertsWidget
               className={`${defaultWidgetClasses}`}
@@ -278,11 +294,11 @@ export default function TabletContents ({
     </div>
   )
 
-  function TabletHeader ({ displayedScore, chat, logout }) {
+  function TabletHeader ({ displayedScore, chat, logout, cartItemCount }) {
     return (
       <div className='flex flex-row items-center justify-between w-full px-6 py-[11.5px]'>
         <div className='text-3xl font-bold'>Live Stream</div>
-        <UserStatus displayedScore={displayedScore} chat={chat} logout={logout} />
+        <UserStatus displayedScore={displayedScore} chat={chat} logout={logout} cartItemCount={cartItemCount} />
       </div>
     )
   }
