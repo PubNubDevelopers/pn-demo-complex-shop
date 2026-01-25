@@ -662,20 +662,30 @@ export default function ChatWidget ({
           <div
             ref={messagesContainerRef}
             className={`${isOverlayMode 
-              ? 'overflow-y-scroll h-full space-y-1 touch-pan-y' 
+              ? 'overflow-y-scroll h-full space-y-1' 
               : 'py-[12px] px-[16px] overflow-y-auto flex-grow hide-scrollbar'
             }`}
             style={isOverlayMode ? { 
               WebkitOverflowScrolling: 'touch',
               overscrollBehavior: 'contain',
-              touchAction: 'pan-y'
+              touchAction: 'pan-y',
+              scrollbarWidth: 'thin',
+              scrollbarColor: 'rgba(255,255,255,0.3) transparent'
             } : {}}
+            onTouchStart={(e) => {
+              // Mark that touch scrolling is happening
+              e.currentTarget.setAttribute('data-scrolling', 'true');
+            }}
+            onTouchEnd={(e) => {
+              // Clear scrolling flag
+              e.currentTarget.removeAttribute('data-scrolling');
+            }}
             onTouchMove={(e) => {
               // Allow touch scrolling and prevent event bubbling
               e.stopPropagation();
             }}
             onWheel={(e) => {
-              // Allow trackpad/mouse wheel scrolling
+              // Allow trackpad/mouse wheel scrolling (for desktop with mobile layout)
               e.stopPropagation();
             }}
           >

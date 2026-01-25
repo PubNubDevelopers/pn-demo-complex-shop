@@ -453,16 +453,21 @@ export default function PreviewMobile ({
           />
         </div>
 
-        {/* Chat overlay - bottom left */}
+        {/* Chat overlay - constrained between commentary and input */}
         {showChat && (
           <>
+            {/* Chat messages container - scrollable, constrained height */}
             <div 
-              className="absolute bottom-32 left-4 right-20 z-20 pointer-events-auto" 
-              style={{ maxHeight: '384px' }}
+              className="absolute left-4 right-20 z-20 pointer-events-auto overflow-hidden"
+              style={{ 
+                top: showSubtitles ? '280px' : '70px',  // Below commentary or below header
+                bottom: '140px',  // Above input box
+                maxHeight: '400px'
+              }}
               data-chat-scroll
             >
               <ChatWidget
-                className="bg-transparent border-none shadow-none"
+                className="bg-transparent border-none shadow-none h-full"
                 isMobilePreview={true}
                 chat={chat}
                 isGuidedDemo={isGuidedDemo}
