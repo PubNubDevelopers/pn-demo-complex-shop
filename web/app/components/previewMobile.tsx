@@ -348,52 +348,8 @@ export default function PreviewMobile ({
       }}
     >
       <div className='w-full rounded-2xl text-white h-full relative bg-black overflow-hidden'>
-        {/* Swipe visual cues - show when no overlay is active */}
-        {activeOverlay === 'none' && (
-          <>
-            <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10 pointer-events-none">
-              <div className="bg-gradient-to-r from-white/30 to-transparent px-3 py-2 rounded-r-lg animate-pulse">
-                <div className="text-white text-xs font-bold flex items-center">
-                  Ads <span className="ml-1">→</span>
-                </div>
-              </div>
-            </div>
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 z-10 pointer-events-none">
-              <div className="bg-gradient-to-l from-white/30 to-transparent px-3 py-2 rounded-l-lg animate-pulse">
-                <div className="text-white text-xs font-bold flex items-center">
-                  <span className="mr-1">←</span> Products
-                </div>
-              </div>
-            </div>
-          </>
-        )}
-        
-        {/* Main video stream - full screen */}
-        <StreamWidget
-          className="absolute inset-0 z-0"
-          isMobilePreview={true}
-          chat={chat}
-          isGuidedDemo={isGuidedDemo}
-          guidesShown={guidesShown}
-          visibleGuide={visibleGuide}
-          setVisibleGuide={setVisibleGuide}
-          muted={muted}
-          awardPoints={async (points, message) => {
-            const newScore = await AwardPoints(
-              chat,
-              points,
-              message,
-              uiScore,
-              showNewPointsAlert
-            );
-            if (typeof newScore === 'number') {
-              setUiScore(newScore);
-            }
-          }}
-        />
-
         {/* Clean top header - Always visible */}
-        <div className="absolute top-0 left-0 right-0 z-30 p-4">
+        <div className="absolute top-0 left-0 right-0 z-30 p-4 bg-gradient-to-b from-black/80 to-transparent">
           <MobileHeader 
             displayedScore={uiScore} 
             chat={chat} 
@@ -437,8 +393,7 @@ export default function PreviewMobile ({
           </div>
         )}
 
-        {/* Live commentary as subtitles - moved to top
-            Always render the widget, but control content visibility via commentaryEnabled prop */}
+        {/* Live commentary label - just below header */}
         <div className="absolute top-16 left-4 right-4 z-30">
           <LiveCommentaryWidget
             className="bg-transparent border-none text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
@@ -453,16 +408,63 @@ export default function PreviewMobile ({
           />
         </div>
 
-        {/* Chat overlay - constrained between commentary and input */}
+        {/* Main video stream - positioned below commentary label */}
+        <div className="absolute left-0 right-0 z-0" style={{ top: showSubtitles ? '320px' : '56px', height: '280px' }}>
+          {/* Swipe visual cues - show when no overlay is active */}
+          {activeOverlay === 'none' && (
+            <>
+              <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10 pointer-events-none">
+                <div className="bg-gradient-to-r from-white/30 to-transparent px-3 py-2 rounded-r-lg animate-pulse">
+                  <div className="text-white text-xs font-bold flex items-center">
+                    Ads <span className="ml-1">→</span>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute right-0 top-1/2 -translate-y-1/2 z-10 pointer-events-none">
+                <div className="bg-gradient-to-l from-white/30 to-transparent px-3 py-2 rounded-l-lg animate-pulse">
+                  <div className="text-white text-xs font-bold flex items-center">
+                    <span className="mr-1">←</span> Products
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
+          
+          <StreamWidget
+            className="w-full h-full"
+            isMobilePreview={true}
+            chat={chat}
+            isGuidedDemo={isGuidedDemo}
+            guidesShown={guidesShown}
+            visibleGuide={visibleGuide}
+            setVisibleGuide={setVisibleGuide}
+            muted={muted}
+            awardPoints={async (points, message) => {
+              const newScore = await AwardPoints(
+                chat,
+                points,
+                message,
+                uiScore,
+                showNewPointsAlert
+              );
+              if (typeof newScore === 'number') {
+                setUiScore(newScore);
+              }
+            }}
+          />
+        </div>
+
+        {/* Chat overlay - positioned below video, above input */}
         {showChat && (
           <>
-            {/* Chat messages container - scrollable, constrained height */}
+            {/* Chat messages container - scrollable, constrained between video and input */}
             <div 
-              className="absolute left-4 right-20 z-20 pointer-events-auto overflow-hidden"
+              className="absolute left-4 right-20 z-20 pointer-events-auto"
               style={{ 
-                top: showSubtitles ? '280px' : '70px',  // Below commentary or below header
+                top: showSubtitles ? '610px' : '346px',  // Below video
                 bottom: '140px',  // Above input box
-                maxHeight: '400px'
+                overflowY: 'auto',
+                overflowX: 'hidden'
               }}
               data-chat-scroll
             >
