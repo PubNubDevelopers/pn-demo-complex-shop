@@ -725,7 +725,7 @@ export default function PreviewMobile ({
         </div>
 
         {notification && (
-          <div className="absolute top-20 left-4 right-4 z-20">
+          <div className="absolute top-20 left-4 right-4 z-[60]">
             <Notification
               heading={notification.heading}
               message={notification.message}
