@@ -21,8 +21,9 @@ export default function Home () {
       ? process.env.NEXT_PUBLIC_GUIDED_DEMO
       : null
     setGuidedDemo(isGuidedDemo === 'true')
-    setSalesIntroPageShown(isGuidedDemo === 'true')
-    setLoginPageShown(!(isGuidedDemo === 'true'))
+    // Skip sales intro page - go directly to login
+    setSalesIntroPageShown(false)
+    setLoginPageShown(true)
   }, [])
 
   if (salesIntroPageShown) {
