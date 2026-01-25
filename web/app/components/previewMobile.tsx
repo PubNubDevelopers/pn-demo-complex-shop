@@ -55,6 +55,7 @@ export default function PreviewMobile ({
   const [showSubtitles, setShowSubtitles] = useState(true)
   const [showChat, setShowChat] = useState(true)
   const [chatMessage, setChatMessage] = useState('')
+  const [showLogoutDialog, setShowLogoutDialog] = useState(false)
   
   // ==================== POLL STATE ====================
   // Poll state management - reuses interfaces and patterns from liveStreamPoll.tsx
@@ -343,23 +344,57 @@ export default function PreviewMobile ({
 
         {/* Clean top header - Always visible */}
         <div className="absolute top-0 left-0 right-0 z-30 p-4">
-          <MobileHeader displayedScore={uiScore} chat={chat} />
-        </div>
-
-        {/* Live commentary as subtitles - moved to top */}
-        <div className="absolute top-16 left-4 right-4 z-30">
-          <LiveCommentaryWidget
-            className="bg-transparent border-none text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
-            isMobilePreview={true}
-            chat={chat}
-            guidesShown={guidesShown}
-            visibleGuide={visibleGuide}
-            setVisibleGuide={setVisibleGuide}
-            showCommentaryIcon={true}
-            commentaryEnabled={showSubtitles}
-            onToggleCommentary={() => setShowSubtitles(!showSubtitles)}
+          <MobileHeader 
+            displayedScore={uiScore} 
+            chat={chat} 
+            onProfileClick={() => setShowLogoutDialog(true)}
           />
         </div>
+
+        {/* Logout confirmation dialog */}
+        {showLogoutDialog && (
+          <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
+            <div className="bg-white rounded-xl p-6 mx-8 shadow-2xl">
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Logout</h3>
+              <p className="text-gray-600 mb-6">Are you sure you want to logout?</p>
+              <div className="flex gap-3">
+                <button
+                  onClick={() => setShowLogoutDialog(false)}
+                  className="flex-1 px-4 py-2 border border-gray-300 rounded-lg text-gray-700 font-medium hover:bg-gray-50"
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={() => {
+                    setShowLogoutDialog(false)
+                    logout && logout()
+                  }}
+                  className="flex-1 px-4 py-2 bg-complex-red text-white rounded-lg font-medium hover:bg-red-600"
+                >
+                  OK
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Live commentary as subtitles - moved to top
+            Only render commentary content when showSubtitles is true */}
+        {showSubtitles && (
+          <div className="absolute top-16 left-4 right-4 z-30">
+            <LiveCommentaryWidget
+              className="bg-transparent border-none text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
+              isMobilePreview={true}
+              chat={chat}
+              guidesShown={guidesShown}
+              visibleGuide={visibleGuide}
+              setVisibleGuide={setVisibleGuide}
+              showCommentaryIcon={true}
+              commentaryEnabled={showSubtitles}
+              onToggleCommentary={() => setShowSubtitles(!showSubtitles)}
+            />
+          </div>
+        )}
 
         {/* Chat overlay - bottom left */}
         {showChat && (
@@ -429,16 +464,36 @@ export default function PreviewMobile ({
           </div>
         </button>
 
-        {/* ==================== POLL ICON BUTTON ====================
-            Shows when poll is active but user dismissed it
-            Allows user to re-open the poll slide-up */}
-        {pollViewState === 'hidden' && activePoll && activePoll.isPollOpen && (
+        {/* Commentary toggle button - shows when commentary is hidden */}
+        {!showSubtitles && (
           <button
-            className="absolute bottom-4 left-16 z-20 bg-black/50 text-white p-2 rounded-full backdrop-blur-sm animate-pulse"
-            onClick={() => setPollViewState('minimized')}
+            className="absolute top-16 left-4 z-30 bg-black/50 text-white p-2 rounded-full backdrop-blur-sm"
+            onClick={() => setShowSubtitles(true)}
           >
-            <div className="w-6 h-6 flex items-center justify-center text-lg">
-              📊
+            <div className="w-6 h-6 flex items-center justify-center text-lg relative">
+              <span className="opacity-50">📢</span>
+              <span className="absolute inset-0 flex items-center justify-center text-complex-red text-2xl font-bold">⨯</span>
+            </div>
+          </button>
+        )}
+
+        {/* ==================== POLL ICON BUTTON ====================
+            Shows on right side when a poll exists
+            Allows user to open/re-open the poll slide-up */}
+        {activePoll && pollViewState !== 'fullscreen' && (
+          <button
+            className={`absolute bottom-4 right-4 z-20 bg-black/50 text-white p-2 rounded-full backdrop-blur-sm ${pollViewState === 'hidden' && activePoll.isPollOpen ? 'animate-pulse' : ''}`}
+            onClick={() => setPollViewState(pollViewState === 'minimized' ? 'hidden' : 'minimized')}
+          >
+            <div className="w-6 h-6 flex items-center justify-center text-lg relative">
+              {pollViewState === 'minimized' ? '📊' : (
+                <>
+                  <span className={activePoll.isPollOpen ? '' : 'opacity-50'}>📊</span>
+                  {pollViewState === 'hidden' && !activePoll.isPollOpen && (
+                    <span className="absolute inset-0 flex items-center justify-center text-complex-red text-2xl font-bold">⨯</span>
+                  )}
+                </>
+              )}
             </div>
           </button>
         )}
@@ -764,16 +819,29 @@ export default function PreviewMobile ({
     </div>
   )
 
-  function MobileHeader ({ displayedScore, chat }) {
+  function MobileHeader ({ displayedScore, chat, onProfileClick }) {
+    const profileUrl = chat?.currentUser?.profileUrl
+    const userName = chat?.currentUser?.name?.split(' ')[0] || 'User'
+    
     return (
       <div className='flex items-center justify-between w-full'>
-        {/* Left side - Clean score display */}
+        {/* Left side - Score and profile */}
         <div className='flex items-center space-x-3'>
           <div className='bg-yellow-500 text-black text-sm font-bold px-3 py-1 rounded-full shadow-lg'>
             🏆 {displayedScore}
           </div>
-          <div className='text-white text-sm font-medium opacity-90'>
-            {chat?.currentUser?.name?.split(' ')[0] || 'User'}
+          {/* Profile pic and name - clickable for logout */}
+          <div 
+            className='flex items-center space-x-2 cursor-pointer hover:opacity-80'
+            onClick={onProfileClick}
+          >
+            <div 
+              className='w-8 h-8 rounded-full bg-gray-400 bg-cover bg-center border-2 border-white/50'
+              style={profileUrl ? { backgroundImage: `url(${profileUrl})` } : {}}
+            />
+            <div className='text-white text-sm font-medium opacity-90'>
+              {userName}
+            </div>
           </div>
         </div>
       </div>
