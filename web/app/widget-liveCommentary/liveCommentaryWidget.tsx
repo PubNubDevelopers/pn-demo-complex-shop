@@ -12,7 +12,8 @@ export default function LiveCommentaryWidget ({
   setVisibleGuide,
   showCommentaryIcon = false,
   commentaryEnabled = true,
-  onToggleCommentary
+  onToggleCommentary,
+  maxContentHeight
 }: {
   className?: string
   isMobilePreview?: boolean
@@ -23,6 +24,7 @@ export default function LiveCommentaryWidget ({
   showCommentaryIcon?: boolean
   commentaryEnabled?: boolean
   onToggleCommentary?: () => void
+  maxContentHeight?: string
 }) {
   const liveCommentaryScrollRef = useRef<HTMLDivElement>(null)
   const [messages, setMessages] = useState<any[]>([])
@@ -79,11 +81,11 @@ export default function LiveCommentaryWidget ({
   return (
     <div className={`${className} px-6 pt-3 pb-4`}>
       <div 
-        className={`font-semibold text-base pb-3 flex items-center gap-2 ${onToggleCommentary ? 'cursor-pointer' : ''}`}
+        className={`font-semibold text-base pb-3 flex items-center gap-2 whitespace-nowrap ${onToggleCommentary ? 'cursor-pointer' : ''}`}
         onClick={onToggleCommentary ? () => onToggleCommentary() : undefined}
       >
         {showCommentaryIcon && (
-          <span className="text-lg relative inline-flex items-center justify-center">
+          <span className="text-lg relative inline-flex items-center justify-center flex-shrink-0">
             {commentaryEnabled ? '📢' : (
               <>
                 <span className="opacity-50">📢</span>
@@ -122,7 +124,11 @@ export default function LiveCommentaryWidget ({
       )}
       {commentaryEnabled && (
         <div
-          className='flex flex-col gap-3 min-h-64 max-h-64 overflow-y-auto overscroll-none'
+          className='flex flex-col gap-3 overflow-y-auto overscroll-none'
+          style={{ 
+            minHeight: maxContentHeight || '256px',
+            maxHeight: maxContentHeight || '256px'
+          }}
           onScroll={handleScroll}
           ref={liveCommentaryScrollRef}
         >

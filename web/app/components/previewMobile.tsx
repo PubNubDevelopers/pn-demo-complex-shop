@@ -393,8 +393,8 @@ export default function PreviewMobile ({
           </div>
         )}
 
-        {/* Live commentary - positioned to the left, not overlaying video */}
-        <div className="absolute top-16 left-2 z-30" style={{ maxWidth: '200px' }}>
+        {/* Live commentary - positioned above video on the left */}
+        <div className="absolute left-2 z-30" style={{ top: '60px', maxWidth: '220px' }}>
           <LiveCommentaryWidget
             className="bg-transparent border-none text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
             isMobilePreview={true}
@@ -405,11 +405,12 @@ export default function PreviewMobile ({
             showCommentaryIcon={true}
             commentaryEnabled={showSubtitles}
             onToggleCommentary={() => setShowSubtitles(!showSubtitles)}
+            maxContentHeight="200px"
           />
         </div>
 
-        {/* Main video stream - positioned below header, no overlay */}
-        <div className="absolute left-0 right-0 z-0" style={{ top: '56px', height: '280px' }}>
+        {/* Main video stream - positioned below commentary label */}
+        <div className="absolute left-0 right-0 z-0" style={{ top: '96px', height: '280px' }}>
           {/* Swipe visual cues - show when no overlay is active */}
           {activeOverlay === 'none' && (
             <>
@@ -430,38 +431,38 @@ export default function PreviewMobile ({
             </>
           )}
           
-          <StreamWidget
+        <StreamWidget
             className="w-full h-full"
-            isMobilePreview={true}
-            chat={chat}
-            isGuidedDemo={isGuidedDemo}
-            guidesShown={guidesShown}
-            visibleGuide={visibleGuide}
-            setVisibleGuide={setVisibleGuide}
+          isMobilePreview={true}
+          chat={chat}
+          isGuidedDemo={isGuidedDemo}
+          guidesShown={guidesShown}
+          visibleGuide={visibleGuide}
+          setVisibleGuide={setVisibleGuide}
             muted={muted}
-            awardPoints={async (points, message) => {
-              const newScore = await AwardPoints(
-                chat,
-                points,
-                message,
-                uiScore,
-                showNewPointsAlert
-              );
-              if (typeof newScore === 'number') {
-                setUiScore(newScore);
-              }
-            }}
-          />
+          awardPoints={async (points, message) => {
+            const newScore = await AwardPoints(
+              chat,
+              points,
+              message,
+              uiScore,
+              showNewPointsAlert
+            );
+            if (typeof newScore === 'number') {
+              setUiScore(newScore);
+            }
+          }}
+        />
         </div>
 
         {/* Chat overlay - positioned below video, above input */}
         {showChat && (
           <>
-            {/* Chat messages container - scrollable, constrained between video and input */}
+            {/* Chat messages container - scrollable, starts below video */}
             <div 
               className="absolute left-4 right-4 z-20 pointer-events-auto"
               style={{ 
-                top: '346px',  // Below video (fixed position now)
+                top: '386px',  // Below video (96px + 280px + 10px padding)
                 bottom: '140px',  // Above input box
                 overflowY: 'auto',
                 overflowX: 'hidden'
@@ -489,25 +490,25 @@ export default function PreviewMobile ({
             {/* Chat input - always visible when chat is enabled */}
             <div className="absolute bottom-16 left-4 right-4 z-10">
               <div className="flex space-x-2">
-                <input
-                  type="text"
-                  value={chatMessage}
-                  onChange={(e) => setChatMessage(e.target.value)}
-                  placeholder="Add a comment..."
+                    <input
+                      type="text"
+                      value={chatMessage}
+                      onChange={(e) => setChatMessage(e.target.value)}
+                      placeholder="Add a comment..."
                   className="flex-1 bg-black/70 text-white placeholder-white/60 rounded-full px-4 py-2 text-sm border-none outline-none backdrop-blur-sm"
-                  style={{ fontSize: '16px' }} // Prevent iOS zoom
-                  onKeyPress={(e) => {
-                    if (e.key === 'Enter') {
-                      handleSendMessage()
-                    }
-                  }}
-                />
-                <button
-                  onClick={handleSendMessage}
+                      style={{ fontSize: '16px' }} // Prevent iOS zoom
+                      onKeyPress={(e) => {
+                        if (e.key === 'Enter') {
+                          handleSendMessage()
+                        }
+                      }}
+                    />
+                    <button
+                      onClick={handleSendMessage}
                   className="bg-complex-red text-white rounded-full px-4 py-2 text-sm font-medium min-w-fit shadow-lg"
-                >
-                  Send
-                </button>
+                    >
+                      Send
+                    </button>
               </div>
             </div>
           </>
@@ -530,9 +531,13 @@ export default function PreviewMobile ({
 
 
         {/* ==================== MUTE TOGGLE BUTTON ====================
-            Volume control for mobile video - bottom right corner */}
+            Volume control - positioned at bottom-right corner of video */}
         <button
-          className="absolute bottom-4 right-16 z-20 bg-black/50 text-white p-2 rounded-full backdrop-blur-sm hover:bg-black/70 transition"
+          className="absolute z-20 bg-black/50 text-white p-2 rounded-full backdrop-blur-sm hover:bg-black/70 transition"
+          style={{ 
+            top: '336px',  // Video bottom (96px + 280px - 40px for button centering)
+            right: '8px'
+          }}
           onClick={() => setMuted(!muted)}
         >
           <div className="w-6 h-6 flex items-center justify-center text-lg">
@@ -1050,7 +1055,7 @@ export default function PreviewMobile ({
               className='w-8 h-8 rounded-full bg-gray-400 bg-cover bg-center border-2 border-white/50'
               style={profileUrl ? { backgroundImage: `url(${profileUrl})` } : {}}
             />
-            <div className='text-white text-sm font-medium opacity-90'>
+          <div className='text-white text-sm font-medium opacity-90'>
               {userName}
             </div>
           </div>
@@ -1076,29 +1081,29 @@ export default function PreviewMobile ({
 
   function AllAdsDisplay({ onAdClick }) {
     const { ads } = require('../data/constants')
-    
+
     return (
       <div className="space-y-4">
         <div className="text-xs text-gray-500 mb-4 text-center">Sponsored Content</div>
         {ads.map((ad, index) => (
-          <div 
+        <div 
             key={ad.id}
             className="relative cursor-pointer border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
             onClick={() => onAdClick(ad.clickPoints || 0)}
-          >
-            <Image
+        >
+          <Image
               src={ad.src}
               alt={`Advertisement ${index + 1}`}
-              width={402}
-              height={150}
+            width={402}
+            height={150}
               className="w-full object-cover"
-            />
+          />
             {ad.clickPoints > 0 && (
-              <div className="absolute top-2 right-2 bg-yellow-400 text-black text-xs px-2 py-1 rounded-full font-bold">
+            <div className="absolute top-2 right-2 bg-yellow-400 text-black text-xs px-2 py-1 rounded-full font-bold">
                 +{ad.clickPoints} pts
-              </div>
-            )}
-          </div>
+            </div>
+          )}
+        </div>
         ))}
       </div>
     )
