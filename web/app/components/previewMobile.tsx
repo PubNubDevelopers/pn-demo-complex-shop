@@ -459,7 +459,7 @@ export default function PreviewMobile ({
           <>
             {/* Chat messages container - scrollable, constrained between video and input */}
             <div 
-              className="absolute left-4 right-20 z-20 pointer-events-auto"
+              className="absolute left-4 right-4 z-20 pointer-events-auto"
               style={{ 
                 top: '346px',  // Below video (fixed position now)
                 bottom: '140px',  // Above input box
@@ -561,12 +561,93 @@ export default function PreviewMobile ({
           </button>
         )}
 
-        {/* ==================== POLL SLIDE-UP CARD ====================
-            Compact card that slides up from bottom
-            Shows: poll title, option count, dismiss/expand buttons
-            Also used for showing vote confirmation and results */}
+        {/* ==================== POLL RESULTS ALERT ====================
+            When poll closes, show results as an alert sliding up from bottom
+            Stays on top until dismissed */}
         <AnimatePresence>
-          {pollViewState === 'minimized' && activePoll && (
+          {activePoll && !activePoll.isPollOpen && pollViewState !== 'hidden' && (
+            <motion.div
+              initial={{ y: '100%' }}
+              animate={{ y: 0 }}
+              exit={{ y: '100%' }}
+              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+              className="absolute bottom-0 left-0 right-0 z-50 bg-white shadow-2xl"
+            >
+              <div className="p-6">
+                {/* Header */}
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="text-2xl">📊</span>
+                      <div className="text-lg font-bold text-complex-red">Poll Results</div>
+                    </div>
+                    <div className="text-xl font-bold text-gray-900">{activePoll.title}</div>
+                  </div>
+                  <button
+                    onClick={() => setPollViewState('hidden')}
+                    className="text-gray-500 hover:text-gray-700 p-2 text-2xl"
+                  >
+                    ✕
+                  </button>
+                </div>
+
+                {/* Results */}
+                <div className="space-y-3">
+                  {(() => {
+                    const totalVotes = activePoll.options.reduce((sum, opt) => sum + (opt.score || 0), 0)
+                    const topOption = activePoll.options.reduce((max, opt) => 
+                      (opt.score || 0) > (max.score || 0) ? opt : max, activePoll.options[0])
+                    
+                    return (
+                      <>
+                        <div className="bg-green-50 border-2 border-green-400 rounded-lg p-4 mb-4">
+                          <div className="text-sm text-green-700 font-semibold mb-1">🏆 Winner</div>
+                          <div className="text-lg font-bold text-green-800">{topOption.text}</div>
+                          <div className="text-sm text-green-600 mt-1">
+                            {topOption.score || 0} votes ({totalVotes > 0 ? ((topOption.score || 0) / totalVotes * 100).toFixed(0) : 0}%)
+                          </div>
+                        </div>
+                        
+                        <div className="text-sm font-semibold text-gray-700 mb-2">All Results:</div>
+                        {activePoll.options.map(opt => {
+                          const percentage = totalVotes > 0 && opt.score ? (opt.score / totalVotes) * 100 : 0
+                          const isWinner = opt.id === topOption.id
+                          return (
+                            <div key={opt.id} className={`p-3 rounded-lg ${isWinner ? 'bg-green-50 border border-green-200' : 'bg-gray-50'}`}>
+                              <div className="flex justify-between items-center mb-1">
+                                <span className={`font-medium ${isWinner ? 'text-green-800' : 'text-gray-800'}`}>
+                                  {opt.text}
+                                </span>
+                                <span className={`text-sm ${isWinner ? 'text-green-700' : 'text-gray-600'}`}>
+                                  {opt.score || 0} votes
+                                </span>
+                              </div>
+                              <div className="h-2 w-full bg-gray-200 rounded-full overflow-hidden">
+                                <div 
+                                  style={{ width: `${percentage}%` }} 
+                                  className={`h-full rounded-full ${isWinner ? 'bg-green-500' : 'bg-gray-400'}`}
+                                ></div>
+                              </div>
+                              <div className={`text-xs mt-1 ${isWinner ? 'text-green-600' : 'text-gray-500'}`}>
+                                {percentage.toFixed(0)}%
+                              </div>
+                            </div>
+                          )
+                        })}
+                      </>
+                    )
+                  })()}
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* ==================== POLL SLIDE-UP CARD ====================
+            Compact card that slides up from bottom for active polls and vote confirmations
+            Shows: poll title, option count, dismiss/expand buttons */}
+        <AnimatePresence>
+          {pollViewState === 'minimized' && activePoll && activePoll.isPollOpen && (
             <motion.div
               initial={{ y: '100%' }}
               animate={{ y: 0 }}
@@ -576,12 +657,10 @@ export default function PreviewMobile ({
             >
               {/* Poll card content */}
               <div className="p-4">
-                {/* Header with dismiss and expand buttons */}
+                {/* Header with dismiss button */}
                 <div className="flex justify-between items-start mb-3">
                   <div className="flex-1">
-                    {!activePoll.isPollOpen ? (
-                      <div className="text-sm font-semibold text-complex-red">Poll Results</div>
-                    ) : activePoll.answered ? (
+                    {activePoll.answered ? (
                       <div className="text-sm font-semibold text-green-600">Your choice:</div>
                     ) : (
                       <div className="text-sm font-semibold text-complex-red">New Poll</div>
@@ -599,31 +678,7 @@ export default function PreviewMobile ({
                 </div>
 
                 {/* Poll content based on state */}
-                {!activePoll.isPollOpen ? (
-                  // Show results
-                  <div className="text-sm">
-                    {(() => {
-                      const totalVotes = activePoll.options.reduce((sum, opt) => sum + (opt.score || 0), 0)
-                      const topOption = activePoll.options.reduce((max, opt) => 
-                        (opt.score || 0) > (max.score || 0) ? opt : max, activePoll.options[0])
-                      return (
-                        <div className="space-y-2">
-                          <div className="text-gray-600 mb-2">
-                            Winner: <span className="font-semibold text-green-600">{topOption.text}</span>
-                          </div>
-                          {activePoll.options.map(opt => {
-                            const percentage = totalVotes > 0 && opt.score ? (opt.score / totalVotes) * 100 : 0
-                            return (
-                              <div key={opt.id} className="text-xs text-gray-600">
-                                {opt.text}: {opt.score || 0} votes ({percentage.toFixed(0)}%)
-                              </div>
-                            )
-                          })}
-                        </div>
-                      )
-                    })()}
-                  </div>
-                ) : activePoll.answered ? (
+                {activePoll.answered ? (
                   // Show user's choice
                   <div className="text-sm text-gray-700">
                     {userAnswerText || 'Waiting for confirmation...'}
