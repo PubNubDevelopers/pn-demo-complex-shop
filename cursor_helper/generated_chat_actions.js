@@ -3,255 +3,123 @@
 
 export const generatedChatActions = [
   {
-    timeSinceVideoStartedInMs: 50000,
+    timeSinceVideoStartedInMs: 15000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-01',
-        text: 'Wow, a Game Boy Color! Takes me back!'
+        text: 'JT is a legend! Been waiting for this episode.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 62000,
+    timeSinceVideoStartedInMs: 32000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-02',
-        text: 'The maroon is a classic look.'
+        text: 'Flight Club LA is the spot.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 74000,
+    timeSinceVideoStartedInMs: 65000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-03',
-        text: 'Remember trading Pokemon with the link cable? Good times!'
+        text: 'That Super Bowl halftime show was iconic with those 3s.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 86000,
+    timeSinceVideoStartedInMs: 95000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-04',
-        text: 'I wonder how many AA batteries I went through as a kid...'
+        text: 'The reflective swoosh is such a cool hidden detail.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 98000,
+    timeSinceVideoStartedInMs: 125000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-05',
-        text: 'That clicky D-pad was the best.'
+        text: 'Tinker Hatfield is the GOAT.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 110000,
+    timeSinceVideoStartedInMs: 145000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-06',
-        text: 'Pokemon Crystal on this would be epic.'
+        text: 'Those Bio Beige 3s are super underrated.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 122000,
+    timeSinceVideoStartedInMs: 160000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-07',
-        text: 'Still got my old GBC somewhere!'
+        text: 'Leather laces definitely give it that luxury vibe.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 134000,
+    timeSinceVideoStartedInMs: 175000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-08',
-        text: 'The first handheld I ever owned! So many memories.'
+        text: '\"Higher grade suede\" you can tell just looking at it.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 136000,
+    timeSinceVideoStartedInMs: 200000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-09',
-        text: 'Does the volume wheel work?'
+        text: 'I still prefer the Jordan 3 without the Swoosh, tbh.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 143000,
+    timeSinceVideoStartedInMs: 215000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-10',
-        text: 'Does it come with a backlit screen?'
+        text: 'No way, the Swoosh makes it look like a prototype. It\'s fire.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 146000,
+    timeSinceVideoStartedInMs: 260000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-11',
-        text: 'Shame about the screen scratch, but still a beaut!'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 158000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-12',
-        text: 'That Z80 processor was a workhorse.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 170000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-13',
-        text: 'Max 56 colors seemed like a million back then!'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 182000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-14',
-        text: 'Gotta love region-free consoles.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 194000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-15',
-        text: 'Anyone else have the worm light for playing in the dark?'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 206000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-16',
-        text: 'That startup sound is iconic.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 218000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-17',
-        text: 'This would be a great addition to a retro collection.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 230000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-18',
-        text: 'So cool to see these still working.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 242000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-19',
-        text: 'What was your first GBC game? Mine was Link\'s Awakening DX!'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 254000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-20',
-        text: 'The see-through purple one was my favorite color.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 263000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-21',
-        text: 'Does Pokemon Crystal come with the Console?'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 266000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-22',
-        text: 'Can almost feel those buttons now.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 278000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-23',
-        text: 'Hope it finds a good home!'
+        text: 'He really knows his history with Tinker.'
       }
     }
   },
@@ -259,571 +127,142 @@ export const generatedChatActions = [
     timeSinceVideoStartedInMs: 290000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-24',
-        text: 'Retro gaming is the best.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 302000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-25',
-        text: 'Such a simple, perfect design.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 314000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-26',
-        text: 'Good old Nintendo reliability.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 328000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-27',
-        text: 'The GBA SP! The red is so vibrant.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 340000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-28',
-        text: 'Finally, a backlit screen! That was a game changer.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 352000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-29',
-        text: 'Clamshell design was genius. No more screen scratches in my pocket!'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 364000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-30',
-        text: 'Pokemon Ruby/Sapphire on this... hours and hours.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 376000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-31',
-        text: 'Loved that it was rechargeable.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 388000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-32',
-        text: 'The SP felt so much more modern.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 400000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-33',
-        text: 'Still one of my favorite handheld designs ever.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 412000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-34',
-        text: 'Advance Wars on the GBA SP was amazing.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 424000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-35',
-        text: 'That click when you opened and closed it was so satisfying.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 436000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-36',
-        text: 'This looks like it\'s seen some adventures!'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 448000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-37',
-        text: 'The buttons on the SP always felt good.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 454000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-38',
-        text: 'Does Pokemon Ruby come with the console?'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 458000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-39',
-        text: 'Have there been any modifications done to the console?'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 460000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-40',
-        text: 'A new shell and screen and this would be mint.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 461000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-01',
-        text: 'Do any accessories come with it?'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 472000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-02',
-        text: 'So many great RPGs for the GBA.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 484000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-03',
-        text: 'I miss the dedicated headphone jack sometimes, but the design was worth it.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 496000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-04',
-        text: 'This red is fire!'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 508000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-05',
-        text: 'Backward compatibility with GB/GBC games was awesome.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 520000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-06',
-        text: 'Golden Sun, anyone?'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 532000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-07',
-        text: 'The GBA SP was peak pocket gaming for me.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 544000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-08',
-        text: 'Small, powerful, and a great library.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 545000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-09',
-        text: 'Does audio work?'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 556000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-10',
-        text: 'The wear and tear just adds character, haha.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 562000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-11',
-        text: 'I cant hear the audio!!!'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 568000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-12',
-        text: 'How many versions of the SP did they even make? So many colors.'
+        text: 'The Legends of the Summer collection is worth a fortune now.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 580000,
+    timeSinceVideoStartedInMs: 310000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-13',
-        text: 'Metroid Fusion and Zero Mission were incredible on this.'
+        text: 'Imagine finding a pair of those red Jordans at a scavenger hunt...'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 592000,
+    timeSinceVideoStartedInMs: 335000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-14',
-        text: 'Wish I still had mine.'
+        text: 'Those scavenger hunts were crazy times on Twitter.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 604000,
+    timeSinceVideoStartedInMs: 390000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-15',
-        text: 'This is a true collector\'s item.'
+        text: 'The Atmos Air Max 1s! My grails.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 614000,
+    timeSinceVideoStartedInMs: 405000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-16',
-        text: 'Does this work with Gameboy games?'
+        text: 'Elephant print on an Air Max just works so well.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 616000,
+    timeSinceVideoStartedInMs: 425000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-17',
-        text: 'That front-lit screen was a huge step up.'
+        text: 'He\'s right, the Jordan 3 is the perfect silhouette.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 628000,
+    timeSinceVideoStartedInMs: 480000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-18',
-        text: 'Whoever gets this is lucky!'
+        text: 'Those Mike Jordan stories are hilarious.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 653000,
+    timeSinceVideoStartedInMs: 550000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-19',
-        text: 'The DSi! Getting into the dual-screen era.'
+        text: 'The Seoul 3s are so clean with the flag colors.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 665000,
+    timeSinceVideoStartedInMs: 610000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-20',
-        text: 'That white is super clean.'
+        text: 'Virgil changed everything with the deconstructed look.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 677000,
+    timeSinceVideoStartedInMs: 625000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-21',
-        text: 'DSiWare had some fun little games.'
+        text: 'UNC Off-Whites are probably the best of the ten.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 689000,
+    timeSinceVideoStartedInMs: 650000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-22',
-        text: 'The cameras were a bit of a gimmick but fun for a bit!'
+        text: 'I love how he appreciates the craftsmanship.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 701000,
+    timeSinceVideoStartedInMs: 720000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-23',
-        text: 'Bigger screens than the original DS, right?'
+        text: 'Fear of God 1s... looked like spaceships when they came out.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 713000,
+    timeSinceVideoStartedInMs: 750000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-24',
-        text: 'Ah, the stylus. So many taps.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 725000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-25',
-        text: 'Nintendogs on the DS was a cultural phenomenon.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 737000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-26',
-        text: 'Japanese consoles always have cool exclusive colors.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 749000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-27',
-        text: 'Region-locking for DSi specific games is a bit of a pain, but DS games are fine!'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 761000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-28',
-        text: 'The matte finish on some DSi models was nice.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 773000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-29',
-        text: 'This was when Nintendo started getting really creative with handhelds.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 785000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-30',
-        text: 'Brain Age! Kept my parents busy for ages.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 797000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-31',
-        text: 'The click of the DS hinge is another classic sound.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 809000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-32',
-        text: 'This one looks like it\'s in great shape.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 821000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-33',
-        text: 'The SD card slot was a welcome addition for sure.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 833000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-34',
-        text: 'Still have a soft spot for the DS family.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 845000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-35',
-        text: 'Phantom Hourglass and Spirit Tracks! Great Zelda games.'
+        text: 'Jerry Lorenzo really bridged performance and luxury.'
       }
     }
   },
@@ -831,131 +270,32 @@ export const generatedChatActions = [
     timeSinceVideoStartedInMs: 850000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
-        user: 'bot-36',
-        text: 'TURN ON THE SCREEN!'
+        user: 'bot-25',
+        text: 'LeBron Watch was such a cool program.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 857000,
+    timeSinceVideoStartedInMs: 880000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
-        user: 'bot-37',
-        text: 'The DSi browser was... an attempt!'
+        user: 'bot-26',
+        text: 'The Diamond Turf strap on the LeBron 15 is crazy.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 869000,
+    timeSinceVideoStartedInMs: 920000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
-        user: 'bot-38',
-        text: 'Can I play American DS games on this console?'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 869000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-39',
-        text: 'PictoChat was surprisingly fun with friends.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 881000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-40',
-        text: 'Sleeker than the chunky original DS.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 893000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-01',
-        text: 'So many great rhythm games on the DS.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 905000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-02',
-        text: 'The build quality on these always felt solid.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 917000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-03',
-        text: 'That pristine white looks amazing.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 929000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-04',
-        text: 'I wonder what\'s on that included SD card, haha (jk).'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 940000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-05',
-        text: 'Does this include any games?'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 941000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-06',
-        text: 'Dual screens opened up so many new gameplay ideas.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 945000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-07',
-        text: 'Does it come with any accessories?'
+        user: 'bot-27',
+        text: 'He\'s grabbing everything off the shelf!'
       }
     }
   },
@@ -963,21 +303,10 @@ export const generatedChatActions = [
     timeSinceVideoStartedInMs: 950000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
-        user: 'bot-08',
-        text: 'Does it come with a case?'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 953000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-09',
-        text: 'The DS had such a diverse library. Something for everyone.'
+        user: 'bot-28',
+        text: 'Wait... did he just spot them?'
       }
     }
   },
@@ -985,1044 +314,131 @@ export const generatedChatActions = [
     timeSinceVideoStartedInMs: 965000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-10',
-        text: 'Still playable today, easily.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 977000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-11',
-        text: 'For DS games, this is a great find.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 987000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-12',
-        text: '\"The system looks great! Any defects or other problems with the DS\"?'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 989000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-13',
-        text: 'The speakers on the DS were pretty decent too.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 995000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-14',
-        text: 'Can you test the cameras?'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1001000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-15',
-        text: 'Good to know the cameras work!'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1013000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-16',
-        text: 'A solid piece of Nintendo history.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1025000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-17',
-        text: 'The start of the eShop era, kind of.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1037000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-18',
-        text: 'Would love to play some classic DS titles on this.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1040000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-19',
-        text: ' Region-locking can be so confusing with older consoles! Good to know the details for this DSi'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1049000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-20',
-        text: 'That satisfying click when a DS game goes in.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1061000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-21',
-        text: 'Hope this finds a good collector.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1079000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-22',
-        text: 'The 3DS XL! Now we\'re talking big screens!'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1091000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-23',
-        text: 'That Japanese \"LL\" branding is cool.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1103000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-24',
-        text: 'The 3D effect was hit or miss for me, but cool when it worked.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1115000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-25',
-        text: 'StreetPass was such an innovative feature. Miss that.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1125000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-26',
-        text: 'WOW, Such Size difference!'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1127000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-27',
-        text: 'So many amazing games on the 3DS.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1139000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-28',
-        text: 'Pokemon X/Y really showed off the system.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1151000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-29',
-        text: 'The Circle Pad was a huge improvement for 3D movement.'
+        text: 'RED OCTOBERS.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1155000,
+    timeSinceVideoStartedInMs: 980000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-30',
-        text: '\"Is the original 3ds for sale\"?'
+        text: 'The holy grail.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1163000,
+    timeSinceVideoStartedInMs: 1000000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-31',
-        text: 'Animal Crossing: New Leaf took over my life on the 3DS.'
+        text: 'Those are easily $15k+ right now.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1175000,
+    timeSinceVideoStartedInMs: 1020000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-32',
-        text: 'Good old eShop... RIP.'
+        text: '\"Do I need to take out a loan?\" LMAO 😂'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1187000,
+    timeSinceVideoStartedInMs: 1050000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-33',
-        text: 'The XL model is so much more comfortable for longer play sessions.'
+        text: 'He\'s actually doing it. He\'s buying the Yeezy 2s.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1199000,
+    timeSinceVideoStartedInMs: 1080000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-34',
-        text: 'A Link Between Worlds was a masterpiece.'
+        text: 'The gold aglets on those are iconic.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1211000,
+    timeSinceVideoStartedInMs: 1120000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-35',
-        text: 'Love that many Japanese 3DS games have English options. Super useful!'
+        text: 'Checking out...'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1223000,
+    timeSinceVideoStartedInMs: 1130000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-36',
-        text: 'The blue one is a nice color.'
+        text: 'That total is going to be astronomical.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1235000,
+    timeSinceVideoStartedInMs: 1140000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-37',
-        text: 'Scratches are a shame, but a new shell isn\'t too hard to find for these.'
+        text: '$22,000!!! 💀'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1247000,
+    timeSinceVideoStartedInMs: 1150000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-38',
-        text: 'This is the definitive way to play 3DS games for many.'
+        text: 'Dropped 20 bands like it was nothing.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1259000,
+    timeSinceVideoStartedInMs: 1160000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-39',
-        text: 'The cameras for AR games were fun.'
+        text: 'Great episode. JT has taste.'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1260000,
+    timeSinceVideoStartedInMs: 1165000,
     persistInHistory: false,
     action: {
-      channel: 'live.shopping.chat',
+      channel: 'game.chat',
       data: {
         user: 'bot-40',
-        text: '\"Will there be issues between the American and Japanese chargers for the system\"?'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1271000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-01',
-        text: 'Still use my 3DS from time to time.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1283000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-02',
-        text: 'The Virtual Console on 3DS had some gems.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1295000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-03',
-        text: 'Monster Hunter on the 3DS XL was a blast.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1300000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-04',
-        text: '\"Does the camera work\"?'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1307000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-05',
-        text: 'So glad it has an SD card included.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1319000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-06',
-        text: 'The sound on the 3DS XL is pretty good.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1320000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-07',
-        text: 'Volume on the system OK?'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1331000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-08',
-        text: 'That top screen is massive!'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1343000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-09',
-        text: 'Fire Emblem Awakening, anyone?'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1355000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-10',
-        text: 'The wireless light is a nice touch.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1367000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-11',
-        text: 'Hope the 3D slider is still nice and firm.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1379000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-12',
-        text: 'This console has so much personality.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1390000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-13',
-        text: 'Does the eShop still work and have games?'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1391000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-14',
-        text: 'The game library is just incredible.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1403000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-15',
-        text: 'A great system for RPG fans.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1415000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-16',
-        text: 'Kid Icarus: Uprising was underrated!'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1420000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-17',
-        text: '\"Can I use my American eShop games on the Japanese console\"?'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1427000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-18',
-        text: 'Super Mario 3D Land was a perfect showcase for the 3D.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1430000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-19',
-        text: 'Does it come with any accessories?'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1435000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-20',
-        text: '\"Does it come with any games\"?'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1439000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-21',
-        text: 'I always kept the 3D slider off to save battery, lol.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1451000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-22',
-        text: 'This would be great for playing Japanese exclusives.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1463000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-23',
-        text: 'The larger buttons on the XL are a plus.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1475000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-24',
-        text: 'The design is quite sleek.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1487000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-25',
-        text: 'So many hours sunk into this generation.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1499000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-26',
-        text: 'Good to know the charger is the same as the DSi.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1500000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-27',
-        text: 'It\'s a little bright, can you adjust the lighting to see the console better?'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1511000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-28',
-        text: 'A true powerhouse of a handheld.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1523000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-29',
-        text: 'The Home Menu music is so catchy.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1535000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-30',
-        text: 'Still a very capable machine.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1540000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-31',
-        text: 'Can you turn on 3d?'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1547000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-32',
-        text: 'Luigi\'s Mansion: Dark Moon was fantastic.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1559000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-33',
-        text: 'The stylus placement on the XL is pretty convenient.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1571000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-34',
-        text: 'This will make someone very happy.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1580000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-35',
-        text: 'Is the touchpad on the bottom responsive?'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1583000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-36',
-        text: 'The sheer volume of quality games is astounding.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1595000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-37',
-        text: 'I like that the host is honest about the condition.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1607000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-38',
-        text: 'Even with scratches, it\'s a desirable console.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1619000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-39',
-        text: 'The battery life on the XL was decent.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1631000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-40',
-        text: 'Playing DS games on this is also great with the big screens.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1635000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-01',
-        text: 'Can it play more games than just Pokemon?'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1643000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-02',
-        text: 'The clamshell design is just so practical for handhelds.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1655000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-03',
-        text: 'This is peak Nintendo handheld innovation for many.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1660000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-04',
-        text: 'Can you skip cutscenes 🙂?'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1667000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-05',
-        text: 'I should dig out my old 3DS...'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1679000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-06',
-        text: 'So many memories flooding back!'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1691000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-07',
-        text: 'The start/select/home buttons are nicely placed.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1703000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-08',
-        text: 'The weight of the XL feels good in the hands.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1715000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-09',
-        text: 'A great way to experience a massive library of games.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1727000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-10',
-        text: 'The clicky shoulder buttons are satisfying.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1730000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-11',
-        text: 'Does this come with a charger?'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1739000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-12',
-        text: 'This system defined a whole era of portable gaming.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1751000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-13',
-        text: 'That larger top screen makes a huge difference.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1760000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-14',
-        text: 'Can you show the condition of the 3ds again please?'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1763000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-15',
-        text: 'Still a popular console among collectors.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1775000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-16',
-        text: 'The matte finish on some of these was really nice.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1787000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-17',
-        text: 'Hope it gets into the hands of an enthusiast!'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1799000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-18',
-        text: 'The notification LED is a handy feature.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1810000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-19',
-        text: 'What\'s your favorite Pokemon gen?'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1811000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-20',
-        text: 'Such a robust and reliable piece of hardware.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1823000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-21',
-        text: 'Tons of great indie games on the eShop too (back in the day).'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1835000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-22',
-        text: 'This represents a lot of Nintendo history.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1847000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-23',
-        text: 'A fantastic find for any retro gamer.'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1859000,
-    persistInHistory: false,
-    action: {
-      channel: 'live.shopping.chat',
-      data: {
-        user: 'bot-24',
-        text: 'The 3DS family had a great run.'
+        text: 'Joe La Puma is the best host.'
       }
     }
   }

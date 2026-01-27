@@ -1,0 +1,79 @@
+[
+  {
+    "id": 501,
+    "question": "What unique feature was added to the JTH 'Super Bowl' Jordan 3 based on the original sketch?",
+    "options": [
+      "Reflective Swoosh",
+      "Velcro Strap",
+      "Glow in the Dark Soles"
+    ],
+    "correct_option_index": 0,
+    "points": 5,
+    "appear_time_ms": 115000,
+    "reveal_time_ms": 135000
+  },
+  {
+    "id": 502,
+    "question": "Which Justin Timberlake album inspired the 'Bio Beige' Jordan 3 colorway?",
+    "options": [
+      "FutureSex/LoveSounds",
+      "The 20/20 Experience",
+      "Man of the Woods"
+    ],
+    "correct_option_index": 2,
+    "points": 10,
+    "appear_time_ms": 200000,
+    "reveal_time_ms": 220000
+  },
+  {
+    "id": 503,
+    "question": "Justin says the Air Max 1 'Atmos' is his favorite because of which specific detail?",
+    "options": [
+      "The Elephant Print",
+      "The Jade Swoosh",
+      "The White Midsole"
+    ],
+    "correct_option_index": 0,
+    "points": 5,
+    "appear_time_ms": 430000,
+    "reveal_time_ms": 450000
+  },
+  {
+    "id": 504,
+    "question": "The Air Jordan 3 'Seoul' features the flag colors of which country on the tongue?",
+    "options": [
+      "Japan",
+      "South Korea",
+      "China"
+    ],
+    "correct_option_index": 1,
+    "points": 5,
+    "appear_time_ms": 560000,
+    "reveal_time_ms": 580000
+  },
+  {
+    "id": 505,
+    "question": "Who is the designer behind the deconstructed 'Off-White' Air Jordan 1 UNC?",
+    "options": [
+      "Jerry Lorenzo",
+      "Virgil Abloh",
+      "Kanye West"
+    ],
+    "correct_option_index": 1,
+    "points": 10,
+    "appear_time_ms": 680000,
+    "reveal_time_ms": 700000
+  },
+  {
+    "id": 506,
+    "question": "True or False: Justin Timberlake jokingly asked if he needed a loan to buy the Red Octobers.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_option_index": 0,
+    "points": 5,
+    "appear_time_ms": 1090000,
+    "reveal_time_ms": 1110000
+  }
+]
