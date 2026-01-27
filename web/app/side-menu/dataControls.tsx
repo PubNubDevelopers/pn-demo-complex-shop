@@ -35,11 +35,15 @@ export default function SideMenuDataControls ({
   const simulationNames = [
     'Select',
     'Start / restart simulation',
-    'GB Color (Intro)',
-    'GB Color (Scratch)',
-    'Game Boy Advance SP',
-    'DSi',
-    '3DS XL',
+    'Jordan 3 Super Bowl',
+    'Jordan 3 Bio Beige',
+    'Jordan 3 Tinker',
+    'Air Max 1 Atmos',
+    'Jordan 3 Seoul',
+    'Off-White Jordan 1 UNC',
+    'Fear of God 1',
+    'LeBron 15 Diamond Turf',
+    'Yeezy 2 Red October',
     'Featured Poll Start',
     'Featured Poll Results',
     'Pause / Resume Bot chat',
@@ -59,47 +63,83 @@ export default function SideMenuDataControls ({
           channel: serverVideoControlChannelId
         })
         break
-      case 'GB Color (Intro)':
+      case 'Jordan 3 Super Bowl':
         await chat.sdk.publish({
           message: {
             type: 'SEEK',
-            params: { playbackTime: 50395 }
+            params: { playbackTime: 105000 }
           },
           channel: serverVideoControlChannelId
         })
         break
-      case 'GB Color (Scratch)':
+      case 'Jordan 3 Bio Beige':
         await chat.sdk.publish({
           message: {
             type: 'SEEK',
-            params: { playbackTime: 72185 }
+            params: { playbackTime: 190000 }
           },
           channel: serverVideoControlChannelId
         })
         break
-      case 'Game Boy Advance SP':
+      case 'Jordan 3 Tinker':
         await chat.sdk.publish({
           message: {
             type: 'SEEK',
-            params: { playbackTime: 328835 }
+            params: { playbackTime: 250000 }
           },
           channel: serverVideoControlChannelId
         })
         break
-      case 'DSi':
+      case 'Air Max 1 Atmos':
         await chat.sdk.publish({
           message: {
             type: 'SEEK',
-            params: { playbackTime: 653035 }
+            params: { playbackTime: 420000 }
           },
           channel: serverVideoControlChannelId
         })
         break
-      case '3DS XL':
+      case 'Jordan 3 Seoul':
         await chat.sdk.publish({
           message: {
             type: 'SEEK',
-            params: { playbackTime: 1079565 }
+            params: { playbackTime: 540000 }
+          },
+          channel: serverVideoControlChannelId
+        })
+        break
+      case 'Off-White Jordan 1 UNC':
+        await chat.sdk.publish({
+          message: {
+            type: 'SEEK',
+            params: { playbackTime: 660000 }
+          },
+          channel: serverVideoControlChannelId
+        })
+        break
+      case 'Fear of God 1':
+        await chat.sdk.publish({
+          message: {
+            type: 'SEEK',
+            params: { playbackTime: 780000 }
+          },
+          channel: serverVideoControlChannelId
+        })
+        break
+      case 'LeBron 15 Diamond Turf':
+        await chat.sdk.publish({
+          message: {
+            type: 'SEEK',
+            params: { playbackTime: 900000 }
+          },
+          channel: serverVideoControlChannelId
+        })
+        break
+      case 'Yeezy 2 Red October':
+        await chat.sdk.publish({
+          message: {
+            type: 'SEEK',
+            params: { playbackTime: 1080000 }
           },
           channel: serverVideoControlChannelId
         })
@@ -108,7 +148,7 @@ export default function SideMenuDataControls ({
         await chat.sdk.publish({
           message: {
             type: 'SEEK',
-            params: { playbackTime: 49000 }
+            params: { playbackTime: 60000 }
           },
           channel: serverVideoControlChannelId
         })
@@ -117,7 +157,7 @@ export default function SideMenuDataControls ({
         await chat.sdk.publish({
           message: {
             type: 'SEEK',
-            params: { playbackTime: 175000 }
+            params: { playbackTime: 1180000 }
           },
           channel: serverVideoControlChannelId
         })
