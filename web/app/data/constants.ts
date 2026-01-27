@@ -27,7 +27,7 @@ export const dataControlOccupancyChannelId = "game.data-control-occupancy";
 // New channel for UI reset signals
 export const uiResetChannel = "game.ui-reset";
 
-export const streamUrl = "https://www.youtube.com/watch?v=NZtrRWDugls";
+export const streamUrl = "https://youtu.be/dK7TApzAiyA";
 //export const streamUrl = "https://vimeo.com/1094023400"
 
 export const reactions = ["👍", "❤️", "😂", "😮", "👏"]
