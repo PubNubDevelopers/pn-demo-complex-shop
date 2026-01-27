@@ -1,67 +1,40 @@
 exports.polls = [
   {
-    "timeSinceVideoStartedInMs": 75000,
+    "timeSinceVideoStartedInMs": 115000,
     "persistInHistory": false,
     "action": {
       "channel": "game.new-poll",
       "data": {
-        "id": 101,
-        "title": "The Game Boy Color can display over 32,000 colors. True or False?",
+        "id": 501,
+        "title": "What unique feature was added to the JTH 'Super Bowl' Jordan 3 based on the original sketch?",
         "victoryPoints": 5,
         "pollType": "side",
         "options": [
           {
             "id": 1,
-            "text": "True"
+            "text": "Reflective Swoosh"
           },
           {
             "id": 2,
-            "text": "False"
+            "text": "Velcro Strap"
+          },
+          {
+            "id": 3,
+            "text": "Glow in the Dark Soles"
           }
         ]
       }
     }
   },
   {
-    "timeSinceVideoStartedInMs": 95000,
+    "timeSinceVideoStartedInMs": 135000,
     "persistInHistory": false,
     "action": {
       "channel": "game.poll-results",
       "data": {
-        "id": 101,
+        "id": 501,
         "correctOption": 1,
         "pollType": "side"
-      }
-    }
-  },
-  {
-    "timeSinceVideoStartedInMs": 180000,
-    "persistInHistory": false,
-    "action": {
-      "channel": "game.new-poll",
-      "data": {
-        "id": 203,
-        "title": "Which of these is a common issue for aging Game Boy Color consoles?",
-        "victoryPoints": 10,
-        "pollType": "side",
-        "options": [
-          {
-            "id": 1,
-            "text": "Failing Speakers"
-          },
-          {
-            "id": 2,
-            "text": "Cracked Hinges"
-          },
-          {
-            "id": 3,
-            "text": "Drifting Analog Sticks"
-          },
-          {
-            "id": 4,
-            "text": "Overheating Batteries"
-          }
-        ]
       }
     }
   },
@@ -69,79 +42,114 @@ exports.polls = [
     "timeSinceVideoStartedInMs": 200000,
     "persistInHistory": false,
     "action": {
+      "channel": "game.new-poll",
+      "data": {
+        "id": 502,
+        "title": "Which Justin Timberlake album inspired the 'Bio Beige' Jordan 3 colorway?",
+        "victoryPoints": 10,
+        "pollType": "side",
+        "options": [
+          {
+            "id": 1,
+            "text": "FutureSex/LoveSounds"
+          },
+          {
+            "id": 2,
+            "text": "The 20/20 Experience"
+          },
+          {
+            "id": 3,
+            "text": "Man of the Woods"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "timeSinceVideoStartedInMs": 220000,
+    "persistInHistory": false,
+    "action": {
       "channel": "game.poll-results",
       "data": {
-        "id": 203,
+        "id": 502,
+        "correctOption": 3,
+        "pollType": "side"
+      }
+    }
+  },
+  {
+    "timeSinceVideoStartedInMs": 430000,
+    "persistInHistory": false,
+    "action": {
+      "channel": "game.new-poll",
+      "data": {
+        "id": 503,
+        "title": "Justin says the Air Max 1 'Atmos' is his favorite because of which specific detail?",
+        "victoryPoints": 5,
+        "pollType": "side",
+        "options": [
+          {
+            "id": 1,
+            "text": "The Elephant Print"
+          },
+          {
+            "id": 2,
+            "text": "The Jade Swoosh"
+          },
+          {
+            "id": 3,
+            "text": "The White Midsole"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "timeSinceVideoStartedInMs": 450000,
+    "persistInHistory": false,
+    "action": {
+      "channel": "game.poll-results",
+      "data": {
+        "id": 503,
         "correctOption": 1,
         "pollType": "side"
       }
     }
   },
   {
-    "timeSinceVideoStartedInMs": 350000,
+    "timeSinceVideoStartedInMs": 560000,
     "persistInHistory": false,
     "action": {
       "channel": "game.new-poll",
       "data": {
-        "id": 102,
-        "title": "The 'SP' in Game Boy Advance SP stands for 'Super Portable'. True or False?",
+        "id": 504,
+        "title": "The Air Jordan 3 'Seoul' features the flag colors of which country on the tongue?",
         "victoryPoints": 5,
         "pollType": "side",
         "options": [
           {
             "id": 1,
-            "text": "True"
+            "text": "Japan"
           },
           {
             "id": 2,
-            "text": "False"
+            "text": "South Korea"
+          },
+          {
+            "id": 3,
+            "text": "China"
           }
         ]
       }
     }
   },
   {
-    "timeSinceVideoStartedInMs": 370000,
+    "timeSinceVideoStartedInMs": 580000,
     "persistInHistory": false,
     "action": {
       "channel": "game.poll-results",
       "data": {
-        "id": 102,
-        "correctOption": 2,
-        "pollType": "side"
-      }
-    }
-  },
-  {
-    "timeSinceVideoStartedInMs": 480000,
-    "persistInHistory": false,
-    "action": {
-      "channel": "game.new-poll",
-      "data": {
-        "id": 201,
-        "title": "Which Game Boy Advance SP model featured a brighter, backlit screen?",
-        "victoryPoints": 10,
-        "pollType": "side",
-        "options": [
-          {
-            "id": 1,
-            "text": "AGS-001"
-          },
-          {
-            "id": 2,
-            "text": "AGS-101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "timeSinceVideoStartedInMs": 500000,
-    "persistInHistory": false,
-    "action": {
-      "channel": "game.poll-results",
-      "data": {
-        "id": 201,
+        "id": 504,
         "correctOption": 2,
         "pollType": "side"
       }
@@ -153,18 +161,22 @@ exports.polls = [
     "action": {
       "channel": "game.new-poll",
       "data": {
-        "id": 103,
-        "title": "The Nintendo DSi was the first Nintendo handheld with a built-in camera. Yes or No?",
-        "victoryPoints": 5,
+        "id": 505,
+        "title": "Who is the designer behind the deconstructed 'Off-White' Air Jordan 1 UNC?",
+        "victoryPoints": 10,
         "pollType": "side",
         "options": [
           {
             "id": 1,
-            "text": "Yes"
+            "text": "Jerry Lorenzo"
           },
           {
             "id": 2,
-            "text": "No"
+            "text": "Virgil Abloh"
+          },
+          {
+            "id": 3,
+            "text": "Kanye West"
           }
         ]
       }
@@ -176,133 +188,75 @@ exports.polls = [
     "action": {
       "channel": "game.poll-results",
       "data": {
-        "id": 103,
+        "id": 505,
+        "correctOption": 2,
+        "pollType": "side"
+      }
+    }
+  },
+  {
+    "timeSinceVideoStartedInMs": 1090000,
+    "persistInHistory": false,
+    "action": {
+      "channel": "game.new-poll",
+      "data": {
+        "id": 506,
+        "title": "True or False: Justin Timberlake jokingly asked if he needed a loan to buy the Red Octobers.",
+        "victoryPoints": 5,
+        "pollType": "side",
+        "options": [
+          {
+            "id": 1,
+            "text": "True"
+          },
+          {
+            "id": 2,
+            "text": "False"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "timeSinceVideoStartedInMs": 1110000,
+    "persistInHistory": false,
+    "action": {
+      "channel": "game.poll-results",
+      "data": {
+        "id": 506,
         "correctOption": 1,
         "pollType": "side"
       }
     }
   },
   {
-    "timeSinceVideoStartedInMs": 850000,
-    "persistInHistory": false,
-    "action": {
-      "channel": "game.new-poll",
-      "data": {
-        "id": 202,
-        "title": "What was the primary new feature introduced with the Nintendo DSi over the DS Lite?",
-        "victoryPoints": 10,
-        "pollType": "side",
-        "options": [
-          {
-            "id": 1,
-            "text": "Dual Screens"
-          },
-          {
-            "id": 2,
-            "text": "SD Card Slot & DSiWare"
-          },
-          {
-            "id": 3,
-            "text": "3D Display"
-          },
-          {
-            "id": 4,
-            "text": "Motion Controls"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "timeSinceVideoStartedInMs": 870000,
-    "persistInHistory": false,
-    "action": {
-      "channel": "game.poll-results",
-      "data": {
-        "id": 202,
-        "correctOption": 2,
-        "pollType": "side"
-      }
-    }
-  },
-  {
-    "timeSinceVideoStartedInMs": 1100000,
-    "persistInHistory": false,
-    "action": {
-      "channel": "game.new-poll",
-      "data": {
-        "id": 104,
-        "title": "The Nintendo 3DS XL requires special glasses for its 3D effect. Yes or No?",
-        "victoryPoints": 5,
-        "pollType": "side",
-        "options": [
-          {
-            "id": 1,
-            "text": "Yes"
-          },
-          {
-            "id": 2,
-            "text": "No"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "timeSinceVideoStartedInMs": 1120000,
-    "persistInHistory": false,
-    "action": {
-      "channel": "game.poll-results",
-      "data": {
-        "id": 104,
-        "correctOption": 2,
-        "pollType": "side"
-      }
-    }
-  },
-  {
-    "timeSinceVideoStartedInMs": 50000,
+    "timeSinceVideoStartedInMs": 60000,
     "persistInHistory": true,
     "action": {
       "channel": "game.new-poll",
       "data": {
-        "id": 301,
-        "title": "What's MOST important for your ideal future retro handheld?",
+        "id": 601,
+        "title": "Which sneaker in this episode is your personal 'Grail'?",
         "pollType": "featuredStreamPoll",
         "options": [
-          { "id": 1, "text": "Larger Screen" },
-          { "id": 2, "text": "Better Performance (more systems)" },
-          { "id": 3, "text": "Longer Battery Life" },
-          { "id": 4, "text": "Premium Build Quality" }
+          { "id": 1, "text": "Air Jordan 3 JTH" },
+          { "id": 2, "text": "Air Max 1 Atmos" },
+          { "id": 3, "text": "Off-White Jordan 1" },
+          { "id": 4, "text": "Yeezy 2 Red October" }
         ]
       }
     }
   },
   {
-    "timeSinceVideoStartedInMs": 176000,
+    "timeSinceVideoStartedInMs": 1180000,
     "persistInHistory": false,
     "action": {
       "channel": "game.poll-results",
       "data": {
-        "id": 301,
+        "id": 601,
         "pollType": "featuredStreamPoll",
         "isFinalSignal": true
       }
     }
   }
 ];
-
-/*  {
-    timeSinceVideoStartedInMs: 3000,
-    persistInHistory: false,
-    action: {
-      channel: "game.poll-votes",
-      data: {
-        pollId: 2,
-        questionId: "1",
-        choiceId: 1,
-        pollType: "side",
-      },
-    },
-  },
-*/
