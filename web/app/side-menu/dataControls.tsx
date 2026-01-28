@@ -218,28 +218,22 @@ export default function SideMenuDataControls ({
 
   return (
     <div className='flex flex-col gap-3 text-base font-semibold'>
-      {/* Start/Stop Toggle Button */}
+      {/* Start/Stop and Chat Pause/Resume Toggle Buttons */}
       <div className='flex flex-row gap-2 h-11 items-center justify-between'>
-        <div className=''>Control</div>
         <button
           onClick={handleStartStopToggle}
-          className={`flex items-center justify-center gap-2 px-4 h-11 rounded-md font-semibold transition-colors ${
+          className={`flex items-center justify-center gap-2 px-4 h-11 rounded-md font-semibold transition-colors flex-1 ${
             isStarted 
               ? 'bg-complex-red text-white hover:bg-red-700' 
               : 'bg-green-600 text-white hover:bg-green-700'
           }`}
         >
-          {isStarted ? 'Stop Simulation' : 'Start Simulation'}
+          {isStarted ? 'Stop Demo' : 'Start Demo'}
         </button>
-      </div>
-      
-      {/* Chat Pause/Resume Toggle Button */}
-      <div className='flex flex-row gap-2 h-11 items-center justify-between'>
-        <div className=''>Bot Chat</div>
         <button
           onClick={handleChatToggle}
           disabled={!isStarted}
-          className={`flex items-center justify-center gap-2 px-4 h-11 rounded-md font-semibold transition-colors ${
+          className={`flex items-center justify-center gap-2 px-4 h-11 rounded-md font-semibold transition-colors flex-1 ${
             !isStarted
               ? 'bg-gray-500 text-gray-300 cursor-not-allowed'
               : isChatPaused 
@@ -252,7 +246,7 @@ export default function SideMenuDataControls ({
       </div>
       
       <div className='flex flex-row gap-2 h-11 items-center justify-between'>
-        <div className=''>Simulation</div>
+        <div className=''>Jump to:</div>
         <div className='flex flex-col'>
           <div
             className='flex flex-row gap-1 items-center cursor-pointer border-1 border-complex-red rounded-md h-11 max-h-11 w-48 px-3'

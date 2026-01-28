@@ -82,11 +82,11 @@ function SideMenuContents ({
               key={'1'}
               indicator={({ isOpen }) => accordionIndicator(isOpen)}
               className={`${accordionItemClass} pb-6`}
-              textValue={'Data Controls'}
+              textValue={'Demo Controls'}
               title={
                 <div className={accordionTitleClass}>
                   <DataControlsIcon />
-                  Data Controls
+                  Demo Controls
                 </div>
               }
             >
