@@ -1,34 +1,78 @@
-2:16 "Does the volume wheel work?"
-2:23 "Does it come with a backlit screen?"
-4:23 "Does Pokemon Crystal come with the Console?"
-7:34 "Does Pokemon Ruby come with the console?"
-7:38 "Have there been any modifications done to the console?"
-7:41 "Do any accessories come with it?"
-9:05 "Does audio work?"
-9:22 (No question, but people talking about being able to hear audio)
-10:14 "Does this work with Gameboy games?"
-14:10 (No question, but people asking to see the screen turned on)
-14:29 "Can I play American DS games on this console?"
-15:40 "Does this include any games?"
-15:45 “Does it come with any accessories?”
-15:50 “Does it come with a case?”
-16:27 “The system looks great! Any defects or other problems with the DS”?
-16:35 “Can you test the cameras?”
-17:20 (No questions, people just talking about region-bound games and the appropriate consoles. Nintendo DS and below, region free. Nintendo DSi and above, can only play that region’s games)
-18:45 (No questions, just general comments about screen size differences)
-19:15: “Is the original 3ds for sale”?
-21:00 “Will there be issues between the American and Japanese chargers for the system”? (few questions like this)
-21:40 “Does the camera work”?
-22:00 “Volume on the system OK?”
-23:10 “Does the eShop still work and have games?”
-23:40 “Can I use my American eShop games on the Japanese console”?
-23:50 “Does it come with any accessories?”
-23:55 “Does it come with any games”?
-25:00 “It’s a little bright, can you adjust the lighting to see the console better?”
-25:40 “Can you turn on 3d?”
-26:20 “Is the touchpad on the bottom responsive?”
-27:15 “Can it play more games than just Pokemon?”
-27:40 “Can you skip cutscenes 🙂?”
-28:50 “Does this come with a charger?”
-29:20 “Can you show the condition of the 3ds again please?”
-30:10 “What’s your favorite Pokemon gen?”
+1:55 "Did he really mow lawns for sneakers?"
+2:05 "How much was he charging per lawn back then?"
+2:15 "Wait, he had to save up? I thought he was always rich."
+2:30 "Are those the Olive Jordan 9s he's talking about?"
+2:35 "Those look like boots lol"
+2:42 "Is the Olive 9 underrated? True or False?"
+3:05 "Air Max 98s were so comfy."
+3:15 "Wait, Tinker Hatfield designed both?"
+3:20 "Did he say he has high arches?"
+3:40 "Did anyone else actually use those foam arch supports?"
+3:50 "I threw those arch wedges away immediately."
+3:58 "Does he dance in Air Maxes?"
+4:15 "Indiglo 14s! Classic."
+4:20 "Did the whole band actually match shoes?"
+4:35 "Was that product placement or did they just buy them?"
+4:40 "Can you actually dance in 14s?"
+4:45 "Are those the ones with the Ferrari logo?"
+5:20 "Penny Hardaways were huge in Memphis."
+5:25 "Did he wear Foamposites?"
+5:30 "Why couldn't he find the blue and blacks?"
+5:45 "Was he getting free shoes back then?"
+6:15 "Are those the Legends of the Summer 2s?"
+6:25 "Why are they all red?"
+6:30 "Is that glitter on the shoe?"
+6:35 "Did he design these himself?"
+6:50 "Wait, the shoe matched the stage lighting?"
+7:10 "Does it say 'Suit and Tie' on the sole?"
+7:25 "Why don't stores have these?"
+7:40 "He gave his pairs away???"
+7:50 "How much are these worth now? Like 10k?"
+8:05 "Does he only have one pair left?"
+8:35 "Is that a Swoosh on a Jordan 3?"
+8:45 "I thought 3s didn't have swooshes."
+8:55 "Was Tinker mad about the swoosh?"
+9:15 "Is the swoosh reflective 3M?"
+9:25 "Did he change shoes during the halftime show?"
+9:40 "Only 3 pairs made??"
+9:50 "What's the date printed on the inside?"
+10:05 "Did they really sell out in 5 minutes?"
+10:35 "Did he meet Michael Jordan?"
+10:45 "Are those leather laces?"
+10:55 "Is this supposed to be a winter boot?"
+11:05 "I love the orange accents."
+11:15 "What does it say on the insole? 'Fame is a Lie'?"
+11:25 "Is that suede or nubuck?"
+11:45 "He based the shoe on a coat?"
+11:55 "Yellow eyes? That's a cool detail."
+12:30 "Did he really wear a fresh pair for the Super Bowl?"
+12:45 "Is he worried about creasing them?"
+13:00 "Function over fashion I guess?"
+13:15 "Look at that crease! Painful."
+13:50 "A girl gave him her Jordans??"
+14:05 "What size were her feet if they fit him?"
+14:15 "Did he keep the girl or just the shoes?"
+14:25 "That's the best origin story ever."
+14:50 "Did he own a golf course?"
+15:10 "Can you wear these off the golf course?"
+15:30 "Are these spiked?"
+15:55 "Is that an Air Max 1 Golf shoe?"
+16:15 "Is Jordan Brand big in golf now?"
+16:30 "Do they have metal spikes?"
+17:15 "Is he buying the Grinches?"
+17:20 "Are those for his kids?"
+17:25 "Reimagined 3s are a solid pick."
+17:40 "Are those the Powerpuff Girls dunks?"
+17:45 "He's getting the blue ones for his kid?"
+17:50 "Born x Raised Dunks! Those are pricey."
+18:05 "Is he looking at the Lobster Dunks?"
+18:10 "Off-White Air Force 1s? The yellow ones?"
+18:15 "Lemonades? Nice choice."
+18:25 "IS HE LOOKING AT THE RED OCTOBERS?"
+18:30 "No way he's buying the Yeezy 2s."
+18:35 "How much are Red Octobers going for right now?"
+18:40 "Did he just say 'I'll take them'?"
+18:55 "How many pairs did he grab?"
+19:05 "22,000 DOLLARS??"
+19:10 "Did he actually ask for a loan? lol"
+19:15 "Is that the most expensive episode ever?"

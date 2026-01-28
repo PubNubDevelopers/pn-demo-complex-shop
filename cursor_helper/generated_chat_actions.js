@@ -47,6 +47,17 @@ export const generatedChatActions = [
     }
   },
   {
+    timeSinceVideoStartedInMs: 115000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-01',
+        text: 'Did he really mow lawns for sneakers?'
+      }
+    }
+  },
+  {
     timeSinceVideoStartedInMs: 125000,
     persistInHistory: false,
     action: {
@@ -54,6 +65,28 @@ export const generatedChatActions = [
       data: {
         user: 'bot-05',
         text: 'Tinker Hatfield is the GOAT.'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 125000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-02',
+        text: 'How much was he charging per lawn back then?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 135000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-03',
+        text: 'Wait, he had to save up? I thought he was always rich.'
       }
     }
   },
@@ -69,6 +102,28 @@ export const generatedChatActions = [
     }
   },
   {
+    timeSinceVideoStartedInMs: 150000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-04',
+        text: 'Are those the Olive Jordan 9s he\'s talking about?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 155000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-05',
+        text: 'Those look like boots lol'
+      }
+    }
+  },
+  {
     timeSinceVideoStartedInMs: 160000,
     persistInHistory: false,
     action: {
@@ -76,6 +131,17 @@ export const generatedChatActions = [
       data: {
         user: 'bot-07',
         text: 'Leather laces definitely give it that luxury vibe.'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 162000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-06',
+        text: 'Is the Olive 9 underrated? True or False?'
       }
     }
   },
@@ -91,6 +157,28 @@ export const generatedChatActions = [
     }
   },
   {
+    timeSinceVideoStartedInMs: 185000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-07',
+        text: 'Air Max 98s were so comfy.'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 195000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-08',
+        text: 'Wait, Tinker Hatfield designed both?'
+      }
+    }
+  },
+  {
     timeSinceVideoStartedInMs: 200000,
     persistInHistory: false,
     action: {
@@ -98,6 +186,17 @@ export const generatedChatActions = [
       data: {
         user: 'bot-09',
         text: 'I still prefer the Jordan 3 without the Swoosh, tbh.'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 200000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-09',
+        text: 'Did he say he has high arches?'
       }
     }
   },
@@ -113,6 +212,50 @@ export const generatedChatActions = [
     }
   },
   {
+    timeSinceVideoStartedInMs: 220000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-10',
+        text: 'Did anyone else actually use those foam arch supports?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 230000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-11',
+        text: 'I threw those arch wedges away immediately.'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 238000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-12',
+        text: 'Does he dance in Air Maxes?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 255000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-13',
+        text: 'Indiglo 14s! Classic.'
+      }
+    }
+  },
+  {
     timeSinceVideoStartedInMs: 260000,
     persistInHistory: false,
     action: {
@@ -120,6 +263,50 @@ export const generatedChatActions = [
       data: {
         user: 'bot-11',
         text: 'He really knows his history with Tinker.'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 260000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-14',
+        text: 'Did the whole band actually match shoes?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 275000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-15',
+        text: 'Was that product placement or did they just buy them?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 280000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-16',
+        text: 'Can you actually dance in 14s?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 285000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-17',
+        text: 'Are those the ones with the Ferrari logo?'
       }
     }
   },
@@ -146,6 +333,39 @@ export const generatedChatActions = [
     }
   },
   {
+    timeSinceVideoStartedInMs: 320000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-18',
+        text: 'Penny Hardaways were huge in Memphis.'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 325000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-19',
+        text: 'Did he wear Foamposites?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 330000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-20',
+        text: 'Why couldn\'t he find the blue and blacks?'
+      }
+    }
+  },
+  {
     timeSinceVideoStartedInMs: 335000,
     persistInHistory: false,
     action: {
@@ -153,6 +373,39 @@ export const generatedChatActions = [
       data: {
         user: 'bot-14',
         text: 'Those scavenger hunts were crazy times on Twitter.'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 345000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-21',
+        text: 'Was he getting free shoes back then?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 375000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-22',
+        text: 'Are those the Legends of the Summer 2s?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 385000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-23',
+        text: 'Why are they all red?'
       }
     }
   },
@@ -168,6 +421,28 @@ export const generatedChatActions = [
     }
   },
   {
+    timeSinceVideoStartedInMs: 390000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-24',
+        text: 'Is that glitter on the shoe?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 395000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-25',
+        text: 'Did he design these himself?'
+      }
+    }
+  },
+  {
     timeSinceVideoStartedInMs: 405000,
     persistInHistory: false,
     action: {
@@ -175,6 +450,17 @@ export const generatedChatActions = [
       data: {
         user: 'bot-16',
         text: 'Elephant print on an Air Max just works so well.'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 410000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-26',
+        text: 'Wait, the shoe matched the stage lighting?'
       }
     }
   },
@@ -190,6 +476,50 @@ export const generatedChatActions = [
     }
   },
   {
+    timeSinceVideoStartedInMs: 430000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-27',
+        text: 'Does it say \'Suit and Tie\' on the sole?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 445000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-28',
+        text: 'Why don\'t stores have these?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 460000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-29',
+        text: 'He gave his pairs away???'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 470000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-30',
+        text: 'How much are these worth now? Like 10k?'
+      }
+    }
+  },
+  {
     timeSinceVideoStartedInMs: 480000,
     persistInHistory: false,
     action: {
@@ -201,6 +531,50 @@ export const generatedChatActions = [
     }
   },
   {
+    timeSinceVideoStartedInMs: 485000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-31',
+        text: 'Does he only have one pair left?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 515000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-32',
+        text: 'Is that a Swoosh on a Jordan 3?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 525000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-33',
+        text: 'I thought 3s didn\'t have swooshes.'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 535000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-34',
+        text: 'Was Tinker mad about the swoosh?'
+      }
+    }
+  },
+  {
     timeSinceVideoStartedInMs: 550000,
     persistInHistory: false,
     action: {
@@ -208,6 +582,61 @@ export const generatedChatActions = [
       data: {
         user: 'bot-19',
         text: 'The Seoul 3s are so clean with the flag colors.'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 555000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-35',
+        text: 'Is the swoosh reflective 3M?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 565000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-36',
+        text: 'Did he change shoes during the halftime show?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 580000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-37',
+        text: 'Only 3 pairs made??'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 590000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-38',
+        text: 'What\'s the date printed on the inside?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 605000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-39',
+        text: 'Did they really sell out in 5 minutes?'
       }
     }
   },
@@ -234,6 +663,28 @@ export const generatedChatActions = [
     }
   },
   {
+    timeSinceVideoStartedInMs: 635000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-40',
+        text: 'Did he meet Michael Jordan?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 645000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-01',
+        text: 'Are those leather laces?'
+      }
+    }
+  },
+  {
     timeSinceVideoStartedInMs: 650000,
     persistInHistory: false,
     action: {
@@ -241,6 +692,72 @@ export const generatedChatActions = [
       data: {
         user: 'bot-22',
         text: 'I love how he appreciates the craftsmanship.'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 655000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-02',
+        text: 'Is this supposed to be a winter boot?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 665000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-03',
+        text: 'I love the orange accents.'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 675000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-04',
+        text: 'What does it say on the insole? \'Fame is a Lie\'?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 685000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-05',
+        text: 'Is that suede or nubuck?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 705000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-06',
+        text: 'He based the shoe on a coat?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 715000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-07',
+        text: 'Yellow eyes? That\'s a cool detail.'
       }
     }
   },
@@ -267,6 +784,72 @@ export const generatedChatActions = [
     }
   },
   {
+    timeSinceVideoStartedInMs: 750000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-08',
+        text: 'Did he really wear a fresh pair for the Super Bowl?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 765000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-09',
+        text: 'Is he worried about creasing them?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 780000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-10',
+        text: 'Function over fashion I guess?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 795000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-11',
+        text: 'Look at that crease! Painful.'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 830000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-12',
+        text: 'A girl gave him her Jordans??'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 845000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-13',
+        text: 'What size were her feet if they fit him?'
+      }
+    }
+  },
+  {
     timeSinceVideoStartedInMs: 850000,
     persistInHistory: false,
     action: {
@@ -274,6 +857,28 @@ export const generatedChatActions = [
       data: {
         user: 'bot-25',
         text: 'LeBron Watch was such a cool program.'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 855000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-14',
+        text: 'Did he keep the girl or just the shoes?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 865000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-15',
+        text: 'That\'s the best origin story ever.'
       }
     }
   },
@@ -289,6 +894,28 @@ export const generatedChatActions = [
     }
   },
   {
+    timeSinceVideoStartedInMs: 890000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-16',
+        text: 'Did he own a golf course?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 910000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-17',
+        text: 'Can you wear these off the golf course?'
+      }
+    }
+  },
+  {
     timeSinceVideoStartedInMs: 920000,
     persistInHistory: false,
     action: {
@@ -296,6 +923,17 @@ export const generatedChatActions = [
       data: {
         user: 'bot-27',
         text: 'He\'s grabbing everything off the shelf!'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 930000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-18',
+        text: 'Are these spiked?'
       }
     }
   },
@@ -311,6 +949,17 @@ export const generatedChatActions = [
     }
   },
   {
+    timeSinceVideoStartedInMs: 955000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-19',
+        text: 'Is that an Air Max 1 Golf shoe?'
+      }
+    }
+  },
+  {
     timeSinceVideoStartedInMs: 965000,
     persistInHistory: false,
     action: {
@@ -322,6 +971,17 @@ export const generatedChatActions = [
     }
   },
   {
+    timeSinceVideoStartedInMs: 975000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-20',
+        text: 'Is Jordan Brand big in golf now?'
+      }
+    }
+  },
+  {
     timeSinceVideoStartedInMs: 980000,
     persistInHistory: false,
     action: {
@@ -329,6 +989,17 @@ export const generatedChatActions = [
       data: {
         user: 'bot-30',
         text: 'The holy grail.'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 990000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-21',
+        text: 'Do they have metal spikes?'
       }
     }
   },
@@ -355,6 +1026,39 @@ export const generatedChatActions = [
     }
   },
   {
+    timeSinceVideoStartedInMs: 1035000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-22',
+        text: 'Is he buying the Grinches?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 1040000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-23',
+        text: 'Are those for his kids?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 1045000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-24',
+        text: 'Reimagined 3s are a solid pick.'
+      }
+    }
+  },
+  {
     timeSinceVideoStartedInMs: 1050000,
     persistInHistory: false,
     action: {
@@ -362,6 +1066,39 @@ export const generatedChatActions = [
       data: {
         user: 'bot-33',
         text: 'He\'s actually doing it. He\'s buying the Yeezy 2s.'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 1060000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-25',
+        text: 'Are those the Powerpuff Girls dunks?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 1065000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-26',
+        text: 'He\'s getting the blue ones for his kid?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 1070000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-27',
+        text: 'Born x Raised Dunks! Those are pricey.'
       }
     }
   },
@@ -377,6 +1114,72 @@ export const generatedChatActions = [
     }
   },
   {
+    timeSinceVideoStartedInMs: 1085000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-28',
+        text: 'Is he looking at the Lobster Dunks?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 1090000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-29',
+        text: 'Off-White Air Force 1s? The yellow ones?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 1095000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-30',
+        text: 'Lemonades? Nice choice.'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 1105000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-31',
+        text: 'IS HE LOOKING AT THE RED OCTOBERS?'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 1110000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-32',
+        text: 'No way he\'s buying the Yeezy 2s.'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 1115000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-33',
+        text: 'How much are Red Octobers going for right now?'
+      }
+    }
+  },
+  {
     timeSinceVideoStartedInMs: 1120000,
     persistInHistory: false,
     action: {
@@ -384,6 +1187,17 @@ export const generatedChatActions = [
       data: {
         user: 'bot-35',
         text: 'Checking out...'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 1120000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-34',
+        text: 'Did he just say \'I\'ll take them\'?'
       }
     }
   },
@@ -399,6 +1213,17 @@ export const generatedChatActions = [
     }
   },
   {
+    timeSinceVideoStartedInMs: 1135000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-35',
+        text: 'How many pairs did he grab?'
+      }
+    }
+  },
+  {
     timeSinceVideoStartedInMs: 1140000,
     persistInHistory: false,
     action: {
@@ -410,6 +1235,17 @@ export const generatedChatActions = [
     }
   },
   {
+    timeSinceVideoStartedInMs: 1145000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-36',
+        text: '22,000 DOLLARS??'
+      }
+    }
+  },
+  {
     timeSinceVideoStartedInMs: 1150000,
     persistInHistory: false,
     action: {
@@ -417,6 +1253,28 @@ export const generatedChatActions = [
       data: {
         user: 'bot-38',
         text: 'Dropped 20 bands like it was nothing.'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 1150000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-37',
+        text: 'Did he actually ask for a loan? lol'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 1155000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.chat',
+      data: {
+        user: 'bot-38',
+        text: 'Is that the most expensive episode ever?'
       }
     }
   },
