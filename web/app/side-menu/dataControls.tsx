@@ -44,11 +44,11 @@ export default function SideMenuDataControls ({
     'LeBron 15 Diamond Turf',
     'Yeezy 2 Red October',
     'Featured Poll Start',
-    'Featured Poll Results',
-    'Pause / Resume Bot chat'
+    'Featured Poll Results'
   ]
   const [occupancy, setOccupancy] = useState<number | number[]>(0)
   const [isStarted, setIsStarted] = useState(false)
+  const [isChatPaused, setIsChatPaused] = useState(false)
   
   async function handleStartStopToggle() {
     if (isStarted) {
@@ -67,6 +67,15 @@ export default function SideMenuDataControls ({
       setIsStarted(true)
     }
   }
+  
+  async function handleChatToggle() {
+    await chat.sdk.publish({
+      message: { type: 'BOT_CHAT' },
+      channel: serverVideoControlChannelId
+    })
+    setIsChatPaused(!isChatPaused)
+  }
+  
   async function sendMessageToBackend (simulate) {
     switch (simulate) {
       case 'Jordan 3 Super Bowl':
@@ -168,15 +177,6 @@ export default function SideMenuDataControls ({
           channel: serverVideoControlChannelId
         })
         break
-        case 'Pause / Resume Bot chat':
-        //  Toggle the bot chat
-        await chat.sdk.publish({
-          message: {
-            type: 'BOT_CHAT'
-          },
-          channel: serverVideoControlChannelId
-        })
-        break
     }
   }
 
@@ -230,6 +230,24 @@ export default function SideMenuDataControls ({
           }`}
         >
           {isStarted ? 'Stop Simulation' : 'Start Simulation'}
+        </button>
+      </div>
+      
+      {/* Chat Pause/Resume Toggle Button */}
+      <div className='flex flex-row gap-2 h-11 items-center justify-between'>
+        <div className=''>Bot Chat</div>
+        <button
+          onClick={handleChatToggle}
+          disabled={!isStarted}
+          className={`flex items-center justify-center gap-2 px-4 h-11 rounded-md font-semibold transition-colors ${
+            !isStarted
+              ? 'bg-gray-500 text-gray-300 cursor-not-allowed'
+              : isChatPaused 
+                ? 'bg-yellow-600 text-white hover:bg-yellow-700' 
+                : 'bg-blue-600 text-white hover:bg-blue-700'
+          }`}
+        >
+          {isChatPaused ? 'Resume Chat' : 'Pause Chat'}
         </button>
       </div>
       
