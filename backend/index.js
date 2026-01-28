@@ -164,6 +164,20 @@ async function handleControlMessage(msg) {
       voteCounts = {};
       shouldSendChatMessages = true;
       matchScript = buildMatchScript();
+      
+      // Publish reset message to clear all UI components
+      await pubnub.publish({
+        channel: UI_RESET_CHANNEL,
+        message: { 
+          resetLiveStreamPoll: true, 
+          resetPollsWidget: true, 
+          resetCommentary: true,
+          resetChat: true,
+          resetProductShowcase: true
+        },
+        storeInHistory: false
+      });
+      
       await publishVideoEvent("START_STREAM", {});
       startLoop();
       break;
