@@ -3,24 +3,101 @@
 
 exports.commentary = [
   {
-    timeSinceVideoStartedInMs: 20000,
+    timeSinceVideoStartedInMs: 0,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
         text: '[Music]',
-        timeCode: '00:20'
+        timeCode: '00:00'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 22000,
+    timeSinceVideoStartedInMs: 2000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
         text: 'all right you got lunch tomorrow at',
-        timeCode: '00:22'
+        timeCode: '00:02'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 3000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: '12:00 uh-huh uh we have to do another',
+        timeCode: '00:03'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 6000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'shoot over there in West Hollywood okay',
+        timeCode: '00:06'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 9000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'uh then you got sneaker shopping',
+        timeCode: '00:09'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 11000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'tonight I got sneakers shopping',
+        timeCode: '00:11'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 15000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'tonight how could I',
+        timeCode: '00:15'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 17000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'forget let\'s',
+        timeCode: '00:17'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 19000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: '[Music]',
+        timeCode: '00:19'
       }
     }
   },
@@ -30,85 +107,30 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: '12:00 uh-huh uh we have to do another',
+        text: 'go',
         timeCode: '00:23'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 26000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'shoot over there in West Hollywood okay',
-        timeCode: '00:26'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 29000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'uh then you got sneaker shopping',
-        timeCode: '00:29'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 31000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'tonight I got sneakers shopping',
-        timeCode: '00:31'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 35000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'tonight how could I',
-        timeCode: '00:35'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 37000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'forget let\'s',
-        timeCode: '00:37'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 39000,
+    timeSinceVideoStartedInMs: 25000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
         text: '[Music]',
-        timeCode: '00:39'
+        timeCode: '00:25'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 43000,
+    timeSinceVideoStartedInMs: 41000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'go',
-        timeCode: '00:43'
+        text: 'wao',
+        timeCode: '00:41'
       }
     }
   },
@@ -118,19 +140,85 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: '[Music]',
+        text: 'yo',
         timeCode: '00:45'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 61000,
+    timeSinceVideoStartedInMs: 48000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'wao',
-        timeCode: '01:01'
+        text: 'hello Joe we doing the show yeah let\'s',
+        timeCode: '00:48'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 52000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'do the',
+        timeCode: '00:52'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 53000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'show',
+        timeCode: '00:53'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 57000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'what\'s up everybody it\'s Joe from',
+        timeCode: '00:57'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 58000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'complex we\'re in La at Flight Club with',
+        timeCode: '00:58'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 60000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'the Grammy and Emmy awardwinning Justin',
+        timeCode: '01:00'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 62000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'Timberly how you doing I\'m great going',
+        timeCode: '01:02'
       }
     }
   },
@@ -140,8 +228,30 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'yo',
+        text: 'to do some sneaker shopping tonight',
         timeCode: '01:05'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 66000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'going to see what he\'s feeling what he\'s',
+        timeCode: '01:06'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 67000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'not and then hopefully he\'s going to buy',
+        timeCode: '01:07'
       }
     }
   },
@@ -151,19 +261,8 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'hello Joe we doing the show yeah let\'s',
+        text: 'some sneakers let\'s do it man let\'s',
         timeCode: '01:08'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 72000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'do the',
-        timeCode: '01:12'
       }
     }
   },
@@ -173,41 +272,8 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'show',
+        text: '[Music]',
         timeCode: '01:13'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 77000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'what\'s up everybody it\'s Joe from',
-        timeCode: '01:17'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 78000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'complex we\'re in La at Flight Club with',
-        timeCode: '01:18'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 80000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'the Grammy and Emmy awardwinning Justin',
-        timeCode: '01:20'
       }
     }
   },
@@ -217,7 +283,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'Timberly how you doing I\'m great going',
+        text: 'go when this happens that means Joe\'s',
         timeCode: '01:22'
       }
     }
@@ -228,30 +294,8 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'to do some sneaker shopping tonight',
+        text: 'ready to get that yeah yeah',
         timeCode: '01:25'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 86000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'going to see what he\'s feeling what he\'s',
-        timeCode: '01:26'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 87000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'not and then hopefully he\'s going to buy',
-        timeCode: '01:27'
       }
     }
   },
@@ -261,30 +305,74 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'some sneakers let\'s do it man let\'s',
+        text: 'is Joe\'s I\'m ready move talk about',
         timeCode: '01:28'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 93000,
+    timeSinceVideoStartedInMs: 91000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: '[Music]',
-        timeCode: '01:33'
+        text: 'it before we get to Jordan the shoes I',
+        timeCode: '01:31'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 102000,
+    timeSinceVideoStartedInMs: 94000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'go when this happens that means Joe\'s',
-        timeCode: '01:42'
+        text: 'want to talk about Jordan the person and',
+        timeCode: '01:34'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 96000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'you looking up to him what was it like',
+        timeCode: '01:36'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 98000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'you know seeing him playing in the ogs',
+        timeCode: '01:38'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 100000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'and like before even like you got to',
+        timeCode: '01:40'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 103000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'design the player gosh yeah I have',
+        timeCode: '01:43'
       }
     }
   },
@@ -294,7 +382,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'ready to get that yeah yeah',
+        text: 'posters of MJ on my walls growing up in',
         timeCode: '01:45'
       }
     }
@@ -305,30 +393,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'is Joe\'s I\'m ready move talk about',
+        text: 'Tennessee and and not having access to',
         timeCode: '01:48'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 111000,
+    timeSinceVideoStartedInMs: 112000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'it before we get to Jordan the shoes I',
-        timeCode: '01:51'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 114000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'want to talk about Jordan the person and',
-        timeCode: '01:54'
+        text: 'sneakers as much as you know a huge',
+        timeCode: '01:52'
       }
     }
   },
@@ -338,7 +415,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'you looking up to him what was it like',
+        text: 'metropolitan area right you know I would',
         timeCode: '01:56'
       }
     }
@@ -349,41 +426,30 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'you know seeing him playing in the ogs',
+        text: 'have to say find a way to save up okay',
         timeCode: '01:58'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 120000,
+    timeSinceVideoStartedInMs: 121000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'and like before even like you got to',
-        timeCode: '02:00'
+        text: 'to go to Foot Locker to wait in line and',
+        timeCode: '02:01'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 123000,
+    timeSinceVideoStartedInMs: 126000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'design the player gosh yeah I have',
-        timeCode: '02:03'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 125000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'posters of MJ on my walls growing up in',
-        timeCode: '02:05'
+        text: 'I used to every',
+        timeCode: '02:06'
       }
     }
   },
@@ -393,30 +459,30 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'Tennessee and and not having access to',
+        text: 'cutting grass okay on on my street with',
         timeCode: '02:08'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 132000,
+    timeSinceVideoStartedInMs: 131000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'sneakers as much as you know a huge',
-        timeCode: '02:12'
+        text: 'everybody so I could try to you know',
+        timeCode: '02:11'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 136000,
+    timeSinceVideoStartedInMs: 134000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'metropolitan area right you know I would',
-        timeCode: '02:16'
+        text: 'save money up 10 bucks a lawn and I',
+        timeCode: '02:14'
       }
     }
   },
@@ -426,41 +492,63 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'have to say find a way to save up okay',
+        text: 'would I would try to save up and save up',
         timeCode: '02:18'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 141000,
+    timeSinceVideoStartedInMs: 140000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'to go to Foot Locker to wait in line and',
-        timeCode: '02:21'
+        text: 'to go wait in line at Foot Locker and',
+        timeCode: '02:20'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 146000,
+    timeSinceVideoStartedInMs: 142000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'I used to every',
-        timeCode: '02:26'
+        text: 'I\'ll never forget when the the black and',
+        timeCode: '02:22'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 148000,
+    timeSinceVideoStartedInMs: 144000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'cutting grass okay on on my street with',
-        timeCode: '02:28'
+        text: 'around Olive nines maybe yeah yeah yeah',
+        timeCode: '02:24'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 147000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'when they came out like we all wanted',
+        timeCode: '02:27'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 149000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'those so good such an underrated pair',
+        timeCode: '02:29'
       }
     }
   },
@@ -470,7 +558,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'everybody so I could try to you know',
+        text: 'underrated pair well and also growing up',
         timeCode: '02:31'
       }
     }
@@ -481,19 +569,30 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'save money up 10 bucks a lawn and I',
+        text: 'in a rural area it was a sneaker you',
         timeCode: '02:34'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 158000,
+    timeSinceVideoStartedInMs: 156000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'would I would try to save up and save up',
-        timeCode: '02:38'
+        text: 'could wear and not feel so bad if it got',
+        timeCode: '02:36'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 159000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'well it kind of looks like a Timberland',
+        timeCode: '02:39'
       }
     }
   },
@@ -503,7 +602,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'to go wait in line at Foot Locker and',
+        text: 'that\'s',
         timeCode: '02:40'
       }
     }
@@ -514,7 +613,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'I\'ll never forget when the the black and',
+        text: 'yeah totally which when they winterized',
         timeCode: '02:42'
       }
     }
@@ -525,7 +624,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'around Olive nines maybe yeah yeah yeah',
+        text: 'that shoe I was like what took them so',
         timeCode: '02:44'
       }
     }
@@ -536,19 +635,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'when they came out like we all wanted',
+        text: 'long who who just thought of this right',
         timeCode: '02:47'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 169000,
+    timeSinceVideoStartedInMs: 170000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'those so good such an underrated pair',
-        timeCode: '02:49'
+        text: 'before we\'re going to talk a lot of',
+        timeCode: '02:50'
       }
     }
   },
@@ -558,52 +657,41 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'underrated pair well and also growing up',
+        text: 'Jordans but I really like early 2000s',
         timeCode: '02:51'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 174000,
+    timeSinceVideoStartedInMs: 173000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'in a rural area it was a sneaker you',
-        timeCode: '02:54'
+        text: 'cuz you were Weare ing kind of like Cool',
+        timeCode: '02:53'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 176000,
+    timeSinceVideoStartedInMs: 177000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'could wear and not feel so bad if it got',
-        timeCode: '02:56'
+        text: 'Air Maxes you were really in like your',
+        timeCode: '02:57'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 179000,
+    timeSinceVideoStartedInMs: 178000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'well it kind of looks like a Timberland',
-        timeCode: '02:59'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 180000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'that\'s',
-        timeCode: '03:00'
+        text: 'Air Max bag air max 98 oh yeah what',
+        timeCode: '02:58'
       }
     }
   },
@@ -613,7 +701,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'yeah totally which when they winterized',
+        text: 'about like that Air Max era what do you',
         timeCode: '03:02'
       }
     }
@@ -624,7 +712,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'that shoe I was like what took them so',
+        text: 'remember about that well it\'s kind of',
         timeCode: '03:04'
       }
     }
@@ -635,30 +723,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'long who who just thought of this right',
+        text: 'ironic that the two sneakers that had',
         timeCode: '03:07'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 190000,
+    timeSinceVideoStartedInMs: 189000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'before we\'re going to talk a lot of',
-        timeCode: '03:10'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 191000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'Jordans but I really like early 2000s',
-        timeCode: '03:11'
+        text: 'the most effect on me when I first saw',
+        timeCode: '03:09'
       }
     }
   },
@@ -668,63 +745,63 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'cuz you were Weare ing kind of like Cool',
+        text: 'them were the threes okay and Air Max',
         timeCode: '03:13'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 197000,
+    timeSinceVideoStartedInMs: 196000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'Air Maxes you were really in like your',
-        timeCode: '03:17'
+        text: 'yeah and same',
+        timeCode: '03:16'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 198000,
+    timeSinceVideoStartedInMs: 199000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'Air Max bag air max 98 oh yeah what',
-        timeCode: '03:18'
+        text: 'find out that the same guy yes was',
+        timeCode: '03:19'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 202000,
+    timeSinceVideoStartedInMs: 201000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'about like that Air Max era what do you',
-        timeCode: '03:22'
+        text: 'behind was the genius behind yeah your',
+        timeCode: '03:21'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 204000,
+    timeSinceVideoStartedInMs: 203000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'remember about that well it\'s kind of',
-        timeCode: '03:24'
+        text: 'boy now yeah well yeah yeah I have a',
+        timeCode: '03:23'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 207000,
+    timeSinceVideoStartedInMs: 206000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'ironic that the two sneakers that had',
-        timeCode: '03:27'
+        text: 'story yeah but yeah I went through a big',
+        timeCode: '03:26'
       }
     }
   },
@@ -734,30 +811,41 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'the most effect on me when I first saw',
+        text: 'Air Max phase just because like super',
         timeCode: '03:29'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 213000,
+    timeSinceVideoStartedInMs: 212000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'them were the threes okay and Air Max',
-        timeCode: '03:33'
+        text: 'comfortable shoe yeah um I have big',
+        timeCode: '03:32'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 216000,
+    timeSinceVideoStartedInMs: 214000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'yeah and same',
-        timeCode: '03:36'
+        text: 'arches in my feet okay so I would wear',
+        timeCode: '03:34'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 217000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'them on stage when I could because they',
+        timeCode: '03:37'
       }
     }
   },
@@ -767,7 +855,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'find out that the same guy yes was',
+        text: 'were they just supported my feet and',
         timeCode: '03:39'
       }
     }
@@ -778,8 +866,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'behind was the genius behind yeah your',
+        text: 'when they used to you know when they',
         timeCode: '03:41'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 222000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'first sold them they came with the',
+        timeCode: '03:42'
       }
     }
   },
@@ -789,7 +888,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'boy now yeah well yeah yeah I have a',
+        text: 'little the little wedge yep I remember',
         timeCode: '03:43'
       }
     }
@@ -800,19 +899,30 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'story yeah but yeah I went through a big',
+        text: 'all this the arch W it was a styrofoam',
         timeCode: '03:46'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 229000,
+    timeSinceVideoStartedInMs: 228000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'Air Max phase just because like super',
-        timeCode: '03:49'
+        text: 'it was blue and pink like that',
+        timeCode: '03:48'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 230000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'to really save the arch you just threw',
+        timeCode: '03:50'
       }
     }
   },
@@ -822,30 +932,41 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'comfortable shoe yeah um I have big',
+        text: 'them out you threw them out with like',
         timeCode: '03:52'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 234000,
+    timeSinceVideoStartedInMs: 233000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'arches in my feet okay so I would wear',
-        timeCode: '03:54'
+        text: 'the gel that you can\'t eat the little',
+        timeCode: '03:53'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 237000,
+    timeSinceVideoStartedInMs: 235000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'them on stage when I could because they',
-        timeCode: '03:57'
+        text: 'things that are pois I I I would spend',
+        timeCode: '03:55'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 236000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'so much time trying to put them the',
+        timeCode: '03:56'
       }
     }
   },
@@ -855,19 +976,8 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'were they just supported my feet and',
+        text: 'right way in the yeah so another moment',
         timeCode: '03:59'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 241000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'when they used to you know when they',
-        timeCode: '04:01'
       }
     }
   },
@@ -877,19 +987,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'first sold them they came with the',
+        text: 'Big Pop Culture moment big Music Moment',
         timeCode: '04:02'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 243000,
+    timeSinceVideoStartedInMs: 244000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'little the little wedge yep I remember',
-        timeCode: '04:03'
+        text: 'do you know the significance of these do',
+        timeCode: '04:04'
       }
     }
   },
@@ -899,19 +1009,8 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'all this the arch W it was a styrofoam',
+        text: 'you remember oh God think about',
         timeCode: '04:06'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 248000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'it was blue and pink like that',
-        timeCode: '04:08'
       }
     }
   },
@@ -921,41 +1020,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'to really save the arch you just threw',
+        text: 'it where did I wear these byebye bye',
         timeCode: '04:10'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 252000,
+    timeSinceVideoStartedInMs: 254000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'them out you threw them out with like',
-        timeCode: '04:12'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 253000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'the gel that you can\'t eat the little',
-        timeCode: '04:13'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 255000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'things that are pois I I I would spend',
-        timeCode: '04:15'
+        text: 'video matching think the whole crew',
+        timeCode: '04:14'
       }
     }
   },
@@ -965,7 +1042,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'so much time trying to put them the',
+        text: 'matched that\'s right whole crew indiglow',
         timeCode: '04:16'
       }
     }
@@ -976,41 +1053,41 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'right way in the yeah so another moment',
+        text: '14s 2000 they came out you matched them',
         timeCode: '04:19'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 262000,
+    timeSinceVideoStartedInMs: 263000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'Big Pop Culture moment big Music Moment',
-        timeCode: '04:22'
+        text: 'up yeah and that\'s why in sync is the',
+        timeCode: '04:23'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 264000,
+    timeSinceVideoStartedInMs: 265000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'do you know the significance of these do',
-        timeCode: '04:24'
+        text: 'greatest boy band of all time',
+        timeCode: '04:25'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 266000,
+    timeSinceVideoStartedInMs: 267000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'you remember oh God think about',
-        timeCode: '04:26'
+        text: 'we go there we go but like was Jordan',
+        timeCode: '04:27'
       }
     }
   },
@@ -1020,8 +1097,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'it where did I wear these byebye bye',
+        text: 'brand seating you guys or were you going',
         timeCode: '04:30'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 271000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'out or do you remember complex rated',
+        timeCode: '04:31'
       }
     }
   },
@@ -1031,7 +1119,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'video matching think the whole crew',
+        text: 'like the best moments in music videos',
         timeCode: '04:34'
       }
     }
@@ -1042,74 +1130,74 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'matched that\'s right whole crew indiglow',
+        text: 'and that made it oh wow it\'s definitely',
         timeCode: '04:36'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 279000,
+    timeSinceVideoStartedInMs: 277000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: '14s 2000 they came out you matched them',
-        timeCode: '04:39'
+        text: 'like a sneaker culture moment this is a',
+        timeCode: '04:37'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 283000,
+    timeSinceVideoStartedInMs: 280000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'up yeah and that\'s why in sync is the',
-        timeCode: '04:43'
+        text: 'deep cut this is like a bide on a Stevie',
+        timeCode: '04:40'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 285000,
+    timeSinceVideoStartedInMs: 282000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'greatest boy band of all time',
-        timeCode: '04:45'
+        text: 'Wonder Al you know what I mean like gosh',
+        timeCode: '04:42'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 287000,
+    timeSinceVideoStartedInMs: 286000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'we go there we go but like was Jordan',
-        timeCode: '04:47'
+        text: 'you\'re right and we all had them very',
+        timeCode: '04:46'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 290000,
+    timeSinceVideoStartedInMs: 289000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'brand seating you guys or were you going',
-        timeCode: '04:50'
+        text: 'good to dance and good com shoot and',
+        timeCode: '04:49'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 291000,
+    timeSinceVideoStartedInMs: 292000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'out or do you remember complex rated',
-        timeCode: '04:51'
+        text: 'then another thing I like back in the',
+        timeCode: '04:52'
       }
     }
   },
@@ -1119,7 +1207,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'like the best moments in music videos',
+        text: 'day celebrity games charity games you',
         timeCode: '04:54'
       }
     }
@@ -1130,19 +1218,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'and that made it oh wow it\'s definitely',
+        text: 'always brought it you always brought you',
         timeCode: '04:56'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 297000,
+    timeSinceVideoStartedInMs: 299000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'like a sneaker culture moment this is a',
-        timeCode: '04:57'
+        text: 'always brought it and it was like you',
+        timeCode: '04:59'
       }
     }
   },
@@ -1152,19 +1240,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'deep cut this is like a bide on a Stevie',
+        text: 'were wearing',
         timeCode: '05:00'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 302000,
+    timeSinceVideoStartedInMs: 303000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'Wonder Al you know what I mean like gosh',
-        timeCode: '05:02'
+        text: 'shoes that like Dirk nitzky was wearing',
+        timeCode: '05:03'
       }
     }
   },
@@ -1174,30 +1262,41 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'you\'re right and we all had them very',
+        text: 'right right so like and true blue 3es',
         timeCode: '05:06'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 309000,
+    timeSinceVideoStartedInMs: 308000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'good to dance and good com shoot and',
-        timeCode: '05:09'
+        text: 'what about those games that you remember',
+        timeCode: '05:08'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 312000,
+    timeSinceVideoStartedInMs: 310000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'then another thing I like back in the',
-        timeCode: '05:12'
+        text: 'like I\'m definitely going to wear dope',
+        timeCode: '05:10'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 311000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'sneakers yeah yeah well also too I was a',
+        timeCode: '05:11'
       }
     }
   },
@@ -1207,30 +1306,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'day celebrity games charity games you',
+        text: 'big Penny fan okay Memphis right big',
         timeCode: '05:14'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 316000,
+    timeSinceVideoStartedInMs: 317000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'always brought it you always brought you',
-        timeCode: '05:16'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 319000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'always brought it and it was like you',
-        timeCode: '05:19'
+        text: 'Penny Hardway fan getting the deposits',
+        timeCode: '05:17'
       }
     }
   },
@@ -1240,7 +1328,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'were wearing',
+        text: 'were were like a big deal too okay but I',
         timeCode: '05:20'
       }
     }
@@ -1251,8 +1339,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'shoes that like Dirk nitzky was wearing',
+        text: 'never I don\'t think I ever was I could I',
         timeCode: '05:23'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 325000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'could ever find the blue and black was',
+        timeCode: '05:25'
       }
     }
   },
@@ -1262,30 +1361,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'right right so like and true blue 3es',
+        text: 'always the white oral yeah the original',
         timeCode: '05:26'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 328000,
+    timeSinceVideoStartedInMs: 329000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'what about those games that you remember',
-        timeCode: '05:28'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 330000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'like I\'m definitely going to wear dope',
-        timeCode: '05:30'
+        text: 'I think I was just at that time I was',
+        timeCode: '05:29'
       }
     }
   },
@@ -1295,41 +1383,52 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'sneakers yeah yeah well also too I was a',
+        text: 'mixing it up and wearing just like',
         timeCode: '05:31'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 334000,
+    timeSinceVideoStartedInMs: 333000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'big Penny fan okay Memphis right big',
-        timeCode: '05:34'
+        text: 'anything that caught my eye got it',
+        timeCode: '05:33'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 337000,
+    timeSinceVideoStartedInMs: 335000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'Penny Hardway fan getting the deposits',
-        timeCode: '05:37'
+        text: 'boxes coming in at that point uh no not',
+        timeCode: '05:35'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 340000,
+    timeSinceVideoStartedInMs: 338000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'were were like a big deal too okay but I',
-        timeCode: '05:40'
+        text: 'as much not as much not even for the',
+        timeCode: '05:38'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 341000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'videos you think costume designer or',
+        timeCode: '05:41'
       }
     }
   },
@@ -1339,19 +1438,8 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'never I don\'t think I ever was I could I',
+        text: 'yeah my my yeah maybe okay yeah like if',
         timeCode: '05:43'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 345000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'could ever find the blue and black was',
-        timeCode: '05:45'
       }
     }
   },
@@ -1361,19 +1449,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'always the white oral yeah the original',
+        text: 'there was a stylist or something we were',
         timeCode: '05:46'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 349000,
+    timeSinceVideoStartedInMs: 348000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'I think I was just at that time I was',
-        timeCode: '05:49'
+        text: 'able to get what had just come out at',
+        timeCode: '05:48'
       }
     }
   },
@@ -1383,74 +1471,41 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'mixing it up and wearing just like',
+        text: 'the time okay but um yeah yeah I I not',
         timeCode: '05:51'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 353000,
+    timeSinceVideoStartedInMs: 356000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'anything that caught my eye got it',
-        timeCode: '05:53'
+        text: 'the plug that I have now okay',
+        timeCode: '05:56'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 355000,
+    timeSinceVideoStartedInMs: 359000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'boxes coming in at that point uh no not',
-        timeCode: '05:55'
+        text: '[Music]',
+        timeCode: '05:59'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 358000,
+    timeSinceVideoStartedInMs: 365000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'as much not as much not even for the',
-        timeCode: '05:58'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 361000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'videos you think costume designer or',
-        timeCode: '06:01'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 363000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'yeah my my yeah maybe okay yeah like if',
-        timeCode: '06:03'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 366000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'there was a stylist or something we were',
-        timeCode: '06:06'
+        text: 'okay we want to talk Legends Of Summer',
+        timeCode: '06:05'
       }
     }
   },
@@ -1460,19 +1515,30 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'able to get what had just come out at',
+        text: 'Don\'t Throw yeah well I\'m going to catch',
         timeCode: '06:08'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 371000,
+    timeSinceVideoStartedInMs: 370000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'the time okay but um yeah yeah I I not',
-        timeCode: '06:11'
+        text: 'you could throw Legends Of Summer these',
+        timeCode: '06:10'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 372000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'are two yes yeah so this wrapped up yeah',
+        timeCode: '06:12'
       }
     }
   },
@@ -1482,30 +1548,52 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'the plug that I have now okay',
+        text: 'one two three yeah yeah so we did we did',
         timeCode: '06:16'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 379000,
+    timeSinceVideoStartedInMs: 378000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: '[Music]',
-        timeCode: '06:19'
+        text: 'an all red one',
+        timeCode: '06:18'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 385000,
+    timeSinceVideoStartedInMs: 381000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'okay we want to talk Legends Of Summer',
-        timeCode: '06:25'
+        text: 'this I don\'t even know how to describe',
+        timeCode: '06:21'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 383000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'it we called them the Dorothy they look',
+        timeCode: '06:23'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 386000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'like the the red slippers you know it',
+        timeCode: '06:26'
       }
     }
   },
@@ -1515,7 +1603,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'Don\'t Throw yeah well I\'m going to catch',
+        text: 'literally like somebody littered them',
         timeCode: '06:28'
       }
     }
@@ -1526,7 +1614,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'you could throw Legends Of Summer these',
+        text: 'you know what I mean and um and yeah I',
         timeCode: '06:30'
       }
     }
@@ -1537,8 +1625,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'are two yes yeah so this wrapped up yeah',
+        text: 'really wanted I mean the three has',
         timeCode: '06:32'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 394000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'always been one of my favorite shoes and',
+        timeCode: '06:34'
       }
     }
   },
@@ -1548,7 +1647,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'one two three yeah yeah so we did we did',
+        text: 'the two to me has always been the most',
         timeCode: '06:36'
       }
     }
@@ -1559,8 +1658,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'an all red one',
+        text: 'underrated that\'s what a lot of people',
         timeCode: '06:38'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 399000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'say of Jordans that\'s just my personal',
+        timeCode: '06:39'
       }
     }
   },
@@ -1570,74 +1680,41 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'this I don\'t even know how to describe',
+        text: 'opinion and so the color of this shoe is',
         timeCode: '06:41'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 403000,
+    timeSinceVideoStartedInMs: 407000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'it we called them the Dorothy they look',
-        timeCode: '06:43'
+        text: 'actually the uh exact same color of the',
+        timeCode: '06:47'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 406000,
+    timeSinceVideoStartedInMs: 411000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'like the the red slippers you know it',
-        timeCode: '06:46'
+        text: 'stage Jay and I have put together for of',
+        timeCode: '06:51'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 408000,
+    timeSinceVideoStartedInMs: 415000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'literally like somebody littered them',
-        timeCode: '06:48'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 410000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'you know what I mean and um and yeah I',
-        timeCode: '06:50'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 412000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'really wanted I mean the three has',
-        timeCode: '06:52'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 414000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'always been one of my favorite shoes and',
-        timeCode: '06:54'
+        text: 'the summer so when I',
+        timeCode: '06:55'
       }
     }
   },
@@ -1647,19 +1724,8 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'the two to me has always been the most',
+        text: 'stage it actually like almost',
         timeCode: '06:56'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 418000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'underrated that\'s what a lot of people',
-        timeCode: '06:58'
       }
     }
   },
@@ -1669,30 +1735,52 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'say of Jordans that\'s just my personal',
+        text: 'camouflaged itself makes sense and um if',
         timeCode: '06:59'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 421000,
+    timeSinceVideoStartedInMs: 422000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'opinion and so the color of this shoe is',
-        timeCode: '07:01'
+        text: 'you kind of look down on the bottom it\'s',
+        timeCode: '07:02'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 427000,
+    timeSinceVideoStartedInMs: 424000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'actually the uh exact same color of the',
-        timeCode: '07:07'
+        text: 'got a reference to suit and Thai which',
+        timeCode: '07:04'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 426000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'which was a song at that time suit and',
+        timeCode: '07:06'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 428000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'Tai and holy grail and yeah I wanted all',
+        timeCode: '07:08'
       }
     }
   },
@@ -1702,19 +1790,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'stage Jay and I have put together for of',
+        text: 'different materials on all the pieces of',
         timeCode: '07:11'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 435000,
+    timeSinceVideoStartedInMs: 433000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'the summer so when I',
-        timeCode: '07:15'
+        text: 'architecture of the shoe so and the',
+        timeCode: '07:13'
       }
     }
   },
@@ -1724,8 +1812,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'stage it actually like almost',
+        text: 'shoes you know we couldn\'t even Source',
         timeCode: '07:16'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 437000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'them you had to bring them you had to',
+        timeCode: '07:17'
       }
     }
   },
@@ -1735,7 +1834,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'camouflaged itself makes sense and um if',
+        text: 'bring them well yeah as you I said you',
         timeCode: '07:19'
       }
     }
@@ -1746,7 +1845,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'you kind of look down on the bottom it\'s',
+        text: 'have them our friend mayor who had the',
         timeCode: '07:22'
       }
     }
@@ -1757,19 +1856,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'got a reference to suit and Thai which',
+        text: 'ones he hooked up the the two-color one',
         timeCode: '07:24'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 446000,
+    timeSinceVideoStartedInMs: 447000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'which was a song at that time suit and',
-        timeCode: '07:26'
+        text: 'but you bought them from home because',
+        timeCode: '07:27'
       }
     }
   },
@@ -1779,41 +1878,41 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'Tai and holy grail and yeah I wanted all',
+        text: 'these stores',
         timeCode: '07:28'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 451000,
+    timeSinceVideoStartedInMs: 450000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'different materials on all the pieces of',
-        timeCode: '07:31'
+        text: 'sneaker doesn\'t even have them but you',
+        timeCode: '07:30'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 453000,
+    timeSinceVideoStartedInMs: 452000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'architecture of the shoe so and the',
-        timeCode: '07:33'
+        text: 'also said you don\'t even have that many',
+        timeCode: '07:32'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 456000,
+    timeSinceVideoStartedInMs: 454000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'shoes you know we couldn\'t even Source',
-        timeCode: '07:36'
+        text: 'pairs they\'re going for like $20,000',
+        timeCode: '07:34'
       }
     }
   },
@@ -1823,7 +1922,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'them you had to bring them you had to',
+        text: 'what happened to all your pairs I know',
         timeCode: '07:37'
       }
     }
@@ -1834,74 +1933,52 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'bring them well yeah as you I said you',
+        text: 'well a lot of my boys a lot of my',
         timeCode: '07:39'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 462000,
+    timeSinceVideoStartedInMs: 461000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'have them our friend mayor who had the',
-        timeCode: '07:42'
+        text: 'friends we had same same size okay so',
+        timeCode: '07:41'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 464000,
+    timeSinceVideoStartedInMs: 465000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'ones he hooked up the the two-color one',
-        timeCode: '07:44'
+        text: 'when when uh you know Jordan brand made',
+        timeCode: '07:45'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 467000,
+    timeSinceVideoStartedInMs: 469000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'but you bought them from home because',
-        timeCode: '07:47'
+        text: 'me my sort of stash yeah of of them I',
+        timeCode: '07:49'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 468000,
+    timeSinceVideoStartedInMs: 473000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'these stores',
-        timeCode: '07:48'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 470000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'sneaker doesn\'t even have them but you',
-        timeCode: '07:50'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 472000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'also said you don\'t even have that many',
-        timeCode: '07:52'
+        text: 'just wanted to share with all of my',
+        timeCode: '07:53'
       }
     }
   },
@@ -1911,74 +1988,63 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'pairs they\'re going for like $20,000',
+        text: 'friends and I think I literally only',
         timeCode: '07:54'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 477000,
+    timeSinceVideoStartedInMs: 476000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'what happened to all your pairs I know',
-        timeCode: '07:57'
+        text: 'have one pair of the all red ones wow at',
+        timeCode: '07:56'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 479000,
+    timeSinceVideoStartedInMs: 480000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'well a lot of my boys a lot of my',
-        timeCode: '07:59'
+        text: 'home got to keep those I know I will it',
+        timeCode: '08:00'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 481000,
+    timeSinceVideoStartedInMs: 482000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'friends we had same same size okay so',
-        timeCode: '08:01'
+        text: 'will',
+        timeCode: '08:02'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 485000,
+    timeSinceVideoStartedInMs: 484000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'when when uh you know Jordan brand made',
-        timeCode: '08:05'
+        text: '[Music]',
+        timeCode: '08:04'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 489000,
+    timeSinceVideoStartedInMs: 491000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'me my sort of stash yeah of of them I',
-        timeCode: '08:09'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 493000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'just wanted to share with all of my',
-        timeCode: '08:13'
+        text: 'yeah all good Joe I\'m good you\'re living',
+        timeCode: '08:11'
       }
     }
   },
@@ -1988,7 +2054,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'friends and I think I literally only',
+        text: 'on the',
         timeCode: '08:14'
       }
     }
@@ -1999,41 +2065,63 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'have one pair of the all red ones wow at',
+        text: 'don\'t think I ever dropped one wow I\'m',
         timeCode: '08:16'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 500000,
+    timeSinceVideoStartedInMs: 499000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'home got to keep those I know I will it',
-        timeCode: '08:20'
+        text: 'going to drop the next one you just',
+        timeCode: '08:19'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 502000,
+    timeSinceVideoStartedInMs: 501000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'will',
-        timeCode: '08:22'
+        text: 'that\'s like he hasn\'t miss a free throw',
+        timeCode: '08:21'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 504000,
+    timeSinceVideoStartedInMs: 503000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: '[Music]',
-        timeCode: '08:24'
+        text: 'all night yeah CL',
+        timeCode: '08:23'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 506000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'exactly we got to talk the Super Bowl',
+        timeCode: '08:26'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 508000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'moment okay you debut these and this',
+        timeCode: '08:28'
       }
     }
   },
@@ -2043,7 +2131,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'yeah all good Joe I\'m good you\'re living',
+        text: 'pair is really special this is cuz these',
         timeCode: '08:31'
       }
     }
@@ -2054,7 +2142,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'on the',
+        text: 'right are but little different in the',
         timeCode: '08:34'
       }
     }
@@ -2065,19 +2153,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'don\'t think I ever dropped one wow I\'m',
+        text: 'details you if you notice these you get',
         timeCode: '08:36'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 519000,
+    timeSinceVideoStartedInMs: 518000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'going to drop the next one you just',
-        timeCode: '08:39'
+        text: 'the you get the Nike yes and this was',
+        timeCode: '08:38'
       }
     }
   },
@@ -2087,7 +2175,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'that\'s like he hasn\'t miss a free throw',
+        text: 'you know obviously if you know you know',
         timeCode: '08:41'
       }
     }
@@ -2098,30 +2186,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'all night yeah CL',
+        text: 'it\'s you know if you know you know this',
         timeCode: '08:43'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 526000,
+    timeSinceVideoStartedInMs: 527000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'exactly we got to talk the Super Bowl',
-        timeCode: '08:46'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 528000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'moment okay you debut these and this',
-        timeCode: '08:48'
+        text: 'was the original design for the three',
+        timeCode: '08:47'
       }
     }
   },
@@ -2131,30 +2208,30 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'pair is really special this is cuz these',
+        text: 'and that Tinker you know said you know',
         timeCode: '08:51'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 534000,
+    timeSinceVideoStartedInMs: 533000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'right are but little different in the',
-        timeCode: '08:54'
+        text: 'the jump',
+        timeCode: '08:53'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 536000,
+    timeSinceVideoStartedInMs: 535000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'details you if you notice these you get',
-        timeCode: '08:56'
+        text: 'on its own and we should take the Nike',
+        timeCode: '08:55'
       }
     }
   },
@@ -2164,7 +2241,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'the you get the Nike yes and this was',
+        text: 'Swoosh off which I\'m sure was very',
         timeCode: '08:58'
       }
     }
@@ -2175,7 +2252,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'you know obviously if you know you know',
+        text: 'controversial right conversation at the',
         timeCode: '09:01'
       }
     }
@@ -2186,30 +2263,41 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'it\'s you know if you know you know this',
+        text: 'time I I would not want to be in that',
         timeCode: '09:03'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 547000,
+    timeSinceVideoStartedInMs: 545000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'was the original design for the three',
-        timeCode: '09:07'
+        text: 'board meeting exactly but so we talked',
+        timeCode: '09:05'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 551000,
+    timeSinceVideoStartedInMs: 548000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'and that Tinker you know said you know',
-        timeCode: '09:11'
+        text: 'about like what if we brought the',
+        timeCode: '09:08'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 550000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'original design back for the Super Bowl',
+        timeCode: '09:10'
       }
     }
   },
@@ -2219,41 +2307,30 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'the jump',
+        text: 'performance and I I said I\'m good with',
         timeCode: '09:13'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 555000,
+    timeSinceVideoStartedInMs: 557000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'on its own and we should take the Nike',
-        timeCode: '09:15'
+        text: 'that as long as cuz it\'s the 3M but I',
+        timeCode: '09:17'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 558000,
+    timeSinceVideoStartedInMs: 560000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'Swoosh off which I\'m sure was very',
-        timeCode: '09:18'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 561000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'controversial right conversation at the',
-        timeCode: '09:21'
+        text: 'said but as long as it\'s the same color',
+        timeCode: '09:20'
       }
     }
   },
@@ -2263,7 +2340,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'time I I would not want to be in that',
+        text: 'as long as it\'s white cuz I wanted it to',
         timeCode: '09:23'
       }
     }
@@ -2274,19 +2351,8 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'board meeting exactly but so we talked',
+        text: 'be a detail and not like an overbearing',
         timeCode: '09:25'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 568000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'about like what if we brought the',
-        timeCode: '09:28'
       }
     }
   },
@@ -2296,19 +2362,30 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'original design back for the Super Bowl',
+        text: 'thing because that\'s how Tinker saw it',
         timeCode: '09:30'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 573000,
+    timeSinceVideoStartedInMs: 572000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'performance and I I said I\'m good with',
-        timeCode: '09:33'
+        text: 'got it right',
+        timeCode: '09:32'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 574000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'think they only made three pair of them',
+        timeCode: '09:34'
       }
     }
   },
@@ -2318,7 +2395,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'that as long as cuz it\'s the 3M but I',
+        text: 'one for them to keep one for me to rock',
         timeCode: '09:37'
       }
     }
@@ -2329,8 +2406,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'said but as long as it\'s the same color',
+        text: 'and then one for me to stock so this is',
         timeCode: '09:40'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 581000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'the stock one and and the difference is',
+        timeCode: '09:41'
       }
     }
   },
@@ -2340,74 +2428,74 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'as long as it\'s white cuz I wanted it to',
+        text: 'you get the date in the Super Bowl that',
         timeCode: '09:43'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 585000,
+    timeSinceVideoStartedInMs: 587000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'be a detail and not like an overbearing',
-        timeCode: '09:45'
+        text: 'they were at and then they drop under 5',
+        timeCode: '09:47'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 590000,
+    timeSinceVideoStartedInMs: 589000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'thing because that\'s how Tinker saw it',
-        timeCode: '09:50'
+        text: 'minutes they sell out what was it like',
+        timeCode: '09:49'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 592000,
+    timeSinceVideoStartedInMs: 591000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'got it right',
-        timeCode: '09:52'
+        text: 'to see it s I mean you you were busy',
+        timeCode: '09:51'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 594000,
+    timeSinceVideoStartedInMs: 593000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'think they only made three pair of them',
-        timeCode: '09:54'
+        text: 'obviously but',
+        timeCode: '09:53'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 597000,
+    timeSinceVideoStartedInMs: 595000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'one for them to keep one for me to rock',
-        timeCode: '09:57'
+        text: 'no Reggie Reggie from from Jordan hits',
+        timeCode: '09:55'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 600000,
+    timeSinceVideoStartedInMs: 598000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'and then one for me to stock so this is',
-        timeCode: '10:00'
+        text: 'me and said the sneaker sold out and I',
+        timeCode: '09:58'
       }
     }
   },
@@ -2417,7 +2505,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'the stock one and and the difference is',
+        text: 'was like what he goes they sold out in 5',
         timeCode: '10:01'
       }
     }
@@ -2428,8 +2516,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'you get the date in the Super Bowl that',
+        text: 'minutes I was like wait I was on',
         timeCode: '10:03'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 604000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'stage',
+        timeCode: '10:04'
       }
     }
   },
@@ -2439,85 +2538,74 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'they were at and then they drop under 5',
+        text: 'so like the sneakers sold out quicker',
         timeCode: '10:07'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 609000,
+    timeSinceVideoStartedInMs: 610000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'minutes they sell out what was it like',
-        timeCode: '10:09'
+        text: 'then I could actually get back off the',
+        timeCode: '10:10'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 611000,
+    timeSinceVideoStartedInMs: 612000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'to see it s I mean you you were busy',
-        timeCode: '10:11'
+        text: 'stage and so yeah it was it was an it',
+        timeCode: '10:12'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 613000,
+    timeSinceVideoStartedInMs: 614000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'obviously but',
-        timeCode: '10:13'
+        text: 'was a cool moment and and even at that',
+        timeCode: '10:14'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 615000,
+    timeSinceVideoStartedInMs: 616000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'no Reggie Reggie from from Jordan hits',
-        timeCode: '10:15'
+        text: 'time you know we were working on the man',
+        timeCode: '10:16'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 618000,
+    timeSinceVideoStartedInMs: 620000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'me and said the sneaker sold out and I',
-        timeCode: '10:18'
+        text: 'of the woods kind of I call the Boot',
+        timeCode: '10:20'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 621000,
+    timeSinceVideoStartedInMs: 622000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'was like what he goes they sold out in 5',
-        timeCode: '10:21'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 623000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'minutes I was like wait I was on',
-        timeCode: '10:23'
+        text: 'three that\'s what I call it',
+        timeCode: '10:22'
       }
     }
   },
@@ -2527,7 +2615,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'stage',
+        text: 'right right yeah that so so it was funny',
         timeCode: '10:24'
       }
     }
@@ -2538,41 +2626,30 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'so like the sneakers sold out quicker',
+        text: 'because two or three days before I',
         timeCode: '10:27'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 630000,
+    timeSinceVideoStartedInMs: 631000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'then I could actually get back off the',
-        timeCode: '10:30'
+        text: 'performed at the Superbowl I had a',
+        timeCode: '10:31'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 632000,
+    timeSinceVideoStartedInMs: 633000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'stage and so yeah it was it was an it',
-        timeCode: '10:32'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 634000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'was a cool moment and and even at that',
-        timeCode: '10:34'
+        text: 'meeting with with Mike a conference',
+        timeCode: '10:33'
       }
     }
   },
@@ -2582,41 +2659,63 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'time you know we were working on the man',
+        text: 'meeting what was that like uh it was',
         timeCode: '10:36'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 640000,
+    timeSinceVideoStartedInMs: 637000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'of the woods kind of I call the Boot',
-        timeCode: '10:40'
+        text: 'great you know he said he really loved',
+        timeCode: '10:37'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 642000,
+    timeSinceVideoStartedInMs: 639000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'three that\'s what I call it',
-        timeCode: '10:42'
+        text: 'what',
+        timeCode: '10:39'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 644000,
+    timeSinceVideoStartedInMs: 641000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'right right yeah that so so it was funny',
-        timeCode: '10:44'
+        text: 'thing with the man of the wood shoe was',
+        timeCode: '10:41'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 643000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'I wanted it to feel like a boot I wanted',
+        timeCode: '10:43'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 645000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'it to feel like that n little like a',
+        timeCode: '10:45'
       }
     }
   },
@@ -2626,7 +2725,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'because two or three days before I',
+        text: 'winter Bo you know and um I was always',
         timeCode: '10:47'
       }
     }
@@ -2637,19 +2736,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'performed at the Superbowl I had a',
+        text: 'into the wallabies okay you know like I',
         timeCode: '10:51'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 653000,
+    timeSinceVideoStartedInMs: 654000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'meeting with with Mike a conference',
-        timeCode: '10:53'
+        text: 'was I was like how do we do like a',
+        timeCode: '10:54'
       }
     }
   },
@@ -2659,19 +2758,8 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'meeting what was that like uh it was',
+        text: 'reference to the WABE so that\'s why we',
         timeCode: '10:56'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 657000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'great you know he said he really loved',
-        timeCode: '10:57'
       }
     }
   },
@@ -2681,7 +2769,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'what',
+        text: 'did the leather laces okay you know and',
         timeCode: '10:59'
       }
     }
@@ -2692,7 +2780,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'thing with the man of the wood shoe was',
+        text: 'obviously it came with the orange pop',
         timeCode: '11:01'
       }
     }
@@ -2703,7 +2791,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'I wanted it to feel like a boot I wanted',
+        text: 'that you could do as well but I just',
         timeCode: '11:03'
       }
     }
@@ -2714,7 +2802,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'it to feel like that n little like a',
+        text: 'wanted to have that sort of like boot',
         timeCode: '11:05'
       }
     }
@@ -2725,19 +2813,30 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'winter Bo you know and um I was always',
+        text: 'feel to it and the body of the of',
         timeCode: '11:07'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 671000,
+    timeSinceVideoStartedInMs: 670000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'into the wallabies okay you know like I',
-        timeCode: '11:11'
+        text: 'shoe lends itself to that anyway yeah',
+        timeCode: '11:10'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 673000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'but these are called the these are',
+        timeCode: '11:13'
       }
     }
   },
@@ -2747,7 +2846,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'was I was like how do we do like a',
+        text: 'called the higher hes which is a song',
         timeCode: '11:14'
       }
     }
@@ -2758,7 +2857,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'reference to the WABE so that\'s why we',
+        text: 'off that album and you know had a ET in',
         timeCode: '11:16'
       }
     }
@@ -2769,30 +2868,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'did the leather laces okay you know and',
+        text: 'there and then you know on the inside',
         timeCode: '11:19'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 681000,
+    timeSinceVideoStartedInMs: 682000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'obviously it came with the orange pop',
-        timeCode: '11:21'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 683000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'that you could do as well but I just',
-        timeCode: '11:23'
+        text: 'it\'s one Sho says is cruel and then the',
+        timeCode: '11:22'
       }
     }
   },
@@ -2802,19 +2890,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'wanted to have that sort of like boot',
+        text: 'other one says Fame is a lie love that',
         timeCode: '11:25'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 687000,
+    timeSinceVideoStartedInMs: 688000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'feel to it and the body of the of',
-        timeCode: '11:27'
+        text: 'and also I want to talk about one night',
+        timeCode: '11:28'
       }
     }
   },
@@ -2824,85 +2912,85 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'shoe lends itself to that anyway yeah',
+        text: 'in Beverly',
         timeCode: '11:30'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 693000,
+    timeSinceVideoStartedInMs: 691000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'but these are called the these are',
-        timeCode: '11:33'
+        text: 'Hills uh Barney okay that relates to',
+        timeCode: '11:31'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 694000,
+    timeSinceVideoStartedInMs: 695000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'called the higher hes which is a song',
-        timeCode: '11:34'
+        text: 'this a little bit okay is this a',
+        timeCode: '11:35'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 696000,
+    timeSinceVideoStartedInMs: 698000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'off that album and you know had a ET in',
-        timeCode: '11:36'
+        text: 'reference yes yes',
+        timeCode: '11:38'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 699000,
+    timeSinceVideoStartedInMs: 701000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'there and then you know on the inside',
-        timeCode: '11:39'
+        text: 'wow this is a reference and I see it and',
+        timeCode: '11:41'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 702000,
+    timeSinceVideoStartedInMs: 704000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'it\'s one Sho says is cruel and then the',
-        timeCode: '11:42'
+        text: 'I love it because it when you think of',
+        timeCode: '11:44'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 705000,
+    timeSinceVideoStartedInMs: 707000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'other one says Fame is a lie love that',
-        timeCode: '11:45'
+        text: 'like what goes into these designs you',
+        timeCode: '11:47'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 708000,
+    timeSinceVideoStartedInMs: 709000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'and also I want to talk about one night',
-        timeCode: '11:48'
+        text: 'think of',
+        timeCode: '11:49'
       }
     }
   },
@@ -2912,41 +3000,41 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'in Beverly',
+        text: 'but a Sakai jacket at Barney\'s in',
         timeCode: '11:50'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 711000,
+    timeSinceVideoStartedInMs: 713000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'Hills uh Barney okay that relates to',
-        timeCode: '11:51'
+        text: 'Beverly I had found this Sakai amazing',
+        timeCode: '11:53'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 715000,
+    timeSinceVideoStartedInMs: 717000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'this a little bit okay is this a',
-        timeCode: '11:55'
+        text: 'you know winter coat and I just love the',
+        timeCode: '11:57'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 718000,
+    timeSinceVideoStartedInMs: 719000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'reference yes yes',
-        timeCode: '11:58'
+        text: 'colors of it and I was like this feels',
+        timeCode: '11:59'
       }
     }
   },
@@ -2956,19 +3044,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'wow this is a reference and I see it and',
+        text: 'like the color palette to my my album',
         timeCode: '12:01'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 724000,
+    timeSinceVideoStartedInMs: 725000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'I love it because it when you think of',
-        timeCode: '12:04'
+        text: 'yeah and so yeah that was the coat that',
+        timeCode: '12:05'
       }
     }
   },
@@ -2978,19 +3066,8 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'like what goes into these designs you',
+        text: 'inspired the shoe and I love it cuz',
         timeCode: '12:07'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 729000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'think of',
-        timeCode: '12:09'
       }
     }
   },
@@ -3000,8 +3077,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'but a Sakai jacket at Barney\'s in',
+        text: 'there\'s a little yellow on the hood and',
         timeCode: '12:10'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 731000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'there\'s even yellow in the eyelids yep',
+        timeCode: '12:11'
       }
     }
   },
@@ -3011,74 +3099,74 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'Beverly I had found this Sakai amazing',
+        text: 'love that there\'s the there\'s orange',
         timeCode: '12:13'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 737000,
+    timeSinceVideoStartedInMs: 735000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'you know winter coat and I just love the',
-        timeCode: '12:17'
+        text: 'detail yellow yeah you got it man love',
+        timeCode: '12:15'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 739000,
+    timeSinceVideoStartedInMs: 738000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'colors of it and I was like this feels',
-        timeCode: '12:19'
+        text: 'that going back just for a second to the',
+        timeCode: '12:18'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 741000,
+    timeSinceVideoStartedInMs: 740000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'like the color palette to my my album',
-        timeCode: '12:21'
+        text: 'Super Bowl ones though you said you have',
+        timeCode: '12:20'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 745000,
+    timeSinceVideoStartedInMs: 742000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'yeah and so yeah that was the coat that',
-        timeCode: '12:25'
+        text: 'one to the the ones',
+        timeCode: '12:22'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 747000,
+    timeSinceVideoStartedInMs: 744000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'inspired the shoe and I love it cuz',
-        timeCode: '12:27'
+        text: 'stock one for them one to rock but you',
+        timeCode: '12:24'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 750000,
+    timeSinceVideoStartedInMs: 748000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'there\'s a little yellow on the hood and',
-        timeCode: '12:30'
+        text: 'were locked in but the C wait it\'s such',
+        timeCode: '12:28'
       }
     }
   },
@@ -3088,19 +3176,8 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'there\'s even yellow in the eyelids yep',
+        text: 'a sneaker head thing but I know I know',
         timeCode: '12:31'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 753000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'love that there\'s the there\'s orange',
-        timeCode: '12:33'
       }
     }
   },
@@ -3110,41 +3187,41 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'detail yellow yeah you got it man love',
+        text: 'the that\'s why that\'s why I brought',
         timeCode: '12:35'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 758000,
+    timeSinceVideoStartedInMs: 757000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'that going back just for a second to the',
-        timeCode: '12:38'
+        text: 'those actually I thought maybe those but',
+        timeCode: '12:37'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 760000,
+    timeSinceVideoStartedInMs: 759000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'Super Bowl ones though you said you have',
-        timeCode: '12:40'
+        text: 'those aren\'t the on right cuz no those',
+        timeCode: '12:39'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 762000,
+    timeSinceVideoStartedInMs: 761000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'one to the the ones',
-        timeCode: '12:42'
+        text: 'have zero creases okay the big I brought',
+        timeCode: '12:41'
       }
     }
   },
@@ -3154,41 +3231,63 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'stock one for them one to rock but you',
+        text: 'that one big sneaker head thing but',
         timeCode: '12:44'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 768000,
+    timeSinceVideoStartedInMs: 765000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'were locked in but the C wait it\'s such',
-        timeCode: '12:48'
+        text: 'listen you got the Super Bowl',
+        timeCode: '12:45'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 771000,
+    timeSinceVideoStartedInMs: 767000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'a sneaker head thing but I know I know',
-        timeCode: '12:51'
+        text: 'performance that was a big conundrum for',
+        timeCode: '12:47'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 775000,
+    timeSinceVideoStartedInMs: 770000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'the that\'s why that\'s why I brought',
-        timeCode: '12:55'
+        text: 'me because I was like do I break these',
+        timeCode: '12:50'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 772000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'in you know what I mean cuz I\'m like am',
+        timeCode: '12:52'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 774000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'I going to come off limping you know',
+        timeCode: '12:54'
       }
     }
   },
@@ -3198,30 +3297,30 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'those actually I thought maybe those but',
+        text: 'what I mean or like',
         timeCode: '12:57'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 779000,
+    timeSinceVideoStartedInMs: 778000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'those aren\'t the on right cuz no those',
-        timeCode: '12:59'
+        text: 'like the worst Tow Jam ever you went for',
+        timeCode: '12:58'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 781000,
+    timeSinceVideoStartedInMs: 780000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'have zero creases okay the big I brought',
-        timeCode: '13:01'
+        text: 'function I went well but only because I',
+        timeCode: '13:00'
       }
     }
   },
@@ -3231,52 +3330,41 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'that one big sneaker head thing but',
+        text: 'had two hair okay you know what I mean',
         timeCode: '13:04'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 785000,
+    timeSinceVideoStartedInMs: 786000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'listen you got the Super Bowl',
-        timeCode: '13:05'
+        text: 'it\'s crazy cuz oh yeah you\'ll take an',
+        timeCode: '13:06'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 787000,
+    timeSinceVideoStartedInMs: 789000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'performance that was a big conundrum for',
-        timeCode: '13:07'
+        text: 'Instagram photo and you\'re not like',
+        timeCode: '13:09'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 790000,
+    timeSinceVideoStartedInMs: 791000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'me because I was like do I break these',
-        timeCode: '13:10'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 792000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'in you know what I mean cuz I\'m like am',
-        timeCode: '13:12'
+        text: 'tying your shoe all the comments are wow',
+        timeCode: '13:11'
       }
     }
   },
@@ -3286,19 +3374,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'I going to come off limping you know',
+        text: 'the crease the crease the crease but',
         timeCode: '13:14'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 797000,
+    timeSinceVideoStartedInMs: 796000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'what I mean or like',
-        timeCode: '13:17'
+        text: 'that\'s a major I feel like I do have to',
+        timeCode: '13:16'
       }
     }
   },
@@ -3308,19 +3396,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'like the worst Tow Jam ever you went for',
+        text: 'defend myself right now there go there',
         timeCode: '13:18'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 800000,
+    timeSinceVideoStartedInMs: 801000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'function I went well but only because I',
-        timeCode: '13:20'
+        text: 'was one for work and then there was one',
+        timeCode: '13:21'
       }
     }
   },
@@ -3330,19 +3418,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'had two hair okay you know what I mean',
+        text: 'that I was going to keep and uh another',
         timeCode: '13:24'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 806000,
+    timeSinceVideoStartedInMs: 807000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'it\'s crazy cuz oh yeah you\'ll take an',
-        timeCode: '13:26'
+        text: 'thing yeah that was yeah that was funny',
+        timeCode: '13:27'
       }
     }
   },
@@ -3352,7 +3440,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'Instagram photo and you\'re not like',
+        text: 'aggressive priest but you had another',
         timeCode: '13:29'
       }
     }
@@ -3363,19 +3451,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'tying your shoe all the comments are wow',
+        text: 'one on Deck Tinker half',
         timeCode: '13:31'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 814000,
+    timeSinceVideoStartedInMs: 815000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'the crease the crease the crease but',
-        timeCode: '13:34'
+        text: 'this we you know it\'s good that we\'re',
+        timeCode: '13:35'
       }
     }
   },
@@ -3385,7 +3473,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'that\'s a major I feel like I do have to',
+        text: 'ending here in this section cuz you said',
         timeCode: '13:36'
       }
     }
@@ -3396,8 +3484,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'defend myself right now there go there',
+        text: 'that this was the first one the kid',
         timeCode: '13:38'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 820000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'cutting the grass you think this was one',
+        timeCode: '13:40'
       }
     }
   },
@@ -3407,7 +3506,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'was one for work and then there was one',
+        text: 'of the first ones okay the first pair of',
         timeCode: '13:41'
       }
     }
@@ -3418,7 +3517,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'that I was going to keep and uh another',
+        text: 'Jordans that I ever had I didn\'t buy',
         timeCode: '13:44'
       }
     }
@@ -3429,7 +3528,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'thing yeah that was yeah that was funny',
+        text: 'them they were they were given to me',
         timeCode: '13:47'
       }
     }
@@ -3440,7 +3539,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'aggressive priest but you had another',
+        text: 'okay and they were the fives with the',
         timeCode: '13:49'
       }
     }
@@ -3451,52 +3550,41 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'one on Deck Tinker half',
+        text: 'number on the heel okay this shoe there',
         timeCode: '13:51'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 835000,
+    timeSinceVideoStartedInMs: 833000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'this we you know it\'s good that we\'re',
-        timeCode: '13:55'
+        text: 'was a girl that lived in The Cove of the',
+        timeCode: '13:53'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 836000,
+    timeSinceVideoStartedInMs: 837000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'ending here in this section cuz you said',
-        timeCode: '13:56'
+        text: 'street that I lived in and she was like',
+        timeCode: '13:57'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 838000,
+    timeSinceVideoStartedInMs: 839000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'that this was the first one the kid',
-        timeCode: '13:58'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 840000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'cutting the grass you think this was one',
-        timeCode: '14:00'
+        text: '2 years older than me I was in sixth',
+        timeCode: '13:59'
       }
     }
   },
@@ -3506,19 +3594,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'of the first ones okay the first pair of',
+        text: 'grade she was in eighth grade and she',
         timeCode: '14:01'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 844000,
+    timeSinceVideoStartedInMs: 845000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'Jordans that I ever had I didn\'t buy',
-        timeCode: '14:04'
+        text: 'was the',
+        timeCode: '14:05'
       }
     }
   },
@@ -3528,30 +3616,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'them they were they were given to me',
+        text: 'at our school and could who like wow for',
         timeCode: '14:07'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 849000,
+    timeSinceVideoStartedInMs: 850000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'okay and they were the fives with the',
-        timeCode: '14:09'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 851000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'number on the heel okay this shoe there',
-        timeCode: '14:11'
+        text: 'real and I had the biggest crush on her',
+        timeCode: '14:10'
       }
     }
   },
@@ -3561,8 +3638,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'was a girl that lived in The Cove of the',
+        text: 'especially when I found out she had a',
         timeCode: '14:13'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 855000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'pair of Jordans she wore these Jordans',
+        timeCode: '14:15'
       }
     }
   },
@@ -3572,74 +3660,63 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'street that I lived in and she was like',
+        text: 'to play and so she literally gave me the',
         timeCode: '14:17'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 859000,
+    timeSinceVideoStartedInMs: 862000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: '2 years older than me I was in sixth',
-        timeCode: '14:19'
+        text: 'Sho what a story',
+        timeCode: '14:22'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 861000,
+    timeSinceVideoStartedInMs: 864000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'grade she was in eighth grade and she',
-        timeCode: '14:21'
+        text: 'off her feet that was the beginning of',
+        timeCode: '14:24'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 865000,
+    timeSinceVideoStartedInMs: 866000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'was the',
-        timeCode: '14:25'
+        text: 'story me collecting Jordans you had a',
+        timeCode: '14:26'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 867000,
+    timeSinceVideoStartedInMs: 869000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'at our school and could who like wow for',
-        timeCode: '14:27'
+        text: 'crush on her did you get the girl no',
+        timeCode: '14:29'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 870000,
+    timeSinceVideoStartedInMs: 871000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'real and I had the biggest crush on her',
-        timeCode: '14:30'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 873000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'especially when I found out she had a',
-        timeCode: '14:33'
+        text: 'just the shoes the shoes okay okay I\'m',
+        timeCode: '14:31'
       }
     }
   },
@@ -3649,41 +3726,52 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'pair of Jordans she wore these Jordans',
+        text: 'doing all',
         timeCode: '14:35'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 877000,
+    timeSinceVideoStartedInMs: 876000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'to play and so she literally gave me the',
-        timeCode: '14:37'
+        text: 'right exactly last thing I want to talk',
+        timeCode: '14:36'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 882000,
+    timeSinceVideoStartedInMs: 878000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'Sho what a story',
-        timeCode: '14:42'
+        text: 'about another special project I think',
+        timeCode: '14:38'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 884000,
+    timeSinceVideoStartedInMs: 880000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'off her feet that was the beginning of',
-        timeCode: '14:44'
+        text: 'very close to your heart Big Creek Golf',
+        timeCode: '14:40'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 883000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'Club oh yes the first golf outing that',
+        timeCode: '14:43'
       }
     }
   },
@@ -3693,19 +3781,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'story me collecting Jordans you had a',
+        text: 'you',
         timeCode: '14:46'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 889000,
+    timeSinceVideoStartedInMs: 888000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'crush on her did you get the girl no',
-        timeCode: '14:49'
+        text: 'you got a special makeup three pairs for',
+        timeCode: '14:48'
       }
     }
   },
@@ -3715,19 +3803,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'just the shoes the shoes okay okay I\'m',
+        text: 'a tournament and now that golf Club',
         timeCode: '14:51'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 895000,
+    timeSinceVideoStartedInMs: 893000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'doing all',
-        timeCode: '14:55'
+        text: 'doesn\'t exist anymore no no it\'s it\'s a',
+        timeCode: '14:53'
       }
     }
   },
@@ -3737,52 +3825,41 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'right exactly last thing I want to talk',
+        text: 'completely different well so my my',
         timeCode: '14:56'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 898000,
+    timeSinceVideoStartedInMs: 899000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'about another special project I think',
-        timeCode: '14:58'
+        text: 'history with that golf club was public',
+        timeCode: '14:59'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 900000,
+    timeSinceVideoStartedInMs: 902000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'very close to your heart Big Creek Golf',
-        timeCode: '15:00'
+        text: 'course and my stepdad really loved Golf',
+        timeCode: '15:02'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 903000,
+    timeSinceVideoStartedInMs: 905000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'Club oh yes the first golf outing that',
-        timeCode: '15:03'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 906000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'you',
-        timeCode: '15:06'
+        text: 'and he kind of like birthed my my love',
+        timeCode: '15:05'
       }
     }
   },
@@ -3792,19 +3869,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'you got a special makeup three pairs for',
+        text: 'for I I was I was very like I was very',
         timeCode: '15:08'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 911000,
+    timeSinceVideoStartedInMs: 912000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'a tournament and now that golf Club',
-        timeCode: '15:11'
+        text: 'clear with him that I was like no I\'m a',
+        timeCode: '15:12'
       }
     }
   },
@@ -3814,7 +3891,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'doesn\'t exist anymore no no it\'s it\'s a',
+        text: 'Hooper I don\'t play golf and so big',
         timeCode: '15:13'
       }
     }
@@ -3825,19 +3902,30 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'completely different well so my my',
+        text: 'Creek Golf Club it was funny like as I',
         timeCode: '15:16'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 919000,
+    timeSinceVideoStartedInMs: 918000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'history with that golf club was public',
-        timeCode: '15:19'
+        text: 'got older I found out that they were',
+        timeCode: '15:18'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 921000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'going to shut the place down and kind',
+        timeCode: '15:21'
       }
     }
   },
@@ -3847,19 +3935,30 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'course and my stepdad really loved Golf',
+        text: 'of',
         timeCode: '15:22'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 925000,
+    timeSinceVideoStartedInMs: 924000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'and he kind of like birthed my my love',
-        timeCode: '15:25'
+        text: 'Condominiums and so we actually went in',
+        timeCode: '15:24'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 926000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'and saved the golf club we bought it',
+        timeCode: '15:26'
       }
     }
   },
@@ -3869,19 +3968,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'for I I was I was very like I was very',
+        text: 'okay and we turned it into',
         timeCode: '15:28'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 932000,
+    timeSinceVideoStartedInMs: 930000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'clear with him that I was like no I\'m a',
-        timeCode: '15:32'
+        text: 'Miramichi uh which means a place of',
+        timeCode: '15:30'
       }
     }
   },
@@ -3891,41 +3990,41 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'Hooper I don\'t play golf and so big',
+        text: 'happy Retreat all right right now I',
         timeCode: '15:33'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 936000,
+    timeSinceVideoStartedInMs: 935000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'Creek Golf Club it was funny like as I',
-        timeCode: '15:36'
+        text: 'ended up selling it since then because I',
+        timeCode: '15:35'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 938000,
+    timeSinceVideoStartedInMs: 937000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'got older I found out that they were',
-        timeCode: '15:38'
+        text: 'don\'t get to spend that much time in',
+        timeCode: '15:37'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 941000,
+    timeSinceVideoStartedInMs: 939000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'going to shut the place down and kind',
-        timeCode: '15:41'
+        text: 'them anymore that so that shoe is a',
+        timeCode: '15:39'
       }
     }
   },
@@ -3935,7 +4034,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'of',
+        text: 'really really special shoe there\'s not',
         timeCode: '15:42'
       }
     }
@@ -3946,7 +4045,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'Condominiums and so we actually went in',
+        text: 'there\'s it was three different ones',
         timeCode: '15:44'
       }
     }
@@ -3957,30 +4056,30 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'and saved the golf club we bought it',
+        text: 'right 11 like a airx one and then like',
         timeCode: '15:46'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 948000,
+    timeSinceVideoStartedInMs: 949000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'okay and we turned it into',
-        timeCode: '15:48'
+        text: 'kind of like a typical golf shoe Yes Man',
+        timeCode: '15:49'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 950000,
+    timeSinceVideoStartedInMs: 951000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'Miramichi uh which means a place of',
-        timeCode: '15:50'
+        text: 'Joe you really are good at your job',
+        timeCode: '15:51'
       }
     }
   },
@@ -3990,7 +4089,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'happy Retreat all right right now I',
+        text: 'thank you man this is a big one you know',
         timeCode: '15:53'
       }
     }
@@ -4001,7 +4100,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'ended up selling it since then because I',
+        text: 'this is a big one',
         timeCode: '15:55'
       }
     }
@@ -4012,19 +4111,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'don\'t get to spend that much time in',
+        text: 'one for us I appreciate it man yes Joe',
         timeCode: '15:57'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 959000,
+    timeSinceVideoStartedInMs: 960000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'them anymore that so that shoe is a',
-        timeCode: '15:59'
+        text: 'has Joe has been after me for how many',
+        timeCode: '16:00'
       }
     }
   },
@@ -4034,118 +4133,107 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'really really special shoe there\'s not',
+        text: 'years a a long six seven years yeah yeah',
         timeCode: '16:02'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 964000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'there\'s it was three different ones',
-        timeCode: '16:04'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 966000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'right 11 like a airx one and then like',
-        timeCode: '16:06'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 969000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'kind of like a typical golf shoe Yes Man',
-        timeCode: '16:09'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 971000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'Joe you really are good at your job',
-        timeCode: '16:11'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 973000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'thank you man this is a big one you know',
-        timeCode: '16:13'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 975000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'this is a big one',
-        timeCode: '16:15'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 977000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'one for us I appreciate it man yes Joe',
-        timeCode: '16:17'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 980000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'has Joe has been after me for how many',
-        timeCode: '16:20'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 982000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'years a a long six seven years yeah yeah',
-        timeCode: '16:22'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 985000,
+    timeSinceVideoStartedInMs: 965000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
         text: 'yeah so finally made it happens',
-        timeCode: '16:25'
+        timeCode: '16:05'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 967000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'absolutely but it\'s exciting because I\'m',
+        timeCode: '16:07'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 970000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'working on some stuff right now okay',
+        timeCode: '16:10'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 972000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'with them just on the golf Side Golf is',
+        timeCode: '16:12'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 974000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'popping for them right now you see',
+        timeCode: '16:14'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 976000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'Jordan getting involved as well yeah so',
+        timeCode: '16:16'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 978000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'I\'m I don\'t want to say too much but',
+        timeCode: '16:18'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 981000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'there\'s some classic um there\'s some',
+        timeCode: '16:21'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 984000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'classic sneaker bodies that I\'m I\'m',
+        timeCode: '16:24'
       }
     }
   },
@@ -4155,7 +4243,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'absolutely but it\'s exciting because I\'m',
+        text: 'pushing to get okay on the golf course',
         timeCode: '16:27'
       }
     }
@@ -4166,7 +4254,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'working on some stuff right now okay',
+        text: 'spiked up and everything',
         timeCode: '16:30'
       }
     }
@@ -4177,19 +4265,8 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'with them just on the golf Side Golf is',
+        text: 'nice listen week of your album thanks',
         timeCode: '16:32'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 994000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'popping for them right now you see',
-        timeCode: '16:34'
       }
     }
   },
@@ -4199,7 +4276,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'Jordan getting involved as well yeah so',
+        text: 'much for taking the time talked about',
         timeCode: '16:36'
       }
     }
@@ -4210,30 +4287,52 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'I\'m I don\'t want to say too much but',
+        text: 'everything now as the easy part browse',
         timeCode: '16:38'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1001000,
+    timeSinceVideoStartedInMs: 999000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'there\'s some classic um there\'s some',
-        timeCode: '16:41'
+        text: 'the shelves see what you\'re going to',
+        timeCode: '16:39'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1004000,
+    timeSinceVideoStartedInMs: 1000000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'classic sneaker bodies that I\'m I\'m',
-        timeCode: '16:44'
+        text: 'take home I think you might get some uh',
+        timeCode: '16:40'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 1002000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'shoes for the fam yeah yeah I\'m try to',
+        timeCode: '16:42'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 1005000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'get some some some sneakers for uh for',
+        timeCode: '16:45'
       }
     }
   },
@@ -4243,19 +4342,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'pushing to get okay on the golf course',
+        text: 'my two sons let\'s do it',
         timeCode: '16:47'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1010000,
+    timeSinceVideoStartedInMs: 1009000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'spiked up and everything',
-        timeCode: '16:50'
+        text: '[Music]',
+        timeCode: '16:49'
       }
     }
   },
@@ -4265,63 +4364,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'nice listen week of your album thanks',
+        text: 'yeah',
         timeCode: '16:52'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1016000,
+    timeSinceVideoStartedInMs: 1014000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'much for taking the time talked about',
-        timeCode: '16:56'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1018000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'everything now as the easy part browse',
-        timeCode: '16:58'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1019000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'the shelves see what you\'re going to',
-        timeCode: '16:59'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1020000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'take home I think you might get some uh',
-        timeCode: '17:00'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1022000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'shoes for the fam yeah yeah I\'m try to',
-        timeCode: '17:02'
+        text: '[Music]',
+        timeCode: '16:54'
       }
     }
   },
@@ -4331,7 +4386,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'get some some some sneakers for uh for',
+        text: 'so how can I help you out today all',
         timeCode: '17:05'
       }
     }
@@ -4342,19 +4397,30 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'my two sons let\'s do it',
+        text: 'right man I\'m definitely going to get',
         timeCode: '17:07'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1029000,
+    timeSinceVideoStartedInMs: 1028000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: '[Music]',
-        timeCode: '17:09'
+        text: 'some stuff for me mhm but let\'s start',
+        timeCode: '17:08'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 1030000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'with the kids first let\'s do Grinch and',
+        timeCode: '17:10'
       }
     }
   },
@@ -4364,7 +4430,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'yeah',
+        text: 'reverse I definitely got the Grinch and',
         timeCode: '17:12'
       }
     }
@@ -4375,8 +4441,52 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: '[Music]',
+        text: 'reverse Grinch for you okay this is a',
         timeCode: '17:14'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 1036000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'special moment my my oldest son\'s uhoh',
+        timeCode: '17:16'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 1039000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'first threes so maybe we just do',
+        timeCode: '17:19'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 1042000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'the reimagine of course course',
+        timeCode: '17:22'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 1043000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'definitely got that for him let\'s do',
+        timeCode: '17:23'
       }
     }
   },
@@ -4386,7 +4496,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'so how can I help you out today all',
+        text: 'matching so let\'s yeah let\'s do a real',
         timeCode: '17:25'
       }
     }
@@ -4397,41 +4507,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'right man I\'m definitely going to get',
+        text: 'matching for me got you yeah perfect and',
         timeCode: '17:27'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1048000,
+    timeSinceVideoStartedInMs: 1051000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'some stuff for me mhm but let\'s start',
-        timeCode: '17:28'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1050000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'with the kids first let\'s do Grinch and',
-        timeCode: '17:30'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1052000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'reverse I definitely got the Grinch and',
-        timeCode: '17:32'
+        text: 'then my younger one this he\'s like very',
+        timeCode: '17:31'
       }
     }
   },
@@ -4441,7 +4529,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'reverse Grinch for you okay this is a',
+        text: 'colorful colorful Vib so maybe the',
         timeCode: '17:34'
       }
     }
@@ -4452,19 +4540,30 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'special moment my my oldest son\'s uhoh',
+        text: 'Powerpuff but maybe if you have him in',
         timeCode: '17:36'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1059000,
+    timeSinceVideoStartedInMs: 1058000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'first threes so maybe we just do',
-        timeCode: '17:39'
+        text: 'like blue I definitely have the blue one',
+        timeCode: '17:38'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 1060000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'for him I definitely grab that for him',
+        timeCode: '17:40'
       }
     }
   },
@@ -4474,19 +4573,8 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'the reimagine of course course',
+        text: 'okay now to me okay I got to do the born',
         timeCode: '17:42'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1063000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'definitely got that for him let\'s do',
-        timeCode: '17:43'
       }
     }
   },
@@ -4496,19 +4584,30 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'matching so let\'s yeah let\'s do a real',
+        text: 'and raised oh big dogs got to do those',
         timeCode: '17:45'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1067000,
+    timeSinceVideoStartedInMs: 1069000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'matching for me got you yeah perfect and',
-        timeCode: '17:47'
+        text: 'so it looks like you looked at',
+        timeCode: '17:49'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 1070000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'everything over here yeah yeah yeah I',
+        timeCode: '17:50'
       }
     }
   },
@@ -4518,19 +4617,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'then my younger one this he\'s like very',
+        text: 'think it\'s time to go to the big boy',
         timeCode: '17:51'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1074000,
+    timeSinceVideoStartedInMs: 1072000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'colorful colorful Vib so maybe the',
-        timeCode: '17:54'
+        text: 'section big boy section this',
+        timeCode: '17:52'
       }
     }
   },
@@ -4540,7 +4639,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'Powerpuff but maybe if you have him in',
+        text: 'it I I got to do the lobsters but I want',
         timeCode: '17:56'
       }
     }
@@ -4551,30 +4650,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'like blue I definitely have the blue one',
+        text: 'to do the orange O classic got to do',
         timeCode: '17:58'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1080000,
+    timeSinceVideoStartedInMs: 1081000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'for him I definitely grab that for him',
-        timeCode: '18:00'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1082000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'okay now to me okay I got to do the born',
-        timeCode: '18:02'
+        text: 'that okay I got the Carolina yeah off',
+        timeCode: '18:01'
       }
     }
   },
@@ -4584,19 +4672,19 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'and raised oh big dogs got to do those',
+        text: 'whites in the Air Force but I think I',
         timeCode: '18:05'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1089000,
+    timeSinceVideoStartedInMs: 1088000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'so it looks like you looked at',
-        timeCode: '18:09'
+        text: 'got to do the lemonade lemonade all FS',
+        timeCode: '18:08'
       }
     }
   },
@@ -4606,74 +4694,74 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'everything over here yeah yeah yeah I',
+        text: 'can\'t go wrong with those okay got you I',
         timeCode: '18:10'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1091000,
+    timeSinceVideoStartedInMs: 1093000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'think it\'s time to go to the big boy',
-        timeCode: '18:11'
+        text: 'don\'t see them',
+        timeCode: '18:13'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1092000,
+    timeSinceVideoStartedInMs: 1095000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'section big boy section this',
-        timeCode: '18:12'
+        text: 'here and you know it\'s a unicorn pair',
+        timeCode: '18:15'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1096000,
+    timeSinceVideoStartedInMs: 1097000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'it I I got to do the lobsters but I want',
-        timeCode: '18:16'
+        text: 'that I never really got a chance to',
+        timeCode: '18:17'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1098000,
+    timeSinceVideoStartedInMs: 1100000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'to do the orange O classic got to do',
-        timeCode: '18:18'
+        text: 'purchase you got the Red October I do',
+        timeCode: '18:20'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1101000,
+    timeSinceVideoStartedInMs: 1103000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'that okay I got the Carolina yeah off',
-        timeCode: '18:21'
+        text: 'have the Octobers 10 and A2 yes sir just',
+        timeCode: '18:23'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1105000,
+    timeSinceVideoStartedInMs: 1106000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'whites in the Air Force but I think I',
-        timeCode: '18:25'
+        text: 'for',
+        timeCode: '18:26'
       }
     }
   },
@@ -4683,19 +4771,8 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'got to do the lemonade lemonade all FS',
+        text: 'you all right I\'ll take all',
         timeCode: '18:28'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1110000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'can\'t go wrong with those okay got you I',
-        timeCode: '18:30'
       }
     }
   },
@@ -4705,7 +4782,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'don\'t see them',
+        text: 'right find everything we need tonight',
         timeCode: '18:33'
       }
     }
@@ -4716,30 +4793,30 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'here and you know it\'s a unicorn pair',
+        text: 'Justin uh I found everything I need and',
         timeCode: '18:35'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1117000,
+    timeSinceVideoStartedInMs: 1118000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'that I never really got a chance to',
-        timeCode: '18:37'
+        text: 'more so yeah',
+        timeCode: '18:38'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1120000,
+    timeSinceVideoStartedInMs: 1121000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'purchase you got the Red October I do',
-        timeCode: '18:40'
+        text: 'did some jamming yeah I didn\'t mean to',
+        timeCode: '18:41'
       }
     }
   },
@@ -4749,52 +4826,41 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'have the Octobers 10 and A2 yes sir just',
+        text: 'it happens you got me all right let\'s',
         timeCode: '18:43'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1126000,
+    timeSinceVideoStartedInMs: 1125000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'for',
-        timeCode: '18:46'
+        text: 'get your total ready for you all',
+        timeCode: '18:45'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1128000,
+    timeSinceVideoStartedInMs: 1130000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'you all right I\'ll take all',
-        timeCode: '18:48'
+        text: 'right did I buy that many I I think so',
+        timeCode: '18:50'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1133000,
+    timeSinceVideoStartedInMs: 1134000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'right find everything we need tonight',
-        timeCode: '18:53'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1135000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'Justin uh I found everything I need and',
-        timeCode: '18:55'
+        text: 'so your total tonight we\'re looking at',
+        timeCode: '18:54'
       }
     }
   },
@@ -4804,52 +4870,63 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'more so yeah',
+        text: '22,4 with',
         timeCode: '18:58'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1141000,
+    timeSinceVideoStartedInMs: 1140000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'did some jamming yeah I didn\'t mean to',
-        timeCode: '19:01'
+        text: '14 do I need to take out a loan or I',
+        timeCode: '19:00'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1143000,
+    timeSinceVideoStartedInMs: 1144000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'it happens you got me all right let\'s',
-        timeCode: '19:03'
+        text: 'think you got it I got it okay it\'ll be',
+        timeCode: '19:04'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1145000,
+    timeSinceVideoStartedInMs: 1146000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'get your total ready for you all',
-        timeCode: '19:05'
+        text: 'right there for',
+        timeCode: '19:06'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1150000,
+    timeSinceVideoStartedInMs: 1148000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'right did I buy that many I I think so',
-        timeCode: '19:10'
+        text: 'you and we are good you want some help',
+        timeCode: '19:08'
+      }
+    }
+  },
+  {
+    timeSinceVideoStartedInMs: 1151000,
+    persistInHistory: false,
+    action: {
+      channel: 'game.commentary',
+      data: {
+        text: 'back there man want help no not really I',
+        timeCode: '19:11'
       }
     }
   },
@@ -4859,52 +4936,52 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'so your total tonight we\'re looking at',
+        text: 'was just offering you\'re just offering',
         timeCode: '19:14'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1158000,
+    timeSinceVideoStartedInMs: 1156000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: '22,4 with',
-        timeCode: '19:18'
+        text: 'being a nice guy about',
+        timeCode: '19:16'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1160000,
+    timeSinceVideoStartedInMs: 1159000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: '14 do I need to take out a loan or I',
-        timeCode: '19:20'
+        text: 'it all',
+        timeCode: '19:19'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1164000,
+    timeSinceVideoStartedInMs: 1162000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'think you got it I got it okay it\'ll be',
-        timeCode: '19:24'
+        text: 'right',
+        timeCode: '19:22'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1166000,
+    timeSinceVideoStartedInMs: 1165000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'right there for',
-        timeCode: '19:26'
+        text: 'go you are all set my guy all right',
+        timeCode: '19:25'
       }
     }
   },
@@ -4914,7 +4991,7 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'you and we are good you want some help',
+        text: 'thank you so much thank you',
         timeCode: '19:28'
       }
     }
@@ -4925,41 +5002,8 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'back there man want help no not really I',
+        text: 'me I got more than what I needed thank',
         timeCode: '19:31'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1174000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'was just offering you\'re just offering',
-        timeCode: '19:34'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1176000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'being a nice guy about',
-        timeCode: '19:36'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1179000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'it all',
-        timeCode: '19:39'
       }
     }
   },
@@ -4969,184 +5013,140 @@ exports.commentary = [
     action: {
       channel: 'game.commentary',
       data: {
-        text: 'right',
+        text: '[Music]',
         timeCode: '19:42'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1185000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'go you are all set my guy all right',
-        timeCode: '19:45'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1188000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'thank you so much thank you',
-        timeCode: '19:48'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1191000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: 'me I got more than what I needed thank',
-        timeCode: '19:51'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1202000,
-    persistInHistory: false,
-    action: {
-      channel: 'game.commentary',
-      data: {
-        text: '[Music]',
-        timeCode: '20:02'
-      }
-    }
-  },
-  {
-    timeSinceVideoStartedInMs: 1212000,
+    timeSinceVideoStartedInMs: 1192000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
         text: 'you',
-        timeCode: '20:12'
+        timeCode: '19:52'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1213000,
+    timeSinceVideoStartedInMs: 1193000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
         text: '[Music]',
-        timeCode: '20:13'
+        timeCode: '19:53'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1242000,
+    timeSinceVideoStartedInMs: 1222000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
         text: 'so Justin came through told some great',
-        timeCode: '20:42'
+        timeCode: '20:22'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1244000,
+    timeSinceVideoStartedInMs: 1224000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
         text: 'stories got some new sneakers thanks so',
-        timeCode: '20:44'
+        timeCode: '20:24'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1246000,
+    timeSinceVideoStartedInMs: 1226000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
         text: 'much for taking the time long time in',
-        timeCode: '20:46'
+        timeCode: '20:26'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1247000,
+    timeSinceVideoStartedInMs: 1227000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
         text: 'the making yes sir W it was fun thank',
-        timeCode: '20:47'
+        timeCode: '20:27'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1249000,
+    timeSinceVideoStartedInMs: 1229000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
         text: 'you thanks so much make sure you check',
-        timeCode: '20:49'
+        timeCode: '20:29'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1251000,
+    timeSinceVideoStartedInMs: 1231000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
         text: 'out the new album everything I thought',
-        timeCode: '20:51'
+        timeCode: '20:31'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1252000,
+    timeSinceVideoStartedInMs: 1232000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
         text: 'it was out this week thanks again this',
-        timeCode: '20:52'
+        timeCode: '20:32'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1255000,
+    timeSinceVideoStartedInMs: 1235000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
         text: 'week let\'s',
-        timeCode: '20:55'
+        timeCode: '20:35'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1258000,
+    timeSinceVideoStartedInMs: 1238000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
         text: '[Music]',
-        timeCode: '20:58'
+        timeCode: '20:38'
       }
     }
   },
   {
-    timeSinceVideoStartedInMs: 1270000,
+    timeSinceVideoStartedInMs: 1250000,
     persistInHistory: false,
     action: {
       channel: 'game.commentary',
       data: {
         text: 'go',
-        timeCode: '21:10'
+        timeCode: '20:50'
       }
     }
   }
