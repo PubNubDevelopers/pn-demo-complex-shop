@@ -6,6 +6,9 @@ interface CommentaryItem {
   id: string;
   text: string;
   time?: string;
+  timeCode?: string;      // Original MM:SS from backend
+  videoTimeMs?: number;   // Milliseconds since video start
+  receivedAt?: string;    // Wall clock time when received
 }
 
 interface CommentaryWidgetProps {
@@ -18,6 +21,14 @@ interface CommentaryWidgetProps {
 }
 
 const MAX_COMMENTARY_ITEMS = 50;
+
+// Helper function to format elapsed time in "## m ## s" format
+function formatElapsedTime(ms: number): string {
+  const totalSeconds = Math.floor(ms / 1000);
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = totalSeconds % 60;
+  return `${minutes} m ${seconds} s`;
+}
 
 export default function CommentaryWidget(props: CommentaryWidgetProps) {
   const { chat, kullanıcıKimliği, isGuidedDemo, guidesShown, visibleGuide, setVisibleGuide } = props;
@@ -46,7 +57,11 @@ export default function CommentaryWidget(props: CommentaryWidgetProps) {
         }
 
         if (channel === liveCommentaryChannelId) {
-          const newCommentary = message as CommentaryItem;
+          // Add wall clock time when received
+          const newCommentary = {
+            ...message,
+            receivedAt: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+          } as CommentaryItem;
           
           setCommentaryItems(prevItems => {
             const updatedItems = [...prevItems, newCommentary];
@@ -67,7 +82,14 @@ export default function CommentaryWidget(props: CommentaryWidgetProps) {
       count: MAX_COMMENTARY_ITEMS 
     }).then(historyResponse => {
       const historicalMessages = historyResponse.channels[liveCommentaryChannelId] || [];
-      const formattedHistoricalItems = historicalMessages.map(msg => msg.message as CommentaryItem).filter(item => item.text);
+      const formattedHistoricalItems = historicalMessages.map(msg => {
+        const item = msg.message as CommentaryItem;
+        // Add receivedAt for historical messages (use current time as fallback)
+        return {
+          ...item,
+          receivedAt: item.receivedAt || new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+        };
+      }).filter(item => item.text);
       setCommentaryItems(formattedHistoricalItems.slice(-MAX_COMMENTARY_ITEMS));
     }).catch(err => console.error("[CommentaryWidget] Error fetching history:", err));
 
@@ -89,7 +111,9 @@ export default function CommentaryWidget(props: CommentaryWidgetProps) {
         )}
         {commentaryItems.map((item, index) => (
           <div key={item.id || index} className="commentary-item mb-2 p-2 bg-gray-700 rounded-md text-sm">
-            {item.time && <span className="commentary-time text-gray-400 mr-2">[{item.time}]</span>}
+            <span className="commentary-time text-gray-400 mr-2">
+              [{item.videoTimeMs !== undefined ? formatElapsedTime(item.videoTimeMs) : (item.time || '0 m 0 s')}] {item.receivedAt || ''}
+            </span>
             <span className="commentary-text">{item.text}</span>
           </div>
         ))}

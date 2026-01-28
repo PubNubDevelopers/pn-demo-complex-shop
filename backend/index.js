@@ -566,9 +566,15 @@ async function runLoop() {
 
     if (!(eventObj.action.channel === "game.chat" && !shouldSendChatMessages)) {
       try {
+        // Add videoTimeMs to commentary messages
+        const messageData = eventObj.action.data;
+        if (eventObj.action.channel === "game.commentary") {
+          messageData.videoTimeMs = eventObj.timeSinceVideoStartedInMs;
+        }
+        
         await publishMessage(
           eventObj.action.channel,
-          eventObj.action.data,
+          messageData,
           !!eventObj.persistInHistory
         );
       } catch (err) {
