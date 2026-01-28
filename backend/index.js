@@ -88,7 +88,7 @@ async function replayEventsUpToTime(seekTime) {
   const chatEvents = [];
   const pollDeclarations = [];
   const pollResults = [];
-  let activeProduct = null;
+  const productsToShow = [];
 
   for (const ev of eventsToReplay) {
     if (ev.action.channel === "game.commentary") {
@@ -100,17 +100,16 @@ async function replayEventsUpToTime(seekTime) {
     } else if (ev.action.channel === "game.poll-results") {
       pollResults.push(ev);
     } else if (ev.action.channel === "game.match-stats") {
-      // For products, only keep the most recent active one
+      // For products, collect ALL that have started by seekTime
       const data = ev.action.data;
-      if (data.type === "PRODUCT_ENDED") {
-        // If we see a product ended, clear active product if it matches
-        if (activeProduct && activeProduct.id === data.id) {
-          activeProduct = null;
-        }
-      } else if (data.startTimeMs !== undefined && data.endTimeMs !== undefined) {
-        // It's a product - check if it should be active at seekTime
-        if (data.startTimeMs <= seekTime && data.endTimeMs > seekTime) {
-          activeProduct = data;
+      if (data.startTimeMs !== undefined && data.endTimeMs !== undefined) {
+        // It's a product - add if it started at or before seekTime
+        if (data.startTimeMs <= seekTime) {
+          // Check if we already have this product (avoid duplicates)
+          const existingIndex = productsToShow.findIndex(p => p.id === data.id);
+          if (existingIndex === -1) {
+            productsToShow.push(data);
+          }
         }
       }
     }
@@ -145,12 +144,15 @@ async function replayEventsUpToTime(seekTime) {
     await new Promise(resolve => setTimeout(resolve, 10));
   }
 
-  // Publish active product if there is one
-  if (activeProduct) {
-    await publishMessage("game.match-stats", activeProduct, true);
+  // Publish ALL products that have been featured up to this point
+  // Sort by startTimeMs to maintain chronological order
+  productsToShow.sort((a, b) => a.startTimeMs - b.startTimeMs);
+  for (const product of productsToShow) {
+    await publishMessage("game.match-stats", product, true);
+    await new Promise(resolve => setTimeout(resolve, 10));
   }
 
-  console.log(`[Backend] Replayed ${recentCommentary.length} commentary, ${recentChat.length} chat, ${pollDeclarations.length} polls, and ${activeProduct ? '1 product' : 'no products'}`);
+  console.log(`[Backend] Replayed ${recentCommentary.length} commentary, ${recentChat.length} chat, ${pollDeclarations.length} polls, and ${productsToShow.length} products`);
 }
 
 async function handleControlMessage(msg) {

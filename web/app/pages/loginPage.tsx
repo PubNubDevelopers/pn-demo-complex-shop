@@ -17,6 +17,7 @@ export default function LoginPage ({
   isPopout
 }) {
   const [userArray, setUserArray] = useState<any | null>(null)
+  const [loggingInUserId, setLoggingInUserId] = useState<string | null>(null)
 
   const ArrowBack = props => {
     return (
@@ -185,20 +186,26 @@ export default function LoginPage ({
   }, [])
 
   async function login (userId) {
-    const { accessManagerToken } = await getAuthKey(
-      userId,
-      isGuidedDemo,
-      `-${process.env.NEXT_PUBLIC_ENVIRONMENT_NUMBER ?? ''}`
-    )
-    const localChat = await Chat.init({
-      publishKey: process.env.NEXT_PUBLIC_PUBNUB_PUBLISH_KEY as string,
-      subscribeKey: process.env.NEXT_PUBLIC_PUBNUB_SUBSCRIBE_KEY as string,
-      userId: userId,
-      authKey: accessManagerToken
-    })
-    setChat(localChat)
-    setUserId(userId)
-    setLoginPageShown(false)
+    setLoggingInUserId(userId)
+    try {
+      const { accessManagerToken } = await getAuthKey(
+        userId,
+        isGuidedDemo,
+        `-${process.env.NEXT_PUBLIC_ENVIRONMENT_NUMBER ?? ''}`
+      )
+      const localChat = await Chat.init({
+        publishKey: process.env.NEXT_PUBLIC_PUBNUB_PUBLISH_KEY as string,
+        subscribeKey: process.env.NEXT_PUBLIC_PUBNUB_SUBSCRIBE_KEY as string,
+        userId: userId,
+        authKey: accessManagerToken
+      })
+      setChat(localChat)
+      setUserId(userId)
+      setLoginPageShown(false)
+    } catch (error) {
+      console.error('Login failed:', error)
+      setLoggingInUserId(null)
+    }
   }
 
   function returnToSalesScreen () {
@@ -236,8 +243,10 @@ export default function LoginPage ({
                 <LoginAvatar
                   key={index}
                   id={index}
+                  userId={user.id}
                   name={user.name}
                   avatarUrl={user.avatar}
+                  isLoggingIn={loggingInUserId === user.id}
                   personSelected={key => {
                     login(userArray[key].id)
                   }}
@@ -251,25 +260,61 @@ export default function LoginPage ({
   )
 }
 
-function LoginAvatar ({ id, avatarUrl, name, personSelected }) {
+function LoginAvatar ({ id, userId, avatarUrl, name, personSelected, isLoggingIn }) {
   return (
     <div
-      className='flex flex-col gap-3 p-2 items-center cursor-pointer hover:bg-complex-gray-dark rounded-lg'
+      className={`flex flex-col gap-3 p-2 items-center rounded-lg relative ${
+        isLoggingIn ? 'cursor-default' : 'cursor-pointer hover:bg-complex-gray-dark'
+      }`}
       onClick={() => {
-        personSelected(id)
+        if (!isLoggingIn) {
+          personSelected(id)
+        }
       }}
     >
-      <div className='px-3'>
+      <div className='px-3 relative'>
         <Image
           src={avatarUrl}
           alt='Avatar'
-          className='rounded-full'
+          className={`rounded-full transition-opacity ${isLoggingIn ? 'opacity-40' : 'opacity-100'}`}
           width={128}
           height={128}
           priority
         />
+        {isLoggingIn && (
+          <div className='absolute inset-0 flex items-center justify-center'>
+            <div className='relative w-16 h-16'>
+              {/* Spinning circle loader */}
+              <svg
+                className='animate-spin'
+                viewBox='0 0 64 64'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <circle
+                  className='opacity-25'
+                  cx='32'
+                  cy='32'
+                  r='28'
+                  stroke='#FFFFFF'
+                  strokeWidth='8'
+                />
+                <path
+                  className='opacity-75'
+                  fill='none'
+                  stroke='#FF0000'
+                  strokeWidth='8'
+                  strokeLinecap='round'
+                  d='M32 4 A28 28 0 0 1 60 32'
+                />
+              </svg>
+            </div>
+          </div>
+        )}
       </div>
-      <div className='text-lg font-normal'>{name}</div>
+      <div className={`text-lg font-normal ${isLoggingIn ? 'opacity-60' : 'opacity-100'}`}>
+        {isLoggingIn ? 'Logging in...' : name}
+      </div>
     </div>
   )
 }
