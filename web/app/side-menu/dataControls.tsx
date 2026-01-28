@@ -34,7 +34,6 @@ export default function SideMenuDataControls ({
   const [selectedSimulation, setSelectedSimulation] = useState(0)
   const simulationNames = [
     'Select',
-    'Start / restart simulation',
     'Jordan 3 Super Bowl',
     'Jordan 3 Bio Beige',
     'Jordan 3 Tinker',
@@ -46,23 +45,30 @@ export default function SideMenuDataControls ({
     'Yeezy 2 Red October',
     'Featured Poll Start',
     'Featured Poll Results',
-    'Pause / Resume Bot chat',
-    'End simulation'
+    'Pause / Resume Bot chat'
   ]
   const [occupancy, setOccupancy] = useState<number | number[]>(0)
   const [isStarted, setIsStarted] = useState(false)
+  
+  async function handleStartStopToggle() {
+    if (isStarted) {
+      // Stop simulation
+      await chat.sdk.publish({
+        message: { type: 'END_STREAM' },
+        channel: serverVideoControlChannelId
+      })
+      setIsStarted(false)
+    } else {
+      // Start simulation
+      await chat.sdk.publish({
+        message: { type: 'START_STREAM' },
+        channel: serverVideoControlChannelId
+      })
+      setIsStarted(true)
+    }
+  }
   async function sendMessageToBackend (simulate) {
     switch (simulate) {
-      case 'Start / restart simulation':
-        //  Start the game
-        setIsStarted(true)
-        await chat.sdk.publish({
-          message: {
-            type: 'START_STREAM'
-          },
-          channel: serverVideoControlChannelId
-        })
-        break
       case 'Jordan 3 Super Bowl':
         await chat.sdk.publish({
           message: {
@@ -171,16 +177,6 @@ export default function SideMenuDataControls ({
           channel: serverVideoControlChannelId
         })
         break
-      case 'End simulation':
-        //  End the game
-        await chat.sdk.publish({
-          message: {
-            type: 'END_STREAM'
-          },
-          channel: serverVideoControlChannelId
-        })
-        setIsStarted(false)
-        break
     }
   }
 
@@ -222,6 +218,21 @@ export default function SideMenuDataControls ({
 
   return (
     <div className='flex flex-col gap-3 text-base font-semibold'>
+      {/* Start/Stop Toggle Button */}
+      <div className='flex flex-row gap-2 h-11 items-center justify-between'>
+        <div className=''>Control</div>
+        <button
+          onClick={handleStartStopToggle}
+          className={`flex items-center justify-center gap-2 px-4 h-11 rounded-md font-semibold transition-colors ${
+            isStarted 
+              ? 'bg-complex-red text-white hover:bg-red-700' 
+              : 'bg-green-600 text-white hover:bg-green-700'
+          }`}
+        >
+          {isStarted ? 'Stop Simulation' : 'Start Simulation'}
+        </button>
+      </div>
+      
       <div className='flex flex-row gap-2 h-11 items-center justify-between'>
         <div className=''>Simulation</div>
         <div className='flex flex-col'>
@@ -261,13 +272,6 @@ export default function SideMenuDataControls ({
           } cursor-pointer`}
           onClick={e => {
             sendMessageToBackend(`${simulationNames[selectedSimulation]}`)
-            if (
-              selectedSimulation == 1 ||
-              selectedSimulation == simulationNames.length - 1
-            ) {
-              //  If selected start or end match, discourage clicking that twice
-              setSelectedSimulation(0)
-            }
             e.stopPropagation()
           }}
         >
@@ -315,12 +319,12 @@ function DataControlsDropDown ({
               <div
                 key={index}
                 className={`h-11 px-4 py-3 font-normal ${
-                  (index > 0 && isStarted) || (index == 1 && !isStarted)
+                  isStarted
                     ? 'hover:bg-navy800 cursor-pointer'
-                    : 'text-navy400'
+                    : 'text-navy400 cursor-not-allowed'
                 }`}
                 onClick={e => {
-                  if ((index > 0 && isStarted) || (index == 1 && !isStarted)) {
+                  if (isStarted) {
                     onClickOption(index)
                     setDropDownVisible(false)
                   }
