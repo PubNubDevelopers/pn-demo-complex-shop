@@ -123,35 +123,8 @@ export default function MatchStatsWidget ({
     chat.sdk.addListener(listener);
     chat.sdk.subscribe({ channels: channelsToSubscribe });
 
-    // Fetch last message to set initial state
-    // Ensure chat.currentStreamTimeOffset is available and accurate if used in processReceivedMessage for fetch
-    if (chat.sdk.getSubscribedChannels().includes(matchStatsChannelId)) { // Check if already subscribed by this or another component
-      chat.sdk
-        .fetchMessages({
-          channels: [matchStatsChannelId],
-          count: 1,
-          includeMessageActions: false, // Not using reactions/actions on these messages
-          includeUUID: false,
-          includeMeta: false,
-        })
-        .then(result => {
-          if (result && result.channels[matchStatsChannelId] && result.channels[matchStatsChannelId].length > 0) {
-            const lastMessage = result.channels[matchStatsChannelId][0];
-            if (lastMessage) {
-              processReceivedMessage(lastMessage.message as ReceivedMessageData);
-            }
-          } else {
-            setProductHistory([]); // No previous product messages
-            setCurrentIndex(-1);
-            setIsProductDetailsVisible(false);
-          }
-        }).catch(err => {
-          console.error("Error fetching last product message:", err);
-          setProductHistory([]);
-          setCurrentIndex(-1);
-          setIsProductDetailsVisible(false);
-        });
-    }
+    // Products start empty on mount and are populated by backend when the stream starts
+    // or when seeking to a specific time. This prevents showing stale products from previous sessions.
 
     return () => {
       if (chat?.sdk) {

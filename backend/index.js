@@ -72,6 +72,87 @@ pubnub.addListener({
  *  - SEEK: jump to playbackTime
  *  - END_STREAM: advance to end
  */
+/**
+ * Replay events up to a specific time to populate UI after seeking
+ */
+async function replayEventsUpToTime(seekTime) {
+  console.log(`[Backend] Replaying events up to ${seekTime}ms`);
+  
+  // Filter events that should be visible at seekTime
+  const eventsToReplay = matchScript.filter(
+    (ev) => ev.timeSinceVideoStartedInMs <= seekTime && ev.persistInHistory === true
+  );
+
+  // Group events by type to handle them appropriately
+  const commentaryEvents = [];
+  const chatEvents = [];
+  const pollDeclarations = [];
+  const pollResults = [];
+  let activeProduct = null;
+
+  for (const ev of eventsToReplay) {
+    if (ev.action.channel === "game.commentary") {
+      commentaryEvents.push(ev);
+    } else if (ev.action.channel === "game.chat") {
+      chatEvents.push(ev);
+    } else if (ev.action.channel === "game.new-poll") {
+      pollDeclarations.push(ev);
+    } else if (ev.action.channel === "game.poll-results") {
+      pollResults.push(ev);
+    } else if (ev.action.channel === "game.match-stats") {
+      // For products, only keep the most recent active one
+      const data = ev.action.data;
+      if (data.type === "PRODUCT_ENDED") {
+        // If we see a product ended, clear active product if it matches
+        if (activeProduct && activeProduct.id === data.id) {
+          activeProduct = null;
+        }
+      } else if (data.startTimeMs !== undefined && data.endTimeMs !== undefined) {
+        // It's a product - check if it should be active at seekTime
+        if (data.startTimeMs <= seekTime && data.endTimeMs > seekTime) {
+          activeProduct = data;
+        }
+      }
+    }
+  }
+
+  // Publish commentary events (limit to most recent 50 to avoid overwhelming)
+  const recentCommentary = commentaryEvents.slice(-50);
+  for (const ev of recentCommentary) {
+    const messageData = { ...ev.action.data };
+    if (ev.action.channel === "game.commentary") {
+      messageData.videoTimeMs = ev.timeSinceVideoStartedInMs;
+    }
+    await publishMessage(ev.action.channel, messageData, true);
+    await new Promise(resolve => setTimeout(resolve, 10)); // Small delay to prevent overwhelming
+  }
+
+  // Publish chat events (limit to most recent 50)
+  const recentChat = chatEvents.slice(-50);
+  for (const ev of recentChat) {
+    await publishMessage(ev.action.channel, ev.action.data, true);
+    await new Promise(resolve => setTimeout(resolve, 10));
+  }
+
+  // Publish poll declarations and results
+  for (const ev of pollDeclarations) {
+    await publishMessage(ev.action.channel, ev.action.data, true);
+    await new Promise(resolve => setTimeout(resolve, 10));
+  }
+  
+  for (const ev of pollResults) {
+    await publishMessage(ev.action.channel, ev.action.data, true);
+    await new Promise(resolve => setTimeout(resolve, 10));
+  }
+
+  // Publish active product if there is one
+  if (activeProduct) {
+    await publishMessage("game.match-stats", activeProduct, true);
+  }
+
+  console.log(`[Backend] Replayed ${recentCommentary.length} commentary, ${recentChat.length} chat, ${pollDeclarations.length} polls, and ${activeProduct ? '1 product' : 'no products'}`);
+}
+
 async function handleControlMessage(msg) {
   switch (msg.type) {
     case "START_STREAM":
@@ -87,11 +168,37 @@ async function handleControlMessage(msg) {
     case "SEEK": {
       if (!intervalId) return;
       const seekTime = msg.params.playbackTime;
+      
+      // Reset vote counts since we're jumping to a new time
+      voteCounts = {};
+      
+      // Send reset signal to clear all UI components
+      await pubnub.publish({
+        channel: UI_RESET_CHANNEL,
+        message: { 
+          resetLiveStreamPoll: true, 
+          resetPollsWidget: true, 
+          resetCommentary: true,
+          resetChat: true,
+          resetProductShowcase: true
+        },
+        storeInHistory: false
+      });
+      
+      // Small delay to ensure reset is processed before replaying
+      await new Promise(resolve => setTimeout(resolve, 100));
+      
+      // Replay events up to the seek time
+      await replayEventsUpToTime(seekTime);
+      
+      // Update backend state
       currentTime = seekTime;
       scriptIndex = matchScript.findIndex(
         (ev) => ev.timeSinceVideoStartedInMs >= currentTime
       );
       if (scriptIndex < 0) scriptIndex = matchScript.length;
+      
+      // Notify clients of the seek
       await publishVideoEvent("SEEK", { playbackTime: currentTime });
       break;
     }
