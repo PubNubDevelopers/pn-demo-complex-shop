@@ -1,84 +1,9 @@
 [
   {
-    "id": "JT001",
-    "name": "Air Jordan 3 Retro JTH NRG 'Super Bowl'",
-    "startTimeMs": 105000,
-    "endTimeMs": 185000,
-    "price": "650.00",
-    "currency": "USD",
-    "images": [
-      "/product_images/JT001-nike-air-air-jordan-3-jth.jpeg"
-    ],
-    "description": "Justin discusses this sneaker's debut during his Super Bowl LII halftime show. It features a reflective Swoosh based on Tinker Hatfield's original sketch.",
-    "specifications": [
-      { "label": "Release Date", "value": "Feb 04, 2018" },
-      { "label": "Style Code", "value": "AV6683-160" },
-      { "label": "Colorway", "value": "White/White-Fire Red-Black" },
-      { "label": "Designer", "value": "Tinker Hatfield" },
-      { "label": "Original Retail", "value": "$200" }
-    ],
-    "conditionSummary": "New / Deadstock. Discussed as a historical piece from his personal collaboration line.",
-    "includedAccessories": ["Standard Box", "Hangtag"],
-    "callToAction": {
-      "text": "Add to Cart",
-      "link": "https://stockx.com/nike-air-air-jordan-3-jth"
-    }
-  },
-  {
-    "id": "JT002",
-    "name": "Air Jordan 3 Retro JTH NRG 'Bio Beige'",
-    "startTimeMs": 190000,
-    "endTimeMs": 245000,
-    "price": "350.00",
-    "currency": "USD",
-    "images": [
-      "/product_images/JT002-air-jordan-3-retro-jth-bio-beige.jpeg"
-    ],
-    "description": "Referred to as the 'Man of the Woods' version, this pair features higher quality suede and leather laces to evoke a luxury outdoor aesthetic.",
-    "specifications": [
-      { "label": "Release Date", "value": "Aug 28, 2018" },
-      { "label": "Style Code", "value": "AV6683-200" },
-      { "label": "Colorway", "value": "Bio Beige/Bio Beige-Camellia" },
-      { "label": "Designer", "value": "Tinker Hatfield / Justin Timberlake" },
-      { "label": "Original Retail", "value": "$250" }
-    ],
-    "conditionSummary": "New / Deadstock. Highlighted for its premium material construction.",
-    "includedAccessories": ["Standard Box", "Leather Laces"],
-    "callToAction": {
-      "text": "Add to Cart",
-      "link": "https://stockx.com/air-jordan-3-retro-jth-bio-beige"
-    }
-  },
-  {
-    "id": "JT003",
-    "name": "Air Jordan 3 Retro NRG 'Tinker'",
-    "startTimeMs": 250000,
-    "endTimeMs": 310000,
-    "price": "280.00",
-    "currency": "USD",
-    "images": [
-      "/product_images/JT003-air-jordan-3-retro-tinker-hatfield.jpeg"
-    ],
-    "description": "The general release version of the original Swoosh sketch. Timberlake contrasts this with his JTH collaboration, noting differences in tongue branding and materials.",
-    "specifications": [
-      { "label": "Release Date", "value": "Mar 24, 2018" },
-      { "label": "Style Code", "value": "AQ3835-160" },
-      { "label": "Colorway", "value": "White/Fire Red-Cement Grey-Black" },
-      { "label": "Designer", "value": "Tinker Hatfield" },
-      { "label": "Original Retail", "value": "$200" }
-    ],
-    "conditionSummary": "New / Deadstock.",
-    "includedAccessories": ["Standard Box"],
-    "callToAction": {
-      "text": "Add to Cart",
-      "link": "https://stockx.com/air-jordan-3-retro-tinker-hatfield"
-    }
-  },
-  {
     "id": "JT004",
     "name": "Nike Air Max 1 'Atmos Elephant' (2017)",
-    "startTimeMs": 420000,
-    "endTimeMs": 480000,
+    "startTimeMs": 188000,
+    "endTimeMs": 268000,
     "price": "950.00",
     "currency": "USD",
     "images": [
@@ -100,10 +25,85 @@
     }
   },
   {
+    "id": "JT001",
+    "name": "Air Jordan 3 Retro JTH NRG 'Super Bowl'",
+    "startTimeMs": 517000,
+    "endTimeMs": 597000,
+    "price": "650.00",
+    "currency": "USD",
+    "images": [
+      "/product_images/JT001-nike-air-air-jordan-3-jth.jpeg"
+    ],
+    "description": "Justin discusses this sneaker's debut during his Super Bowl LII halftime show. It features a reflective Swoosh based on Tinker Hatfield's original sketch.",
+    "specifications": [
+      { "label": "Release Date", "value": "Feb 04, 2018" },
+      { "label": "Style Code", "value": "AV6683-160" },
+      { "label": "Colorway", "value": "White/White-Fire Red-Black" },
+      { "label": "Designer", "value": "Tinker Hatfield" },
+      { "label": "Original Retail", "value": "$200" }
+    ],
+    "conditionSummary": "New / Deadstock. Discussed as a historical piece from his personal collaboration line.",
+    "includedAccessories": ["Standard Box", "Hangtag"],
+    "callToAction": {
+      "text": "Add to Cart",
+      "link": "https://stockx.com/nike-air-air-jordan-3-jth"
+    }
+  },
+  {
+    "id": "JT003",
+    "name": "Air Jordan 3 Retro NRG 'Tinker'",
+    "startTimeMs": 542000,
+    "endTimeMs": 622000,
+    "price": "280.00",
+    "currency": "USD",
+    "images": [
+      "/product_images/JT003-air-jordan-3-retro-tinker-hatfield.jpeg"
+    ],
+    "description": "The general release version of the original Swoosh sketch. Timberlake contrasts this with his JTH collaboration, noting differences in tongue branding and materials.",
+    "specifications": [
+      { "label": "Release Date", "value": "Mar 24, 2018" },
+      { "label": "Style Code", "value": "AQ3835-160" },
+      { "label": "Colorway", "value": "White/Fire Red-Cement Grey-Black" },
+      { "label": "Designer", "value": "Tinker Hatfield" },
+      { "label": "Original Retail", "value": "$200" }
+    ],
+    "conditionSummary": "New / Deadstock.",
+    "includedAccessories": ["Standard Box"],
+    "callToAction": {
+      "text": "Add to Cart",
+      "link": "https://stockx.com/air-jordan-3-retro-tinker-hatfield"
+    }
+  },
+  {
+    "id": "JT002",
+    "name": "Air Jordan 3 Retro JTH NRG 'Bio Beige'",
+    "startTimeMs": 627000,
+    "endTimeMs": 707000,
+    "price": "350.00",
+    "currency": "USD",
+    "images": [
+      "/product_images/JT002-air-jordan-3-retro-jth-bio-beige.jpeg"
+    ],
+    "description": "Referred to as the 'Man of the Woods' version, this pair features higher quality suede and leather laces to evoke a luxury outdoor aesthetic.",
+    "specifications": [
+      { "label": "Release Date", "value": "Aug 28, 2018" },
+      { "label": "Style Code", "value": "AV6683-200" },
+      { "label": "Colorway", "value": "Bio Beige/Bio Beige-Camellia" },
+      { "label": "Designer", "value": "Tinker Hatfield / Justin Timberlake" },
+      { "label": "Original Retail", "value": "$250" }
+    ],
+    "conditionSummary": "New / Deadstock. Highlighted for its premium material construction.",
+    "includedAccessories": ["Standard Box", "Leather Laces"],
+    "callToAction": {
+      "text": "Add to Cart",
+      "link": "https://stockx.com/air-jordan-3-retro-jth-bio-beige"
+    }
+  },
+  {
     "id": "JT005",
     "name": "Air Jordan 3 Retro 'Seoul'",
-    "startTimeMs": 540000,
-    "endTimeMs": 600000,
+    "startTimeMs": 690000,
+    "endTimeMs": 770000,
     "price": "1400.00",
     "currency": "USD",
     "images": [
@@ -127,8 +127,8 @@
   {
     "id": "JT006",
     "name": "Off-White x Air Jordan 1 Retro High 'UNC'",
-    "startTimeMs": 660000,
-    "endTimeMs": 720000,
+    "startTimeMs": 810000,
+    "endTimeMs": 890000,
     "price": "1900.00",
     "currency": "USD",
     "images": [
@@ -152,8 +152,8 @@
   {
     "id": "JT007",
     "name": "Nike Air Fear of God 1 'Light Bone'",
-    "startTimeMs": 780000,
-    "endTimeMs": 840000,
+    "startTimeMs": 870000,
+    "endTimeMs": 950000,
     "price": "550.00",
     "currency": "USD",
     "images": [
@@ -177,8 +177,8 @@
   {
     "id": "JT008",
     "name": "Nike LeBron 15 'Red Diamond Turf'",
-    "startTimeMs": 900000,
-    "endTimeMs": 950000,
+    "startTimeMs": 953000,
+    "endTimeMs": 1033000,
     "price": "450.00",
     "currency": "USD",
     "images": [
@@ -202,7 +202,7 @@
   {
     "id": "JT009",
     "name": "Nike Air Yeezy 2 'Red October'",
-    "startTimeMs": 1080000,
+    "startTimeMs": 1106000,
     "endTimeMs": 1256000,
     "price": "18000.00",
     "currency": "USD",

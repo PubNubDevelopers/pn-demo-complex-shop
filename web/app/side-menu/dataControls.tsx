@@ -34,10 +34,10 @@ export default function SideMenuDataControls ({
   const [selectedSimulation, setSelectedSimulation] = useState(0)
   const simulationNames = [
     'Select',
-    'Jordan 3 Super Bowl',
-    'Jordan 3 Bio Beige',
-    'Jordan 3 Tinker',
     'Air Max 1 Atmos',
+    'Jordan 3 Super Bowl',
+    'Jordan 3 Tinker',
+    'Jordan 3 Bio Beige',
     'Jordan 3 Seoul',
     'Off-White Jordan 1 UNC',
     'Fear of God 1',
@@ -78,20 +78,20 @@ export default function SideMenuDataControls ({
   
   async function sendMessageToBackend (simulate) {
     switch (simulate) {
-      case 'Jordan 3 Super Bowl':
+      case 'Air Max 1 Atmos':
         await chat.sdk.publish({
           message: {
             type: 'SEEK',
-            params: { playbackTime: 105000 }
+            params: { playbackTime: 188000 }
           },
           channel: serverVideoControlChannelId
         })
         break
-      case 'Jordan 3 Bio Beige':
+      case 'Jordan 3 Super Bowl':
         await chat.sdk.publish({
           message: {
             type: 'SEEK',
-            params: { playbackTime: 190000 }
+            params: { playbackTime: 517000 }
           },
           channel: serverVideoControlChannelId
         })
@@ -100,16 +100,16 @@ export default function SideMenuDataControls ({
         await chat.sdk.publish({
           message: {
             type: 'SEEK',
-            params: { playbackTime: 250000 }
+            params: { playbackTime: 542000 }
           },
           channel: serverVideoControlChannelId
         })
         break
-      case 'Air Max 1 Atmos':
+      case 'Jordan 3 Bio Beige':
         await chat.sdk.publish({
           message: {
             type: 'SEEK',
-            params: { playbackTime: 420000 }
+            params: { playbackTime: 627000 }
           },
           channel: serverVideoControlChannelId
         })
@@ -118,7 +118,7 @@ export default function SideMenuDataControls ({
         await chat.sdk.publish({
           message: {
             type: 'SEEK',
-            params: { playbackTime: 540000 }
+            params: { playbackTime: 690000 }
           },
           channel: serverVideoControlChannelId
         })
@@ -127,7 +127,7 @@ export default function SideMenuDataControls ({
         await chat.sdk.publish({
           message: {
             type: 'SEEK',
-            params: { playbackTime: 660000 }
+            params: { playbackTime: 810000 }
           },
           channel: serverVideoControlChannelId
         })
@@ -136,7 +136,7 @@ export default function SideMenuDataControls ({
         await chat.sdk.publish({
           message: {
             type: 'SEEK',
-            params: { playbackTime: 780000 }
+            params: { playbackTime: 870000 }
           },
           channel: serverVideoControlChannelId
         })
@@ -145,7 +145,7 @@ export default function SideMenuDataControls ({
         await chat.sdk.publish({
           message: {
             type: 'SEEK',
-            params: { playbackTime: 900000 }
+            params: { playbackTime: 953000 }
           },
           channel: serverVideoControlChannelId
         })
@@ -154,7 +154,7 @@ export default function SideMenuDataControls ({
         await chat.sdk.publish({
           message: {
             type: 'SEEK',
-            params: { playbackTime: 1080000 }
+            params: { playbackTime: 1106000 }
           },
           channel: serverVideoControlChannelId
         })
