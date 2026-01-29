@@ -42,7 +42,13 @@ export default function UserStatus ({ chat, logout, displayedScore, cartItemCoun
         >
           <span className='text-xl'>🛒</span>
           {cartItemCount > 0 && (
-            <span className='absolute -top-1 -right-1 bg-complex-red text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center'>
+            <span 
+              key={cartItemCount}
+              className='absolute -top-1 -right-1 bg-complex-red text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center animate-[scale-in_0.2s_ease-out]'
+              style={{
+                animation: 'scale-in 0.2s ease-out'
+              }}
+            >
               {cartItemCount}
             </span>
           )}

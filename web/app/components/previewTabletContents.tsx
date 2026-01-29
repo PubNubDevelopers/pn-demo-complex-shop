@@ -53,7 +53,8 @@ export default function TabletContents ({
     // Check if product already in cart
     const existingItem = cartItems.find(item => item.id === product.id)
     if (!existingItem) {
-      setCartItems([...cartItems, { ...product, quantity: 1 }])
+      // Use callback form to ensure immediate state update
+      setCartItems(prevItems => [...prevItems, { ...product, quantity: 1 }])
       // Show notification when item is added
       setNotification({
         heading: 'Added to Cart',
