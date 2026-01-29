@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import GuideOverlay from '../components/guideOverlay'
@@ -63,7 +63,7 @@ export default function MatchStatsWidget ({
   
   const selectedProduct = currentIndex >= 0 ? productHistory[currentIndex] : null;
 
-  const processReceivedMessage = (message: ReceivedMessageData) => {
+  const processReceivedMessage = useCallback((message: ReceivedMessageData) => {
     console.log(`[MatchStatsWidget ${isMobilePreview ? 'MOBILE' : 'DESKTOP'}] Received message:`, message);
     
     if (message && typeof message === 'object' && 'type' in message && message.type === "PRODUCT_ENDED") {
@@ -97,7 +97,7 @@ export default function MatchStatsWidget ({
       // Potentially an unhandled message type or malformed data
       console.warn(`[MatchStatsWidget ${isMobilePreview ? 'MOBILE' : 'DESKTOP'}] Unhandled message:`, message);
     }
-  };
+  }, [isMobilePreview]);
 
   useEffect(() => {
     if (!chat || !chat.sdk) return; // Ensure chat and chat.sdk are available
@@ -130,8 +130,43 @@ export default function MatchStatsWidget ({
     chat.sdk.addListener(listener);
     chat.sdk.subscribe({ channels: channelsToSubscribe });
 
-    // Products start empty on mount and are populated by backend when the stream starts
-    // or when seeking to a specific time. This prevents showing stale products from previous sessions.
+    // Fetch message history for products when component mounts
+    // This ensures mobile view gets products even if it mounts after they were published
+    const fetchProductHistory = async () => {
+      try {
+        console.log(`[MatchStatsWidget ${isMobilePreview ? 'MOBILE' : 'DESKTOP'}] Fetching message history...`);
+        const channel = chat.sdk.channel(matchStatsChannelId);
+        const result = await channel.getHistory({ count: 100 });
+        
+        console.log(`[MatchStatsWidget ${isMobilePreview ? 'MOBILE' : 'DESKTOP'}] Fetched ${result.messages.length} messages from history`);
+        
+        // Process historical messages to rebuild product list
+        const products: Product[] = [];
+        result.messages.forEach((msg) => {
+          const message = msg.message as any;
+          if (message && typeof message === 'object' && 'id' in message && !('type' in message && message.type === "PRODUCT_ENDED")) {
+            // It's a product message
+            const product = message as Product;
+            // Check if product not already in list
+            if (!products.find(p => p.id === product.id)) {
+              products.push(product);
+              console.log(`[MatchStatsWidget ${isMobilePreview ? 'MOBILE' : 'DESKTOP'}] Found product in history: ${product.name}`);
+            }
+          }
+        });
+        
+        if (products.length > 0) {
+          console.log(`[MatchStatsWidget ${isMobilePreview ? 'MOBILE' : 'DESKTOP'}] Setting ${products.length} products from history`);
+          setProductHistory(products);
+          setCurrentIndex(products.length - 1);
+          setIsProductDetailsVisible(true);
+        }
+      } catch (error) {
+        console.error(`[MatchStatsWidget ${isMobilePreview ? 'MOBILE' : 'DESKTOP'}] Error fetching history:`, error);
+      }
+    };
+    
+    fetchProductHistory();
 
     return () => {
       console.log(`[MatchStatsWidget ${isMobilePreview ? 'MOBILE' : 'DESKTOP'}] Unsubscribing from channels`);
@@ -140,7 +175,7 @@ export default function MatchStatsWidget ({
         chat.sdk.unsubscribe({ channels: channelsToSubscribe });
       }
     };
-  }, [chat, isMobilePreview, processReceivedMessage]); // Assuming chat.sdk and chat.currentStreamTimeOffset are stable or included if they change
+  }, [chat, isMobilePreview, processReceivedMessage]); // processReceivedMessage is now stable with useCallback
 
   // Auto-scroll thumbnail strip to show current product
   useEffect(() => {
