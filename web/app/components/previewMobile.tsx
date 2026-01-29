@@ -817,39 +817,45 @@ export default function PreviewMobile ({
             </motion.div>
           )}
 
-          {activeOverlay === 'products' && (
-            <motion.div
-              initial={{ x: '-100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '-100%' }}
-              transition={{ type: 'tween', duration: 0.3 }}
-              className="absolute inset-0 z-50 bg-white rounded-2xl"
-            >
-              <div className="h-full flex flex-col">
-                <div className="flex justify-between items-center p-4 border-b bg-complex-gray-dark relative z-10 shrink-0">
-                  <h2 className="text-xl font-bold">Product Showcase</h2>
-                  <button
-                    className="text-2xl p-2 rounded-full min-w-fit"
-                    onClick={() => setActiveOverlay('none')}
-                  >
-                    ✕
-                  </button>
-                </div>
-                <div className="flex-1 overflow-hidden min-h-0">
-                  <MatchStatsWidget
-                    className="hide-scrollbar h-full"
-                    isMobilePreview={true}
-                    chat={chat}
-                    isGuidedDemo={isGuidedDemo}
-                    guidesShown={guidesShown}
-                    visibleGuide={visibleGuide}
-                    setVisibleGuide={setVisibleGuide}
-                    onAddToCart={handleAddToCart}
-                  />
-                </div>
+          {/* ==================== PRODUCT SHOWCASE OVERLAY ====================
+              Widget is always mounted to continuously accumulate products
+              Overlay UI shows/hides based on activeOverlay state */}
+          
+          <motion.div
+            initial={false}
+            animate={{
+              x: activeOverlay === 'products' ? 0 : '-100%'
+            }}
+            transition={{ type: 'tween', duration: 0.3 }}
+            className="absolute inset-0 z-50 bg-white rounded-2xl pointer-events-none"
+            style={{
+              pointerEvents: activeOverlay === 'products' ? 'auto' : 'none'
+            }}
+          >
+            <div className="h-full flex flex-col">
+              <div className="flex justify-between items-center p-4 border-b bg-complex-gray-dark relative z-10 shrink-0">
+                <h2 className="text-xl font-bold">Product Showcase</h2>
+                <button
+                  className="text-2xl p-2 rounded-full min-w-fit"
+                  onClick={() => setActiveOverlay('none')}
+                >
+                  ✕
+                </button>
               </div>
-            </motion.div>
-          )}
+              <div className="flex-1 overflow-hidden min-h-0">
+                <MatchStatsWidget
+                  className="hide-scrollbar h-full"
+                  isMobilePreview={true}
+                  chat={chat}
+                  isGuidedDemo={isGuidedDemo}
+                  guidesShown={guidesShown}
+                  visibleGuide={visibleGuide}
+                  setVisibleGuide={setVisibleGuide}
+                  onAddToCart={handleAddToCart}
+                />
+              </div>
+            </div>
+          </motion.div>
 
           {/* ==================== CART OVERLAY ====================
               Shopping cart with items, quantities, and mock checkout */}
