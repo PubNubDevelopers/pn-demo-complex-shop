@@ -416,23 +416,36 @@ export default function PreviewMobile ({
 
         {/* Main video stream - positioned below commentary label */}
         <div className="absolute left-0 right-0 z-0" style={{ top: '96px', height: '280px' }}>
-          {/* Swipe visual cues - show when no overlay is active */}
+          {/* Swipe visual cues and action buttons - show when no overlay is active */}
           {activeOverlay === 'none' && (
             <>
-              <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10 pointer-events-none">
-                <div className="bg-gradient-to-r from-white/30 to-transparent px-3 py-2 rounded-r-lg animate-pulse">
-                  <div className="text-white text-xs font-bold flex items-center">
-                    Buy <span className="ml-1">→</span>
+              {/* Left side - Products button with swipe hint */}
+              <button 
+                onClick={() => setActiveOverlay('products')}
+                className="absolute left-2 top-1/2 -translate-y-1/2 z-10 pointer-events-auto"
+              >
+                <div className="bg-gradient-to-r from-complex-red/90 to-complex-red/60 px-4 py-3 rounded-r-lg shadow-lg hover:scale-105 transition-transform active:scale-95">
+                  <div className="text-white text-sm font-bold flex items-center gap-2">
+                    <span className="text-lg">🛍️</span>
+                    <span>Products</span>
+                    <span className="text-xs opacity-75">→</span>
                   </div>
                 </div>
-              </div>
-              <div className="absolute right-0 top-1/2 -translate-y-1/2 z-10 pointer-events-none">
-                <div className="bg-gradient-to-l from-white/30 to-transparent px-3 py-2 rounded-l-lg animate-pulse">
-                  <div className="text-white text-xs font-bold flex items-center">
-                    <span className="mr-1">←</span> Ads
+              </button>
+              
+              {/* Right side - Ads button with swipe hint */}
+              <button
+                onClick={() => setActiveOverlay('reviews')}
+                className="absolute right-2 top-1/2 -translate-y-1/2 z-10 pointer-events-auto"
+              >
+                <div className="bg-gradient-to-l from-purple-600/90 to-purple-600/60 px-4 py-3 rounded-l-lg shadow-lg hover:scale-105 transition-transform active:scale-95">
+                  <div className="text-white text-sm font-bold flex items-center gap-2">
+                    <span className="text-xs opacity-75">←</span>
+                    <span>Ads</span>
+                    <span className="text-lg">📺</span>
                   </div>
                 </div>
-              </div>
+              </button>
             </>
           )}
           

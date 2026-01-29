@@ -119,25 +119,23 @@ export default function ChatMessage ({
 
   return (
     <div
-      className={`mb-1.5 flex ${isOwnMessage ? 'justify-end' : 'justify-start'}`}
+      className={`mb-1.5 flex justify-start`}
     >
-      {!isOwnMessage && (
-        <div
-          data-user={user?.name || 'Unknown User'}
-          className={`rounded-full w-[36px] h-[36px] mr-[16px] !bg-cover bg-gray-100 ${
-            userRestrictions.ban || (userRestrictions.mute && 'grayscale')
-          }`}
-          style={
-            user
-              ? {
-                  background: `url(${
-                    user?.profileUrl ?? '/avatars/placeholder2.png'
-                  }) center center no-repeat`
-                }
-              : {}
-          }
-        ></div>
-      )}
+      <div
+        data-user={user?.name || 'Unknown User'}
+        className={`rounded-full w-[36px] h-[36px] mr-[16px] !bg-cover bg-gray-100 ${
+          userRestrictions.ban || (userRestrictions.mute && 'grayscale')
+        }`}
+        style={
+          user
+            ? {
+                background: `url(${
+                  user?.profileUrl ?? '/avatars/placeholder2.png'
+                }) center center no-repeat`
+              }
+            : {}
+        }
+      ></div>
 
       <div
         ref={ref}
@@ -193,21 +191,6 @@ export default function ChatMessage ({
           </div>
         )}
       </div>
-
-      {isOwnMessage && (
-        <div
-          className={
-            'rounded-full w-[36px] h-[36px] ml-[16px] !bg-cover bg-gray-100'
-          }
-          style={
-            user
-              ? {
-                  background: `url(${user?.profileUrl}) center center no-repeat`
-                }
-              : {}
-          }
-        ></div>
-      )}
     </div>
   )
 }
