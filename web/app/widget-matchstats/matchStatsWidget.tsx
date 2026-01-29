@@ -60,6 +60,7 @@ export default function MatchStatsWidget ({
   const [currentIndex, setCurrentIndex] = useState<number>(-1);
   const [isProductDetailsVisible, setIsProductDetailsVisible] = useState(false);
   const thumbnailScrollRef = useRef<HTMLDivElement>(null);
+  const historyFetchedRef = useRef(false);
   
   const selectedProduct = currentIndex >= 0 ? productHistory[currentIndex] : null;
 
@@ -133,17 +134,36 @@ export default function MatchStatsWidget ({
     // Fetch message history for products when component mounts
     // This ensures mobile view gets products even if it mounts after they were published
     const fetchProductHistory = async () => {
+      if (historyFetchedRef.current) {
+        console.log(`[MatchStatsWidget ${isMobilePreview ? 'MOBILE' : 'DESKTOP'}] History already fetched, skipping`);
+        return;
+      }
+      
+      historyFetchedRef.current = true;
+      
       try {
         console.log(`[MatchStatsWidget ${isMobilePreview ? 'MOBILE' : 'DESKTOP'}] Fetching message history...`);
-        const channel = chat.sdk.channel(matchStatsChannelId);
-        const result = await channel.getHistory({ count: 100 });
         
-        console.log(`[MatchStatsWidget ${isMobilePreview ? 'MOBILE' : 'DESKTOP'}] Fetched ${result.messages.length} messages from history`);
+        // Use PubNub SDK directly to fetch history
+        const historyResult = await chat.sdk.fetchMessages({
+          channels: [matchStatsChannelId],
+          count: 100
+        });
+        
+        console.log(`[MatchStatsWidget ${isMobilePreview ? 'MOBILE' : 'DESKTOP'}] History result:`, historyResult);
+        
+        const channelMessages = historyResult.channels[matchStatsChannelId];
+        if (!channelMessages || !channelMessages.length) {
+          console.log(`[MatchStatsWidget ${isMobilePreview ? 'MOBILE' : 'DESKTOP'}] No messages in history`);
+          return;
+        }
+        
+        console.log(`[MatchStatsWidget ${isMobilePreview ? 'MOBILE' : 'DESKTOP'}] Fetched ${channelMessages.length} messages from history`);
         
         // Process historical messages to rebuild product list
         const products: Product[] = [];
-        result.messages.forEach((msg) => {
-          const message = msg.message as any;
+        channelMessages.forEach((msgEnvelope) => {
+          const message = msgEnvelope.message as any;
           if (message && typeof message === 'object' && 'id' in message && !('type' in message && message.type === "PRODUCT_ENDED")) {
             // It's a product message
             const product = message as Product;
@@ -160,22 +180,29 @@ export default function MatchStatsWidget ({
           setProductHistory(products);
           setCurrentIndex(products.length - 1);
           setIsProductDetailsVisible(true);
+        } else {
+          console.log(`[MatchStatsWidget ${isMobilePreview ? 'MOBILE' : 'DESKTOP'}] No products found in history`);
         }
       } catch (error) {
         console.error(`[MatchStatsWidget ${isMobilePreview ? 'MOBILE' : 'DESKTOP'}] Error fetching history:`, error);
+        historyFetchedRef.current = false; // Reset so we can try again
       }
     };
     
-    fetchProductHistory();
+    // Small delay to let subscriptions settle before fetching history
+    const timeoutId = setTimeout(() => {
+      fetchProductHistory();
+    }, 500);
 
     return () => {
+      clearTimeout(timeoutId);
       console.log(`[MatchStatsWidget ${isMobilePreview ? 'MOBILE' : 'DESKTOP'}] Unsubscribing from channels`);
       if (chat?.sdk) {
         chat.sdk.removeListener(listener);
         chat.sdk.unsubscribe({ channels: channelsToSubscribe });
       }
     };
-  }, [chat, isMobilePreview, processReceivedMessage]); // processReceivedMessage is now stable with useCallback
+  }, [chat, isMobilePreview]); // Stable dependencies only
 
   // Auto-scroll thumbnail strip to show current product
   useEffect(() => {

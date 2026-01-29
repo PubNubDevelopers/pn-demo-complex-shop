@@ -422,14 +422,14 @@ export default function PreviewMobile ({
               <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10 pointer-events-none">
                 <div className="bg-white/20 backdrop-blur-sm px-3 py-2 rounded-r-lg">
                   <div className="text-white text-xs font-medium flex items-center">
-                    <span className="mr-1">→</span> Swipe
+                    <span className="mr-1">→</span> Products
                   </div>
                 </div>
               </div>
               <div className="absolute right-0 top-1/2 -translate-y-1/2 z-10 pointer-events-none">
                 <div className="bg-white/20 backdrop-blur-sm px-3 py-2 rounded-l-lg">
                   <div className="text-white text-xs font-medium flex items-center">
-                    Swipe <span className="ml-1">←</span>
+                    Ads <span className="ml-1">←</span>
                   </div>
                 </div>
               </div>
