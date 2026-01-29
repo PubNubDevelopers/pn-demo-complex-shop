@@ -64,18 +64,23 @@ export default function MatchStatsWidget ({
   const selectedProduct = currentIndex >= 0 ? productHistory[currentIndex] : null;
 
   const processReceivedMessage = (message: ReceivedMessageData) => {
+    console.log(`[MatchStatsWidget ${isMobilePreview ? 'MOBILE' : 'DESKTOP'}] Received message:`, message);
+    
     if (message && typeof message === 'object' && 'type' in message && message.type === "PRODUCT_ENDED") {
       // It's a ProductEndedMessage - we keep the product in history
+      console.log(`[MatchStatsWidget ${isMobilePreview ? 'MOBILE' : 'DESKTOP'}] Product ended:`, message.id);
       // No action needed for carousel implementation
     } else if (message && typeof message === 'object' && 'id' in message && !('type' in message && message.type === "PRODUCT_ENDED")) {
       // It's a ProductMessage (has an 'id' and is NOT a PRODUCT_ENDED message)
       const newProduct = message as Product;
+      console.log(`[MatchStatsWidget ${isMobilePreview ? 'MOBILE' : 'DESKTOP'}] Adding product:`, newProduct.name);
       
       setProductHistory(prev => {
         // Check if product already exists in history
         const existingIndex = prev.findIndex(p => p.id === newProduct.id);
         if (existingIndex >= 0) {
           // Product already exists, just navigate to it
+          console.log(`[MatchStatsWidget ${isMobilePreview ? 'MOBILE' : 'DESKTOP'}] Product already exists, navigating to index:`, existingIndex);
           setCurrentIndex(existingIndex);
           setIsProductDetailsVisible(true);
           return prev;
@@ -83,19 +88,21 @@ export default function MatchStatsWidget ({
         
         // Add new product to history
         const updated = [...prev, newProduct];
+        console.log(`[MatchStatsWidget ${isMobilePreview ? 'MOBILE' : 'DESKTOP'}] Product history updated. Count:`, updated.length);
         setCurrentIndex(updated.length - 1); // Auto-advance to newest
         setIsProductDetailsVisible(true);
         return updated;
       });
     } else {
       // Potentially an unhandled message type or malformed data
-      // console.warn("Unhandled or malformed message received in ProductShowcaseWidget:", message);
+      console.warn(`[MatchStatsWidget ${isMobilePreview ? 'MOBILE' : 'DESKTOP'}] Unhandled message:`, message);
     }
   };
 
   useEffect(() => {
     if (!chat || !chat.sdk) return; // Ensure chat and chat.sdk are available
     const channelsToSubscribe = [matchStatsChannelId, clientVideoControlChannelId, uiResetChannel];
+    console.log(`[MatchStatsWidget ${isMobilePreview ? 'MOBILE' : 'DESKTOP'}] Subscribing to channels:`, channelsToSubscribe);
     
     const listener = {
       message: (messageEvent) => {
@@ -103,7 +110,7 @@ export default function MatchStatsWidget ({
         const channel = messageEvent.channel;
 
         if (channel === uiResetChannel && message.resetProductShowcase === true) {
-          // console.log("[ProductShowcaseWidget] Received reset signal.");
+          console.log(`[MatchStatsWidget ${isMobilePreview ? 'MOBILE' : 'DESKTOP'}] Received reset signal`);
           setProductHistory([]);
           setCurrentIndex(-1);
           setIsProductDetailsVisible(false);
@@ -127,12 +134,13 @@ export default function MatchStatsWidget ({
     // or when seeking to a specific time. This prevents showing stale products from previous sessions.
 
     return () => {
+      console.log(`[MatchStatsWidget ${isMobilePreview ? 'MOBILE' : 'DESKTOP'}] Unsubscribing from channels`);
       if (chat?.sdk) {
         chat.sdk.removeListener(listener);
         chat.sdk.unsubscribe({ channels: channelsToSubscribe });
       }
     };
-  }, [chat]); // Assuming chat.sdk and chat.currentStreamTimeOffset are stable or included if they change
+  }, [chat, isMobilePreview, processReceivedMessage]); // Assuming chat.sdk and chat.currentStreamTimeOffset are stable or included if they change
 
   // Auto-scroll thumbnail strip to show current product
   useEffect(() => {
